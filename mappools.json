@@ -1,0 +1,52 @@
+{
+    "round": "Qualifiers",
+    "maps": [
+        {
+            "id": 5809669,
+            "slot": "NM1"
+        },
+        {
+            "slot": "NM2",
+            "title": "Final Resonance",
+            "keywords": ["Final Resonance"],
+            "badge": "custom"
+        },
+        {
+            "id": 5018067,
+            "slot": "NM3"
+        },
+        {
+            "id": 5394778,
+            "slot": "HD1"
+        },
+        {
+            "slot": "HD2",
+            "title": "TouchDown",
+            "keywords": ["TouchDown"],
+            "badge": "edit"
+        },
+        {
+            "slot": "HR1",
+            "title": "Countdown",
+            "keywords": ["Countdown"],
+            "badge": "custom"
+        },
+        {
+            "slot": "HR2",
+            "title": "Right Now",
+            "keywords": ["Right Now"],
+            "badge": "custom"
+        },
+        {
+            "id": 4882744,
+            "slot": "DT1"
+        },
+        {
+            "slot": "DT2",
+            "artist": "YUC'e",
+            "title": "Cappuchino",
+            "keywords": ["Cappuchino"],
+            "badge": "custom"
+        }
+    ]
+}

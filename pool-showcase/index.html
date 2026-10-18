@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CICO2026 · Pool Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="overlay">
+        <div id="capture-preview" hidden><span class="placeholder-candy" aria-hidden="true"></span></div>
+        <svg id="background" viewBox="0 0 1920 1080" aria-hidden="true">
+            <defs><mask id="scene-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080"><rect width="1920" height="1080" fill="white"/><rect id="client-cutout" fill="black"/></mask></defs>
+            <g mask="url(#scene-mask)">
+                <image href="../assets/background.png" width="1920" height="1080"/>
+                <rect id="client-depth" fill="none" stroke="#b88e66" stroke-width="10"/>
+                <rect id="client-frame" fill="none" stroke="#fff9dc" stroke-width="10"/>
+                <rect id="client-outline" fill="none" stroke="#b88e66" stroke-width="2"/>
+            </g>
+        </svg>
+        <header class="header">
+            <div class="brand" role="img" aria-label="CICO 2026">
+                <img class="mascot" src="../assets/chibi-mascot.png" alt="" draggable="false">
+                <div class="wordmark"><span>CICO</span><small>2026</small></div>
+            </div>
+            <div class="scene-heading"><h1>Pool Showcase</h1></div>
+            <div class="round-heading"><div id="round">Qualifiers</div></div>
+        </header>
+        <aside class="map-panel" aria-label="Current map">
+            <div class="cover" id="cover">
+                <div class="cover-empty"><span class="placeholder-candy" aria-hidden="true"></span></div>
+                <img class="cover-layer" alt="" draggable="false">
+                <img class="cover-layer" alt="" draggable="false">
+                <div class="pick-label" id="pick">—</div>
+                <div class="map-badge" id="map-badge" hidden>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16.6 2.6 4.8 4.8-2.3 2.3-4.8-4.8Zm-3.5 3.5 4.8 4.8-10.1 10.1L2 22l1-5.8Z" fill="currentColor"/></svg>
+                    <span></span>
+                </div>
+            </div>
+            <section class="map-copy" id="map-copy">
+                <div class="artist" id="artist">—</div>
+                <div class="title-window" id="title-window"><div id="title">—</div></div>
+                <div class="difficulty" id="difficulty">—</div>
+                <div class="credits">
+                    <div><span>MAPPED BY</span><strong id="mapper">—</strong></div>
+                    <div><span>REPLAY BY</span><strong id="replayer">—</strong></div>
+                </div>
+            </section>
+            <section class="stats" aria-label="Map statistics">
+                <div class="star-stat"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 1.8 3.1 6.5 7.2 1-5.2 5.1 1.2 7.2L12 18.2l-6.3 3.4 1.2-7.2-5.2-5.1 7.2-1Z" fill="currentColor"/></svg>STAR RATING</span><strong id="sr">—</strong></div>
+                <div class="stat"><span>CS</span><strong id="cs">—</strong></div>
+                <div class="stat"><span>AR</span><strong id="ar">—</strong></div>
+                <div class="stat"><span>OD</span><strong id="od">—</strong></div>
+                <div class="stat"><span>HP</span><strong id="hp">—</strong></div>
+                <div class="stat"><span>BPM</span><strong id="bpm">—</strong></div>
+                <div class="stat"><span>LENGTH</span><strong id="length">—</strong></div>
+            </section>
+        </aside>
+        <section class="casters" id="casters" aria-label="Caster space"><div class="caster-heading"><span>CASTERS</span><span class="caster-line"></span></div></section>
+        <nav class="up-next" aria-label="Mappool running order">
+            <div class="up-next-label">UP NEXT <span aria-hidden="true">›</span></div>
+            <div class="pool-viewport" id="pool-viewport"><div class="pool-track" id="pool-track"></div><span class="pool-empty" id="pool-empty">—</span></div>
+            <span class="pool-position" id="pool-position">— / —</span>
+        </nav>
+    </main>
+    <script src="../config.js"></script>
+    <script src="../deps/reconnecting-websocket.min.js"></script>
+    <script src="../deps/countUp.js"></script>
+    <script src="map-data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

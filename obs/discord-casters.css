@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'CICO Lilita';
+    src: url('https://fonts.gstatic.com/s/lilitaone/v17/i7dPIFZ9Zz-WBtRtedDbUEY.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+:root {
+    --cico-cream: #fff9dc;
+    --cico-coral: #f56c70;
+    --cico-chocolate: #79553f;
+    --cico-caramel: #b88e66;
+    --cico-ease: cubic-bezier(.16, 1, .3, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden !important;
+    background: transparent !important;
+}
+
+body {
+    color: var(--cico-chocolate);
+    font-family: 'CICO Lilita', 'Trebuchet MS', sans-serif;
+    user-select: none;
+}
+
+#root,
+div[class*='Voice_voiceContainer'] {
+    width: 100%;
+    height: 100%;
+    background: transparent !important;
+}
+
+ul[class*='Voice_voiceStates'] {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 10px 8px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    list-style: none !important;
+}
+
+li[class*='Voice_voiceState'] {
+    display: flex !important;
+    flex: 0 1 116px !important;
+    min-width: 0 !important;
+    height: 100px !important;
+    margin: 0 !important;
+    padding: 3px 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+img[class*='Voice_avatar'] {
+    display: block !important;
+    position: static !important;
+    flex: 0 0 56px !important;
+    width: 56px !important;
+    height: 56px !important;
+    margin: 0 !important;
+    border: 3px solid var(--cico-cream) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 0 0 2px var(--cico-caramel), 0 4px 0 var(--cico-caramel) !important;
+    object-fit: cover !important;
+    transition: border-color 140ms var(--cico-ease), box-shadow 140ms var(--cico-ease) !important;
+}
+
+img[class*='Voice_avatarSpeaking'] {
+    border-color: var(--cico-coral) !important;
+    box-shadow: 0 0 0 2px var(--cico-coral), 0 4px 0 var(--cico-caramel) !important;
+}
+
+div[class*='Voice_user'] {
+    position: static !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+span[class*='Voice_name'] {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 1px 2px 3px !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    color: var(--cico-chocolate) !important;
+    font: 400 18px/1.2 'CICO Lilita', 'Trebuchet MS', sans-serif !important;
+    text-align: center !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    transition: color 140ms var(--cico-ease) !important;
+}
+
+li[class*='Voice_voiceState']:has(img[class*='Voice_avatarSpeaking']) span[class*='Voice_name'] {
+    color: var(--cico-coral) !important;
+}
+
+svg[class*='Voice_logo'],
+div[class*='Voice_logo'] {
+    display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
