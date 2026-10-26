@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CICO2026 Starting Soon</title>
+    <link rel="stylesheet" href="../shared/theme.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../config.js" defer></script>
+    <script src="../deps/twitch-chat.js" defer></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <main id="overlay">
+        <video id="background-video" autoplay loop muted playsinline></video>
+        <div id="countdown" role="timer">05:00</div>
+        <section class="chat-panel panel" aria-label="Twitch chat">
+            <div class="chat-heading">
+                <svg class="chat-heading-wave" viewBox="0 0 435 104" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H435V78C384 51 348 103 270 85S151 65 94 81S27 97 0 80Z"/></svg>
+                <h2><span class="chat-candy" aria-hidden="true"></span>TWITCH CHAT</h2>
+            </div>
+            <div class="chat-feed">
+                <div id="twitch-chat" role="log"></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

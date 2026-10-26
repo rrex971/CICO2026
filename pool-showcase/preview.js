@@ -11,9 +11,9 @@ window.CICOPreview = (() => {
         const example = examples[index % examples.length];
         return {
             beatmap: {
-                id: entry.id || 0, artist: entry.artist || example.artist, title: entry.title || example.title, version: example.difficulty, mapper: example.mapper,
-                time: { firstObject: 1250, lastObject: 198250 },
-                stats: { stars: { total: 5.18 + index * .07 }, cs: { converted: 4 }, ar: { converted: 9.2 }, od: { converted: 8.5 }, hp: { converted: 6 }, bpm: { common: 182 } }
+                id: entry.id || 0, artist: entry.artist || example.artist, title: entry.title || example.title, version: entry.difficulty || example.difficulty, mapper: entry.mapper || example.mapper,
+                time: { firstObject: 0, lastObject: entry.length ?? 197000 },
+                stats: { stars: { total: entry.sr ?? 5.18 + index * .07 }, cs: { converted: entry.cs ?? 4 }, ar: { converted: entry.ar ?? 9.2 }, od: { converted: entry.od ?? 8.5 }, hp: { converted: entry.hp ?? 6 }, bpm: { common: entry.bpm ?? 182 } }
             },
             play: { playerName: example.replayer, mods: { number: 0, name: '' } }
         };

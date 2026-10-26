@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CICO2026 · Seed Reveal</title>
+    <link rel="stylesheet" href="../shared/theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="overlay">
+        <img class="background-art" src="../assets/background.png" alt="" draggable="false">
+        <header class="header">
+            <div class="brand" role="img" aria-label="CICO 2026">
+                <img class="mascot" src="../assets/chibi-mascot.png" alt="" draggable="false">
+                <div class="wordmark"><span>CICO</span><small>2026</small></div>
+            </div>
+            <div class="scene-heading"><h1>Seed Reveal</h1></div>
+            <div class="round-heading"><div id="round">Qualifiers</div></div>
+        </header>
+        <section id="eliminated" class="eliminated" hidden>
+            <div class="overview-heading panel"><h2><svg class="eliminated-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M6 12h12" stroke="var(--cream)" stroke-width="3" stroke-linecap="round"/></svg>ELIMINATED</h2><span id="seed-range"></span></div>
+            <div id="player-grid" class="player-grid"></div>
+        </section>
+        <section id="detail" class="detail" hidden>
+            <article class="profile-card panel">
+                <div class="profile-avatar avatar"><img id="avatar" alt="" draggable="false"></div>
+                <div id="seed-number" class="seed-number">—</div>
+                <div id="username" class="username">—</div>
+                <div class="identity-row"><div class="country-line"><img id="flag" class="country-flag" alt=""><span id="country">—</span></div><div class="rank-label"><span>RANK</span><strong id="rank">—</strong></div></div>
+                <div class="summary-row">
+                    <div class="summary score-summary"><span>AVERAGE SCORE</span><strong id="average-score">—</strong></div>
+                    <div class="summary max-summary"><span>%MAX SUM</span><strong id="percent-max">—</strong></div>
+                </div>
+            </article>
+            <div id="mod-grid" class="mod-grid"></div>
+        </section>
+        <div id="empty" class="empty-state" hidden>—</div>
+        <section id="reveal" class="reveal" aria-hidden="true" hidden>
+            <div class="wave-layer wave-cream">
+                <svg class="wave-art" viewBox="0 0 1920 900" preserveAspectRatio="none">
+                    <defs>
+                        <clipPath id="cream-content-clip" clipPathUnits="userSpaceOnUse"><path class="wave-clip" d="M-24 120 C200 230 295 -28 520 72 S850 212 1080 100 S1440 -16 1600 78 S1850 186 1944 76 V924 H-24Z"/></clipPath>
+                        <filter id="wave-inner-glow" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceAlpha" stdDeviation="22" result="soft-alpha"/><feComposite in="SourceAlpha" in2="soft-alpha" operator="out" result="inner-edge"/><feFlood flood-color="#fff9dc" flood-opacity=".55"/><feComposite in2="inner-edge" operator="in" result="glow"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="glow"/></feMerge></filter>
+                    </defs>
+                    <path class="wave-surface wave-back" d="M-24 120 C200 230 295 -28 520 72 S850 212 1080 100 S1440 -16 1600 78 S1850 186 1944 76 V924 H-24Z"/>
+                    <path class="wave-surface wave-middle" transform="translate(0 24)" d="M-24 120 C200 230 295 -28 520 72 S850 212 1080 100 S1440 -16 1600 78 S1850 186 1944 76 V924 H-24Z"/>
+                    <path class="wave-surface" transform="translate(0 58)" filter="url(#wave-inner-glow)" d="M-24 120 C200 230 295 -28 520 72 S850 212 1080 100 S1440 -16 1600 78 S1850 186 1944 76 V924 H-24Z"/>
+                </svg>
+                <div class="wave-content"><div id="reveal-player" class="reveal-player"><div class="reveal-avatar avatar"><img id="reveal-avatar" alt="" draggable="false"></div><img id="reveal-flag" class="country-flag" alt=""><div id="reveal-name">—</div></div></div>
+            </div>
+            <div class="wave-layer wave-coral">
+                <svg class="wave-art" viewBox="0 0 1920 900" preserveAspectRatio="none">
+                    <defs><clipPath id="coral-content-clip" clipPathUnits="userSpaceOnUse"><path class="wave-clip" transform="translate(0 660)" d="M-24 120 C200 230 295 -28 520 72 S850 212 1080 100 S1440 -16 1600 78 S1850 186 1944 76 V-684 H-24Z"/></clipPath></defs>
+                    <path class="wave-surface wave-back" transform="translate(0 660)" d="M-24 120 C200 230 295 -28 520 72 S850 212 1080 100 S1440 -16 1600 78 S1850 186 1944 76 V-684 H-24Z"/>
+                    <path class="wave-surface wave-middle" transform="translate(0 636)" d="M-24 120 C200 230 295 -28 520 72 S850 212 1080 100 S1440 -16 1600 78 S1850 186 1944 76 V-684 H-24Z"/>
+                    <path class="wave-surface" transform="translate(0 602)" d="M-24 120 C200 230 295 -28 520 72 S850 212 1080 100 S1440 -16 1600 78 S1850 186 1944 76 V-684 H-24Z"/>
+                </svg>
+                <div class="wave-content">
+                    <div class="reveal-brand"><div class="brand" role="img" aria-label="CICO 2026"><img class="mascot" src="../assets/chibi-mascot.png" alt="" draggable="false"><div class="wordmark"><span>CICO</span><small>2026</small></div></div></div>
+                    <div id="reveal-status" class="reveal-status">QUALIFIED!</div>
+                    <div class="reveal-seed-copy"><strong id="reveal-seed">—</strong></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../config.js"></script>
+    <script src="../deps/countUp.js"></script>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

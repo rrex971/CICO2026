@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CICO2026 · Pool Showcase</title>
+    <link rel="stylesheet" href="../shared/theme.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,14 +27,15 @@
             <div class="scene-heading"><h1>Pool Showcase</h1></div>
             <div class="round-heading"><div id="round">Qualifiers</div></div>
         </header>
-        <aside class="map-panel" aria-label="Current map">
+        <aside class="map-panel panel" aria-label="Current map">
             <div class="cover" id="cover">
                 <div class="cover-empty"><span class="placeholder-candy" aria-hidden="true"></span></div>
                 <img class="cover-layer" alt="" draggable="false">
                 <img class="cover-layer" alt="" draggable="false">
                 <div class="pick-label" id="pick">—</div>
                 <div class="map-badge" id="map-badge" hidden>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16.6 2.6 4.8 4.8-2.3 2.3-4.8-4.8Zm-3.5 3.5 4.8 4.8-10.1 10.1L2 22l1-5.8Z" fill="currentColor"/></svg>
+                    <svg class="badge-pencil" viewBox="0 0 24 24" aria-hidden="true"><path d="m16.6 2.6 4.8 4.8-2.3 2.3-4.8-4.8Zm-3.5 3.5 4.8 4.8-10.1 10.1L2 22l1-5.8Z" fill="currentColor"/></svg>
+                    <svg class="badge-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <span></span>
                 </div>
             </div>
@@ -56,8 +58,8 @@
                 <div class="stat"><span>LENGTH</span><strong id="length">—</strong></div>
             </section>
         </aside>
-        <section class="casters" id="casters" aria-label="Caster space"><div class="caster-heading"><span>CASTERS</span><span class="caster-line"></span></div></section>
-        <nav class="up-next" aria-label="Mappool running order">
+        <section class="casters panel" id="casters" aria-label="Caster space"><div class="caster-heading"><span>CASTERS</span><span class="caster-line"></span></div></section>
+        <nav class="up-next panel" aria-label="Mappool running order">
             <div class="up-next-label">UP NEXT <span aria-hidden="true">›</span></div>
             <div class="pool-viewport" id="pool-viewport"><div class="pool-track" id="pool-track"></div><span class="pool-empty" id="pool-empty">—</span></div>
             <span class="pool-position" id="pool-position">— / —</span>

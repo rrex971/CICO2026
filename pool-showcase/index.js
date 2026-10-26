@@ -85,7 +85,7 @@ function updateTitleMotion() {
 }
 
 function colorForSlot(slot) {
-    return config.modColors[String(slot).slice(0, 2).toUpperCase()] || '#f4e9c4';
+    return config.modColors[String(slot).slice(0, 2).toUpperCase()] || 'var(--caramel)';
 }
 
 function depthForSlot(slot) {
@@ -240,7 +240,7 @@ function setMapCopy(value) {
 }
 
 async function setMapBadge(value) {
-    const nextType = ['edit', 'custom'].includes(value) ? value : '';
+    const nextType = Object.hasOwn(CICOMapData.badgeLabels, value) ? value : '';
     if (nextType === badgeType) return;
     badgeType = nextType;
     const request = ++badgeRequest;
@@ -257,7 +257,7 @@ async function setMapBadge(value) {
     badgeAnimation?.cancel();
     element.hidden = !nextType;
     element.dataset.type = nextType;
-    element.querySelector('span').textContent = nextType === 'edit' ? 'CICO EDIT' : nextType === 'custom' ? 'CUSTOM' : '';
+    element.querySelector('span').textContent = CICOMapData.badgeLabels[nextType] || '';
     if (!nextType || reducedMotion.matches) return;
     badgeAnimation = element.animate([
         { transform: 'translateY(3px)', filter: 'blur(3px)', opacity: 0 },
@@ -273,6 +273,7 @@ function renderMap(map) {
         activeSlot = value.slot;
         ui.pick.textContent = value.slot;
         ui.pick.style.setProperty('--mod-color', colorForSlot(value.slot));
+        ui.pick.style.setProperty('--mod-depth', depthForSlot(value.slot));
         animateValue(ui.pick);
         syncPool();
     }
@@ -322,7 +323,8 @@ async function start() {
         try {
             const response = await fetch(config.poolSource, { cache: 'no-store' });
             if (!response.ok) throw new Error('Mappool unavailable');
-            const pool = await response.json();
+            const pools = await response.json();
+            const pool = CICOMapData.findPool(pools, params.get('round') || config.defaultRound);
             maps = Array.isArray(pool.maps) ? pool.maps : [];
             if (typeof pool.round === 'string' && pool.round.trim()) config.round = pool.round;
         } catch { maps = []; }

@@ -1,0 +1,124 @@
+#background-video {
+    position: absolute;
+    inset: 0;
+    width: 1920px;
+    height: 1080px;
+    object-fit: cover;
+}
+
+#countdown {
+    position: absolute;
+    left: 64px;
+    top: 48px;
+    width: 760px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--caramel);
+    font-size: 240px;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.chat-panel {
+    position: absolute;
+    top: 360px;
+    left: 64px;
+    width: 640px;
+    height: 660px;
+    overflow: hidden;
+}
+
+.chat-heading {
+    position: relative;
+    height: 104px;
+    border-radius: var(--inset-radius) var(--inset-radius) 0 0;
+    overflow: hidden;
+}
+
+.chat-heading-wave {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    fill: var(--caramel);
+}
+
+.chat-heading h2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0;
+    padding: 18px 20px;
+    color: var(--cream);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.chat-candy {
+    width: 40px;
+    height: 26px;
+    flex: 0 0 auto;
+    background: currentColor;
+    mask: url('../assets/candy.svg') center / contain no-repeat;
+}
+
+.chat-feed {
+    position: absolute;
+    inset: 116px 18px 22px;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    mask-image: linear-gradient(transparent, #000 20px);
+}
+
+#twitch-chat {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.chat-message {
+    flex: 0 0 auto;
+    min-width: 0;
+    color: var(--chocolate);
+    font-size: 26px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.chat-message strong {
+    margin-right: 10px;
+    color: var(--coral);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.chat-emote {
+    width: auto;
+    height: 38px;
+    max-width: 110px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.chat-message.entering {
+    animation: chat-enter 180ms var(--ease-out) both;
+}
+
+@keyframes chat-enter {
+    from { opacity: 0; filter: blur(2px); transform: translateY(12px); }
+    to { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .chat-message.entering { animation: none; }
+}

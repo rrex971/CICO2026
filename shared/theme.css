@@ -1,0 +1,206 @@
+@font-face {
+    font-family: Lilita;
+    src: url('../fonts/LilitaOne-Regular.ttf') format('truetype');
+    font-display: block;
+}
+
+@font-face {
+    font-family: Felixtowe;
+    src: url('../fonts/felixtowe-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: DynaPuff;
+    src: url('../fonts/DynaPuff-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: block;
+}
+
+:root {
+    --coral: #f56c70;
+    --cream: #fff9dc;
+    --yellow: #f6df99;
+    --chocolate: #79553f;
+    --caramel: #b88e66;
+    --coral-depth: #d6535b;
+    --yellow-depth: #c8ac61;
+    --surface-muted: #f5eac3;
+    --accent: var(--coral);
+    --red: var(--coral);
+    --panel-border: 10px;
+    --panel-radius: 24px;
+    --panel-depth: 7px;
+    --panel-outline: 2px;
+    --inset-radius: 14px;
+    --chip-radius: 10px;
+    --ease-out: cubic-bezier(.16, 1, .3, 1);
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: transparent;
+}
+
+body {
+    font-family: Lilita, sans-serif;
+    color: var(--chocolate);
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+#overlay {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    transform: scale(var(--scale, 1));
+    transform-origin: top left;
+}
+
+#background {
+    position: absolute;
+    inset: 0;
+    width: 1920px;
+    height: 1080px;
+}
+
+.panel {
+    background: var(--cream) url('../assets/panel-waves.svg') center bottom / 100% 100% no-repeat;
+    border: var(--panel-border) solid var(--cream);
+    border-radius: var(--panel-radius);
+    box-shadow: 0 0 0 var(--panel-outline) var(--caramel), 0 var(--panel-depth) 0 var(--caramel);
+}
+
+.header {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 152px;
+}
+
+.brand {
+    position: absolute;
+    left: 32px;
+    top: 0;
+    width: 320px;
+    height: 162px;
+}
+
+.mascot {
+    position: absolute;
+    left: -24px;
+    top: 0;
+    width: 190px;
+    height: 190px;
+    filter: drop-shadow(2px 2px 0 var(--cream)) drop-shadow(-2px -2px 0 var(--cream));
+}
+
+.wordmark {
+    position: absolute;
+    left: 123px;
+    top: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--cream);
+    paint-order: stroke fill;
+    -webkit-text-stroke: 7px var(--chocolate);
+    filter: drop-shadow(3px 5px 0 var(--caramel));
+}
+
+.wordmark > span {
+    font-family: Lilita, sans-serif;
+    font-size: 86px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.wordmark > small {
+    position: relative;
+    z-index: 1;
+    align-self: flex-end;
+    margin-top: -27px;
+    margin-right: 4px;
+    font-family: DynaPuff, Lilita, sans-serif;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 1;
+    letter-spacing: 0;
+    -webkit-text-stroke-width: 4px;
+}
+
+.scene-heading {
+    position: absolute;
+    left: 420px;
+    top: 0;
+    height: 152px;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    color: var(--cream);
+    font-family: Lilita, sans-serif;
+    font-size: 53px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    line-height: 1.1;
+    -webkit-text-stroke: 6px var(--chocolate);
+    paint-order: stroke fill;
+    filter: drop-shadow(0 4px 0 var(--caramel));
+}
+
+h1,
+#round {
+    text-transform: uppercase;
+}
+
+.round-heading {
+    position: absolute;
+    right: 34px;
+    top: 0;
+    width: 560px;
+    height: 152px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+#round {
+    max-width: 100%;
+    padding: 8px 22px 10px;
+    border: 2px solid var(--caramel);
+    border-radius: var(--panel-radius);
+    background: var(--cream);
+    box-shadow: 0 4px 0 var(--caramel);
+    overflow: hidden;
+    color: var(--chocolate);
+    font-family: Felixtowe, Lilita, sans-serif;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 1.15;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#round.long-round {
+    font-size: 36px;
+}

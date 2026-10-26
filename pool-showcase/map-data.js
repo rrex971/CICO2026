@@ -1,4 +1,5 @@
 window.CICOMapData = (() => {
+    const badgeLabels = { edit: 'CICO EDIT', custom: 'CUSTOM', original: 'CICO ORIGINAL' };
     function number(...values) {
         for (const value of values) {
             if (value === null || value === undefined || value === '' || typeof value === 'boolean' || typeof value === 'object') continue;
@@ -29,6 +30,13 @@ window.CICOMapData = (() => {
         })) || {};
     }
 
+    function findPool(pools, round) {
+        if (Array.isArray(pools.maps)) return pools;
+        const alias = String(round || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        const key = { ro32: 'round-of-32', roundof32: 'round-of-32', qualifiers: 'qualifiers' }[alias];
+        return pools[key] || { round: '—', maps: [] };
+    }
+
     function clockRate(mods) {
         const explicit = number(mods?.rate, mods?.clockRate);
         if (explicit > 0) return explicit;
@@ -53,6 +61,7 @@ window.CICOMapData = (() => {
         const beatmap = source.beatmap || {};
         if (!beatmap.title && !(number(beatmap.id) > 0)) return null;
         const entry = resolve(maps, beatmap);
+        const badgeType = Object.hasOwn(badgeLabels, entry.badge) ? entry.badge : '';
         const stats = beatmap.stats || {};
         const mods = source.play?.mods || {};
         const modded = Boolean(number(mods.number) || text(mods.name, '').replace(/NM|NONE/gi, '') || clockRate(mods) !== 1);
@@ -69,8 +78,8 @@ window.CICOMapData = (() => {
         return {
             id: number(beatmap.id),
             slot: text(entry.slot, 'MAP'),
-            badge: entry.badge === 'edit' ? 'CICO EDIT' : entry.badge === 'custom' ? 'CUSTOM' : '',
-            badgeType: ['edit', 'custom'].includes(entry.badge) ? entry.badge : '',
+            badge: badgeLabels[badgeType] || '',
+            badgeType,
             artist: text(entry.artist, text(beatmap.artist)),
             title: text(entry.title, text(beatmap.title)),
             difficulty: text(entry.difficulty, text(beatmap.version)),
@@ -84,5 +93,5 @@ window.CICOMapData = (() => {
         };
     }
 
-    return { number, resolve, fromPayload, duration };
+    return { number, resolve, findPool, fromPayload, duration, badgeLabels };
 })();

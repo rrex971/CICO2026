@@ -1,52 +1,288 @@
 {
-    "round": "Qualifiers",
-    "maps": [
-        {
-            "id": 5809669,
-            "slot": "NM1"
-        },
-        {
-            "slot": "NM2",
-            "title": "Final Resonance",
-            "keywords": ["Final Resonance"],
-            "badge": "custom"
-        },
-        {
-            "id": 5018067,
-            "slot": "NM3"
-        },
-        {
-            "id": 5394778,
-            "slot": "HD1"
-        },
-        {
-            "slot": "HD2",
-            "title": "TouchDown",
-            "keywords": ["TouchDown"],
-            "badge": "edit"
-        },
-        {
-            "slot": "HR1",
-            "title": "Countdown",
-            "keywords": ["Countdown"],
-            "badge": "custom"
-        },
-        {
-            "slot": "HR2",
-            "title": "Right Now",
-            "keywords": ["Right Now"],
-            "badge": "custom"
-        },
-        {
-            "id": 4882744,
-            "slot": "DT1"
-        },
-        {
-            "slot": "DT2",
-            "artist": "YUC'e",
-            "title": "Cappuchino",
-            "keywords": ["Cappuchino"],
-            "badge": "custom"
-        }
-    ]
+    "qualifiers": {
+        "round": "Qualifiers",
+        "stageId": 1077,
+        "maps": [
+            {
+                "id": 5809669,
+                "slot": "NM1",
+                "beatmapsetId": 2599185,
+                "artist": "LV.4 feat. Yuu Ikeba",
+                "title": "Sentimental Surge",
+                "difficulty": "Sensation",
+                "mapper": "Mojotax",
+                "background": "https://assets.ppy.sh/beatmaps/2599185/covers/cover.jpg",
+                "sr": 7.32,
+                "cs": 4.2,
+                "ar": 9.8,
+                "od": 9.8,
+                "hp": 5,
+                "bpm": 190,
+                "length": 253000,
+                "mods": 0
+            },
+            {
+                "slot": "NM2",
+                "title": "Final Resonance",
+                "keywords": [
+                    "Final Resonance"
+                ],
+                "badge": "custom",
+                "id": 5948755,
+                "beatmapsetId": 2639271,
+                "artist": "ARForest",
+                "difficulty": "Overdose",
+                "mapper": "Sololiquy",
+                "background": "https://assets.ppy.sh/beatmaps/2639271/covers/cover.jpg",
+                "sr": 6.23,
+                "cs": 4.2,
+                "ar": 9.6,
+                "od": 9.6,
+                "hp": 4.2,
+                "bpm": 195,
+                "length": 135000,
+                "mods": 0
+            },
+            {
+                "id": 5018067,
+                "slot": "NM3",
+                "beatmapsetId": 2337190,
+                "artist": "Shounen Radio",
+                "title": "neu",
+                "difficulty": "smile and cry; you and me!",
+                "mapper": "AnApple7",
+                "background": "https://assets.ppy.sh/beatmaps/2337190/covers/cover.jpg",
+                "sr": 2.97,
+                "cs": 2.5,
+                "ar": 8.3,
+                "od": 8.3,
+                "hp": 2.5,
+                "bpm": 199,
+                "length": 120000,
+                "mods": 0
+            },
+            {
+                "id": 5394778,
+                "slot": "HD1",
+                "beatmapsetId": 2464646,
+                "artist": "Mitsukiyo",
+                "title": "Mikansei Romantic (feat. kotono)",
+                "difficulty": "Dramatic Love",
+                "mapper": "sawarabi",
+                "background": "https://assets.ppy.sh/beatmaps/2464646/covers/cover.jpg",
+                "sr": 6.33,
+                "cs": 4.2,
+                "ar": 9.4,
+                "od": 9.4,
+                "hp": 5,
+                "bpm": 122,
+                "length": 259000,
+                "mods": 8
+            },
+            {
+                "slot": "HD2",
+                "title": "TouchDown",
+                "keywords": [
+                    "TouchDown"
+                ],
+                "badge": "edit",
+                "id": 5948698,
+                "beatmapsetId": 2639255,
+                "artist": "Tanchiky",
+                "difficulty": "KickOff (CICO Edit)",
+                "mapper": "Ekseff",
+                "background": "https://assets.ppy.sh/beatmaps/2639255/covers/cover.jpg",
+                "sr": 4.62,
+                "cs": 4,
+                "ar": 8.3,
+                "od": 8.3,
+                "hp": 6,
+                "bpm": 150,
+                "length": 153000,
+                "mods": 8
+            },
+            {
+                "slot": "HR1",
+                "title": "Countdown",
+                "keywords": [
+                    "Countdown"
+                ],
+                "badge": "custom",
+                "id": 5948656,
+                "beatmapsetId": 2639244,
+                "artist": "Imy",
+                "difficulty": "Eternal Time",
+                "mapper": "EpanPan",
+                "background": "https://assets.ppy.sh/beatmaps/2639244/covers/cover.jpg",
+                "sr": 6.98,
+                "cs": 5.46,
+                "ar": 10,
+                "od": 10,
+                "hp": 6.5,
+                "bpm": 230,
+                "length": 218000,
+                "mods": 16
+            },
+            {
+                "slot": "HR2",
+                "title": "Right Now",
+                "keywords": [
+                    "Right Now"
+                ],
+                "badge": "custom",
+                "id": 5951344,
+                "beatmapsetId": 2639588,
+                "artist": "NewJeans",
+                "difficulty": "Overdose (CICO Ver.)",
+                "mapper": "Spectator",
+                "background": "https://assets.ppy.sh/beatmaps/2639588/covers/cover.jpg",
+                "sr": 5.6,
+                "cs": 6.24,
+                "ar": 10,
+                "od": 10,
+                "hp": 6.5,
+                "bpm": 172,
+                "length": 145000,
+                "mods": 16
+            },
+            {
+                "id": 4882744,
+                "slot": "DT1",
+                "beatmapsetId": 2271671,
+                "artist": "yanaginagi",
+                "title": "Outsider",
+                "difficulty": "Lumi's Rain",
+                "mapper": "Spectator",
+                "background": "https://assets.ppy.sh/beatmaps/2271671/covers/cover.jpg",
+                "sr": 6.34,
+                "cs": 3.8,
+                "ar": 10.33,
+                "od": 10.42,
+                "hp": 4.5,
+                "bpm": 285,
+                "length": 196000,
+                "mods": 64
+            },
+            {
+                "slot": "DT2",
+                "artist": "YUC'e",
+                "title": "Cappuchino",
+                "keywords": [
+                    "Cappuchino"
+                ],
+                "badge": "custom",
+                "id": 5948691,
+                "beatmapsetId": 2639250,
+                "difficulty": "Cozy Rain",
+                "mapper": "Dika312",
+                "background": "https://assets.ppy.sh/beatmaps/2639250/covers/cover.jpg",
+                "sr": 6.06,
+                "cs": 4.2,
+                "ar": 9.8,
+                "od": 9.88,
+                "hp": 5,
+                "bpm": 217.5,
+                "length": 132000,
+                "mods": 64
+            }
+        ]
+    },
+    "round-of-32": {
+        "round": "Round of 32",
+        "stageId": 1084,
+        "maps": [
+            {
+                "slot": "NM1",
+                "title": "RARARA",
+                "keywords": [
+                    "RARARA"
+                ],
+                "badge": "original"
+            },
+            {
+                "slot": "NM2",
+                "title": "Excelsia",
+                "keywords": [
+                    "Excelsia"
+                ],
+                "badge": "custom"
+            },
+            {
+                "id": 77930,
+                "slot": "NM3"
+            },
+            {
+                "slot": "NM4",
+                "title": "landscape",
+                "keywords": [
+                    "landscape"
+                ],
+                "badge": "custom"
+            },
+            {
+                "slot": "HD1",
+                "title": "To the endless sky",
+                "keywords": [
+                    "To the endless sky"
+                ],
+                "badge": "custom"
+            },
+            {
+                "slot": "HD2",
+                "title": "Cord Cutter",
+                "keywords": [
+                    "Cord Cutter"
+                ],
+                "badge": "custom"
+            },
+            {
+                "id": 5850788,
+                "slot": "HR1"
+            },
+            {
+                "id": 4276891,
+                "slot": "HR2"
+            },
+            {
+                "slot": "DT1",
+                "title": "Colorful -season 03-",
+                "keywords": [
+                    "Colorful -season 03-"
+                ],
+                "badge": "custom"
+            },
+            {
+                "id": 4541816,
+                "slot": "DT2"
+            },
+            {
+                "slot": "DT3",
+                "title": "Guinevere",
+                "keywords": [
+                    "Guinevere"
+                ],
+                "badge": "custom"
+            },
+            {
+                "id": 4325523,
+                "slot": "FM1"
+            },
+            {
+                "slot": "FM2",
+                "title": "Luminous Memory",
+                "keywords": [
+                    "Luminous Memory"
+                ],
+                "badge": "edit"
+            },
+            {
+                "slot": "TB",
+                "title": "Black Berserker",
+                "keywords": [
+                    "Black Berserker"
+                ],
+                "badge": "custom"
+            }
+        ]
+    }
 }
