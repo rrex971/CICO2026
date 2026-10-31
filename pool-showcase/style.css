@@ -69,7 +69,6 @@
     background: var(--mod-color, var(--caramel));
     font-size: 24px;
     box-shadow: 0 3px 0 var(--mod-depth, var(--caramel));
-    transition: background-color .18s var(--ease-out), box-shadow .18s var(--ease-out);
 }
 
 .map-badge {
@@ -373,6 +372,16 @@
     font-size: 23px;
     white-space: nowrap;
 }
+
+.artist { --placeholder-width: 6em; }
+#title { --placeholder-width: 8em; }
+.difficulty { --placeholder-width: 8em; }
+.credits strong { --placeholder-width: 5em; }
+.stat strong { --placeholder-width: 1.8em; }
+#length { --placeholder-width: 2.6em; }
+.star-stat strong { --placeholder-width: 2.4em; --placeholder-color: #fff9dc66; }
+.pick-label { --placeholder-width: 1.6em; --placeholder-color: #fff9dc66; }
+.pool-position { --placeholder-width: 3em; }
 
 #capture-preview {
     position: absolute;

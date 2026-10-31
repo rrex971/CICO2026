@@ -5,6 +5,7 @@
 .match-header .round-heading { left: 1676px; right: auto; top: 0; width: 218px; height: 142px; }
 .match-header #round { font-size: 28px; padding: 8px 15px 10px; }
 .match-header #round.long-round { font-size: 22px; }
+.brand[role="button"] { cursor: pointer; }
 .candy-mark { width: 70px; height: 45px; background: var(--caramel); mask: url('../assets/candy.svg') center / contain no-repeat; }
 .player-panel { position: absolute; top: 16px; width: 700px; height: 126px; display: flex; align-items: center; gap: 16px; padding: 8px 12px; }
 .player-panel.side-0 { left: 22px; }
@@ -77,6 +78,15 @@
 .chat-line { font-size: 22px; line-height: 1.2; overflow-wrap: anywhere; }
 .chat-line strong { font-weight: 400; color: var(--coral); margin-right: 8px; }
 .chat-emote { height: 28px; width: auto; max-width: 90px; object-fit: contain; vertical-align: middle; }
+.player-name { --placeholder-width: 6em; }
+.ban-pick { --placeholder-width: 1.6em; --placeholder-color: #fff9dc66; }
+.map-artist { --placeholder-width: 6em; }
+.map-title { --placeholder-width: 8em; }
+.map-difficulty { --placeholder-width: 8em; }
+.map-mapper strong { --placeholder-width: 4.5em; }
+.map-stat strong { --placeholder-width: 1.8em; }
+.map-stat[data-stat="length"] strong { --placeholder-width: 2.6em; }
+.map-stat.star strong { --placeholder-width: 2.4em; --placeholder-color: #fff9dc66; }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
 }

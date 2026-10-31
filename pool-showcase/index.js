@@ -58,7 +58,7 @@ function setupGeometry() {
     position(byId('capture-preview'), rect);
     position(byId('casters'), config.caster);
     byId('capture-preview').hidden = !preview;
-    ui.round.textContent = config.round;
+    CICOPlaceholders.set(ui.round, config.round);
     ui.round.classList.toggle('long-round', config.round.length > 17);
 }
 
@@ -115,7 +115,7 @@ function syncPool() {
         if (position === index) chip.setAttribute('aria-current', 'true');
         else chip.removeAttribute('aria-current');
     });
-    byId('pool-position').textContent = `${index < 0 ? '—' : String(index + 1).padStart(2, '0')} / ${maps.length ? String(maps.length).padStart(2, '0') : '—'}`;
+    CICOPlaceholders.set(byId('pool-position'), index < 0 ? null : `${String(index + 1).padStart(2, '0')} / ${String(maps.length).padStart(2, '0')}`);
     const track = byId('pool-track');
     const viewport = byId('pool-viewport');
     const selected = chips[index];
@@ -149,12 +149,10 @@ function updateCounter(name, value) {
     if (next === null) {
         if (counters[name]) cancelAnimationFrame(counters[name].rAF);
         delete counters[name];
-        if (node.textContent !== '—') {
-            node.textContent = '—';
-            animateValue(node);
-        }
+        if (CICOPlaceholders.set(node, null)) animateValue(node);
         return;
     }
+    CICOPlaceholders.toggle(node, false);
     if (reducedMotion.matches) {
         if (counters[name]) cancelAnimationFrame(counters[name].rAF);
         delete counters[name];
@@ -216,7 +214,7 @@ function setMapCopy(value) {
     clearTimeout(copyTimer);
     copyAnimation?.cancel();
     const apply = () => {
-        for (const key of keys) ui[key].textContent = key === 'difficulty' ? CICOMapData.difficultyLabel(value[key]) : value[key] || '—';
+        for (const key of keys) CICOPlaceholders.set(ui[key], key === 'difficulty' ? CICOMapData.difficultyLabel(value[key]) : value[key]);
         requestAnimationFrame(updateTitleMotion);
     };
     if (first || reducedMotion.matches) {
@@ -271,20 +269,20 @@ function renderMap(map) {
     };
     if (activeSlot !== value.slot) {
         activeSlot = value.slot;
-        ui.pick.textContent = value.slot;
-        ui.pick.style.setProperty('--mod-color', colorForSlot(value.slot));
-        ui.pick.style.setProperty('--mod-depth', depthForSlot(value.slot));
-        animateValue(ui.pick);
+        const poolPick = Boolean(map && value.slot !== 'MAP');
+        ui.pick.classList.toggle('has-pick', poolPick);
+        if (poolPick) {
+            CICOPlaceholders.set(ui.pick, value.slot);
+            ui.pick.style.setProperty('--mod-color', colorForSlot(value.slot));
+            ui.pick.style.setProperty('--mod-depth', depthForSlot(value.slot));
+        }
         syncPool();
     }
     setMapCopy(value);
     setMapBadge(value.badgeType);
     setCover(value.cover);
     for (const key of ['sr', 'cs', 'ar', 'od', 'hp', 'bpm']) updateCounter(key, value[key]);
-    if (ui.length.textContent !== (value.length || '—')) {
-        ui.length.textContent = value.length || '—';
-        animateValue(ui.length);
-    }
+    if (CICOPlaceholders.set(ui.length, value.length)) animateValue(ui.length);
     hasRendered = true;
 }
 

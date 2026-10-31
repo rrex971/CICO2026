@@ -21,12 +21,17 @@ window.CICOBroadcast = (() => {
         let refreshTimer;
         let stopped = false;
         const configuredMatch = params.get('match') || '';
-        const publish = () => { if (context.store) onChange(context); };
+        const publish = () => {
+            if (!context.store) return;
+            context.players = context.store.state.players;
+            context.points = context.store.state.livePoints;
+            onChange(context);
+        };
         const selectedMatch = () => matches[round]?.find(match => match.id === configuredMatch || match.label === configuredMatch);
         function updatePlayers() {
             const match = selectedMatch();
-            context.players = context.live.players.map((player, index) => player || match?.players[index] || null);
-            context.store?.usePlayers(context.players);
+            const players = context.live.players.map((player, index) => player || match?.players[index] || null);
+            context.store?.observe(players, context.live.points);
         }
         const results = await Promise.allSettled([json(CICO2026.match.profileSource), json(CICO2026.match.matchSource)]);
         if (results[0].status === 'fulfilled') context.profiles = results[0].value.players || [];
@@ -37,7 +42,6 @@ window.CICOBroadcast = (() => {
         function apply(packet) {
             context.packet = packet;
             context.live = CICOMatchData.normalize(packet);
-            context.points = context.live.points;
             context.map = CICOMapData.fromPayload(packet, context.pool.maps);
             updatePlayers();
             publish();
@@ -75,7 +79,7 @@ window.CICOBroadcast = (() => {
                 tick++;
             }
             demo();
-            if (!context.store.state.actions.length) {
+            if (!context.store.state.actions.length && !context.store.state.resetCount) {
                 for (const command of [{ type: 'ban', side: 0, slot: 'NM2' }, { type: 'ban', side: 1, slot: 'HD2' }, { type: 'pick', side: 0, slot: 'NM1' }, { type: 'pick', side: 1, slot: 'DT1' }]) context.store.dispatch(command);
             }
             if (params.get('motion') !== '0') previewTimer = setInterval(demo, 200);

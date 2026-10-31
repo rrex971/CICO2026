@@ -69,6 +69,7 @@ function counter(node, value, decimals, suffix = '') {
         view.setText(node, '—');
         return;
     }
+    CICOPlaceholders.toggle(node, false);
     if (reduced.matches) {
         if (node.counter) cancelAnimationFrame(node.counter.rAF);
         node.counter = null;
@@ -119,8 +120,7 @@ async function start() {
     ui.append(casters);
     try {
         context = await CICOBroadcast.open(render);
-        ui.prepend(view.header('Gameplay', context.pool.round));
-        document.querySelector('#round').addEventListener('contextmenu', event => { event.preventDefault(); if (event.ctrlKey) dispatch({ type: 'reset' }); });
+        ui.prepend(view.header('Gameplay', context.pool.round, () => dispatch({ type: 'reset' })));
         if (context.preview) {
             view.appendChat(twitchChat, 'catch_fan', 'This match is so close!', {}, true);
             if (context.params.get('motion') !== '0') previewChat = setInterval(() => view.appendChat(twitchChat, 'viewer', 'Kappa', { emotes: '25:0-4' }, true), 5500);

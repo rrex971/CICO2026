@@ -106,6 +106,36 @@ img {
     box-shadow: 0 0 0 var(--panel-outline) var(--caramel), 0 var(--panel-depth) 0 var(--caramel);
 }
 
+.is-placeholder::after {
+    content: '';
+    display: inline-block;
+    width: var(--placeholder-width, 4em);
+    max-width: 100%;
+    height: var(--placeholder-height, .56em);
+    border-radius: 6px;
+    background: var(--placeholder-color, #946b4d24);
+    vertical-align: .04em;
+    pointer-events: none;
+}
+
+.pool-pick {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px) scale(.94);
+    transform-origin: top left;
+    filter: blur(3px);
+    pointer-events: none;
+    transition: opacity .22s var(--ease-out), transform .3s var(--ease-out), filter .26s var(--ease-out), visibility 0s .3s, background-color .18s var(--ease-out), box-shadow .18s var(--ease-out);
+}
+
+.pool-pick.has-pick {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+    transition-delay: 0s;
+}
+
 .header {
     position: absolute;
     inset: 0 0 auto;

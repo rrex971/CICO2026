@@ -128,8 +128,8 @@ function render(data) {
             path.setAttribute('stroke-linecap', 'round');
         } else if (badgeLabel) view.badgeIcon(path, badgeType);
         status.querySelector('svg').toggleAttribute('hidden', !action && !badgeLabel);
-        const playerName = action ? data.players[action.side]?.name || '—' : '';
-        const actionLabel = action ? `${action.type === 'ban' ? 'BANNED' : 'PICKED'}${action.side === null ? '' : ` BY ${playerName}`}` : '';
+        const playerName = action ? data.players[action.side]?.name || '' : '';
+        const actionLabel = action ? `${action.type === 'ban' ? 'BANNED' : 'PICKED'}${playerName ? ` BY ${playerName}` : ''}` : '';
         view.setText(status.querySelector('span'), actionLabel || badgeLabel || '—');
         if (changed && !reducedMotion.matches) {
             card.stateAnimation?.cancel();
@@ -173,8 +173,7 @@ async function start() {
     ui.append(mapPanel, logPanel, casters, gameChat, twitchChat);
     try {
         context = await CICOBroadcast.open(render);
-        ui.prepend(view.header('Mappool', context.pool.round));
-        document.querySelector('#round').addEventListener('contextmenu', event => { event.preventDefault(); if (event.ctrlKey) dispatch({ type: 'reset' }); });
+        ui.prepend(view.header('Mappool', context.pool.round, () => dispatch({ type: 'reset' })));
         if (context.preview) {
             view.appendChat(twitchChat, 'catch_fan', 'Ready for the next pick!', {}, true);
             view.appendChat(twitchChat, 'viewer', 'Kappa', { emotes: '25:0-4' }, true);

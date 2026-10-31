@@ -37,7 +37,7 @@ function scaleScene() {
 function element(tag, className, text) {
     const node = document.createElement(tag);
     node.className = className;
-    if (text !== undefined) node.textContent = text;
+    if (text !== undefined) CICOPlaceholders.set(node, text);
     return node;
 }
 
@@ -117,6 +117,8 @@ function renderModCards(player) {
 }
 
 function updateSummaries(player) {
+    CICOPlaceholders.toggle(byId('average-score'), false);
+    CICOPlaceholders.toggle(byId('percent-max'), false);
     if (reducedMotion.matches) {
         scoreCounter?.reset();
         percentCounter?.reset();
@@ -137,11 +139,11 @@ function updateSummaries(player) {
 
 function renderDetail(player) {
     setAvatar(byId('avatar'), player);
-    byId('seed-number').textContent = `#${player.seed}`;
-    byId('username').textContent = player.username;
+    CICOPlaceholders.set(byId('seed-number'), `#${player.seed}`);
+    CICOPlaceholders.set(byId('username'), player.username);
     setFlag(byId('flag'), player.country);
-    byId('country').textContent = countryNames[player.country] || countries.of(player.country);
-    byId('rank').textContent = player.rank ? `#${formatter.format(player.rank)}` : '—';
+    CICOPlaceholders.set(byId('country'), player.country ? countryNames[player.country] || countries.of(player.country) : null);
+    CICOPlaceholders.set(byId('rank'), player.rank ? `#${formatter.format(player.rank)}` : null);
     renderModCards(player);
     updateSummaries(player);
     fitNames('.username', 48, 32);
@@ -228,9 +230,12 @@ async function changeScreen(index) {
     const playerCopy = byId('reveal-player');
     const statusCopy = byId('reveal-status');
     statusCopy.hidden = screen.type !== 'detail';
-    byId('reveal-seed').textContent = screen.type === 'detail' ? `#${screen.player.seed}` : 'ELIMINATED';
-    if (screen.type === 'detail') byId('reveal-name').textContent = screen.player.username;
-    else byId('reveal-name').replaceChildren(element('strong', 'reveal-range', `#${screen.players[0].seed}–#${screen.players.at(-1).seed}`));
+    CICOPlaceholders.set(byId('reveal-seed'), screen.type === 'detail' ? `#${screen.player.seed}` : 'ELIMINATED');
+    if (screen.type === 'detail') CICOPlaceholders.set(byId('reveal-name'), screen.player.username);
+    else {
+        CICOPlaceholders.toggle(byId('reveal-name'), false);
+        byId('reveal-name').replaceChildren(element('strong', 'reveal-range', `#${screen.players[0].seed}–#${screen.players.at(-1).seed}`));
+    }
     seedCopy.classList.toggle('eliminated-copy', screen.type !== 'detail');
     playerCopy.classList.toggle('eliminated-copy', screen.type !== 'detail');
     if (screen.type === 'detail') {

@@ -32,7 +32,7 @@
                 <div class="cover-empty"><span class="placeholder-candy" aria-hidden="true"></span></div>
                 <img class="cover-layer" alt="" draggable="false">
                 <img class="cover-layer" alt="" draggable="false">
-                <div class="pick-label" id="pick">—</div>
+                <div class="pick-label pool-pick" id="pick"></div>
                 <div class="map-badge" id="map-badge" hidden>
                     <svg class="badge-pencil" viewBox="0 0 24 24" aria-hidden="true"><path d="m16.6 2.6 4.8 4.8-2.3 2.3-4.8-4.8Zm-3.5 3.5 4.8 4.8-10.1 10.1L2 22l1-5.8Z" fill="currentColor"/></svg>
                     <svg class="badge-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -62,10 +62,11 @@
         <nav class="up-next panel" aria-label="Mappool running order">
             <div class="up-next-label">UP NEXT <span aria-hidden="true">›</span></div>
             <div class="pool-viewport" id="pool-viewport"><div class="pool-track" id="pool-track"></div><span class="pool-empty" id="pool-empty">—</span></div>
-            <span class="pool-position" id="pool-position">— / —</span>
+            <span class="pool-position" id="pool-position">—</span>
         </nav>
     </main>
     <script src="../shared/interactions.js"></script>
+    <script src="../shared/placeholders.js"></script>
     <script src="../config.js"></script>
     <script src="../deps/reconnecting-websocket.min.js"></script>
     <script src="../deps/countUp.js"></script>

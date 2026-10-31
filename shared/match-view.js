@@ -4,18 +4,30 @@ window.CICOMatchView = (() => {
     const node = (tag, className, text) => {
         const element = document.createElement(tag);
         element.className = className;
-        if (text !== undefined) element.textContent = text;
+        if (text !== undefined) CICOPlaceholders.set(element, text);
         return element;
     };
-    const setText = (element, text) => { if (element.textContent !== String(text)) element.textContent = text; };
+    const setText = CICOPlaceholders.set;
     const number = value => value === null || value === undefined ? '—' : Number(Number(value).toFixed(2)).toString();
 
-    function header(title, round) {
+    function header(title, round, reset) {
         const element = node('header', 'header match-header');
         element.setAttribute('aria-label', title);
         element.innerHTML = '<div class="brand" role="img" aria-label="CICO 2026"><img class="mascot" src="../assets/chibi-mascot.png" alt="" draggable="false"><div class="wordmark"><span>CICO</span><small>2026</small></div></div><div class="round-heading"><div id="round"></div></div>';
         setText(element.querySelector('#round'), round);
         element.querySelector('#round').classList.toggle('long-round', round.length > 17);
+        if (reset) {
+            const brand = element.querySelector('.brand');
+            brand.setAttribute('role', 'button');
+            brand.setAttribute('aria-label', 'Reset match');
+            brand.tabIndex = 0;
+            brand.addEventListener('click', reset);
+            brand.addEventListener('keydown', event => {
+                if (!['Enter', 'Space'].includes(event.code) || event.repeat) return;
+                event.preventDefault();
+                reset();
+            });
+        }
         return element;
     }
 
@@ -79,7 +91,7 @@ window.CICOMatchView = (() => {
 
     function mapPanel() {
         const element = node('aside', 'current-map panel');
-        element.innerHTML = '<div class="map-art"><span class="candy-mark"></span><img class="map-image" alt=""><img class="map-image" alt=""><span class="slot-tag">MAP</span><span class="map-tag" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path/></svg><span></span></span></div><div class="current-copy"><div class="map-artist">—</div><div class="map-title-window"><div class="map-title">—</div></div><div class="map-difficulty">—</div><div class="map-mapper"><span>MAPPED BY</span><strong>—</strong></div></div><div class="map-stat-grid"></div>';
+        element.innerHTML = '<div class="map-art"><span class="candy-mark"></span><img class="map-image" alt=""><img class="map-image" alt=""><span class="slot-tag pool-pick"></span><span class="map-tag" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path/></svg><span></span></span></div><div class="current-copy"><div class="map-artist">—</div><div class="map-title-window"><div class="map-title">—</div></div><div class="map-difficulty">—</div><div class="map-mapper"><span>MAPPED BY</span><strong>—</strong></div></div><div class="map-stat-grid"></div>';
         for (const [key, label] of [['sr', '★ STAR RATING'], ['cs', 'CS'], ['ar', 'AR'], ['od', 'OD'], ['hp', 'HP'], ['bpm', 'BPM'], ['length', 'LENGTH']]) {
             const stat = node('div', `map-stat${key === 'sr' ? ' star' : ''}`);
             stat.dataset.stat = key;
@@ -110,11 +122,15 @@ window.CICOMatchView = (() => {
         setText(copy.querySelector('.map-title'), value.title || '—');
         setText(copy.querySelector('.map-difficulty'), CICOMapData.difficultyLabel(value.difficulty));
         setText(copy.querySelector('.map-mapper strong'), value.mapper || '—');
-        const mod = String(value.slot).slice(0, 2);
         const slot = element.querySelector('.slot-tag');
-        setText(slot, value.slot || 'MAP');
-        slot.style.setProperty('--mod-color', CICO2026.modColors[mod] || 'var(--caramel)');
-        slot.style.setProperty('--mod-depth', CICO2026.modDepthColors[mod] || 'var(--chocolate)');
+        const poolPick = Boolean(value.slot && value.slot !== 'MAP');
+        slot.classList.toggle('has-pick', poolPick);
+        if (poolPick) {
+            const mod = String(value.slot).slice(0, 2);
+            setText(slot, value.slot);
+            slot.style.setProperty('--mod-color', CICO2026.modColors[mod] || 'var(--caramel)');
+            slot.style.setProperty('--mod-depth', CICO2026.modDepthColors[mod] || 'var(--chocolate)');
+        }
         const badge = element.querySelector('.map-tag');
         badge.hidden = !CICOMapData.badgeLabels[value.badgeType];
         badge.dataset.type = value.badgeType || '';
