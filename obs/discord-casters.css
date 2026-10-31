@@ -45,24 +45,24 @@ ul[class*='Voice_voiceStates'] {
     width: 100% !important;
     height: 100% !important;
     margin: 0 !important;
-    padding: 10px 8px !important;
+    padding: 4px 8px !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 12px !important;
+    gap: 16px !important;
     list-style: none !important;
 }
 
 li[class*='Voice_voiceState'] {
     display: flex !important;
-    flex: 0 1 116px !important;
+    flex: 0 1 180px !important;
     min-width: 0 !important;
-    height: 100px !important;
+    height: 132px !important;
     margin: 0 !important;
-    padding: 3px 0 !important;
+    padding: 0 !important;
     align-items: center !important;
     justify-content: center !important;
     flex-direction: column !important;
-    gap: 10px !important;
+    gap: 6px !important;
     border: 0 !important;
     background: transparent !important;
     box-shadow: none !important;
@@ -72,9 +72,10 @@ li[class*='Voice_voiceState'] {
 img[class*='Voice_avatar'] {
     display: block !important;
     position: static !important;
-    flex: 0 0 56px !important;
-    width: 56px !important;
-    height: 56px !important;
+    flex: 0 0 auto !important;
+    width: min(92px, 100%) !important;
+    height: auto !important;
+    aspect-ratio: 1;
     margin: 0 !important;
     border: 3px solid var(--cico-cream) !important;
     border-radius: 14px !important;
@@ -105,7 +106,7 @@ span[class*='Voice_name'] {
     overflow: hidden !important;
     background: transparent !important;
     color: var(--cico-chocolate) !important;
-    font: 400 18px/1.2 'CICO Lilita', 'Trebuchet MS', sans-serif !important;
+    font: 400 24px/1.1 'CICO Lilita', 'Trebuchet MS', sans-serif !important;
     text-align: center !important;
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
@@ -124,35 +125,5 @@ div[class*='Voice_logo'] {
 @media (prefers-reduced-motion: reduce) {
     * {
         transition: none !important;
-    }
-}
-
-@media (max-height: 140px) {
-    ul[class*='Voice_voiceStates'] {
-        padding: 2px 4px !important;
-        gap: 16px !important;
-    }
-
-    li[class*='Voice_voiceState'] {
-        flex: 1 1 0 !important;
-        height: 48px !important;
-        flex-direction: row !important;
-        gap: 10px !important;
-    }
-
-    img[class*='Voice_avatar'] {
-        flex-basis: 40px !important;
-        width: 40px !important;
-        height: 40px !important;
-        border-radius: 10px !important;
-    }
-
-    div[class*='Voice_user'] {
-        flex: 1 !important;
-    }
-
-    span[class*='Voice_name'] {
-        text-align: left !important;
-        font-size: 18px !important;
     }
 }

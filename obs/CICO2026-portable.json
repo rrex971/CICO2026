@@ -43,7 +43,7 @@
                 "reroute_audio": false,
                 "shutdown": false,
                 "restart_when_active": false,
-                "css": "@font-face {\n    font-family: 'CICO Lilita';\n    src: url('https://fonts.gstatic.com/s/lilitaone/v17/i7dPIFZ9Zz-WBtRtedDbUEY.ttf') format('truetype');\n    font-weight: 400;\n    font-style: normal;\n    font-display: block;\n}\n\n:root {\n    --cico-cream: #fff9dc;\n    --cico-coral: #f56c70;\n    --cico-chocolate: #79553f;\n    --cico-caramel: #946b4d;\n    --cico-ease: cubic-bezier(.16, 1, .3, 1);\n}\n\n* {\n    box-sizing: border-box;\n}\n\nhtml,\nbody {\n    width: 100%;\n    height: 100%;\n    margin: 0;\n    overflow: hidden !important;\n    background: transparent !important;\n}\n\nbody {\n    color: var(--cico-chocolate);\n    font-family: 'CICO Lilita', 'Trebuchet MS', sans-serif;\n    user-select: none;\n}\n\n#root,\ndiv[class*='Voice_voiceContainer'] {\n    width: 100%;\n    height: 100%;\n    background: transparent !important;\n}\n\nul[class*='Voice_voiceStates'] {\n    display: flex !important;\n    width: 100% !important;\n    height: 100% !important;\n    margin: 0 !important;\n    padding: 10px 8px !important;\n    align-items: center !important;\n    justify-content: center !important;\n    gap: 12px !important;\n    list-style: none !important;\n}\n\nli[class*='Voice_voiceState'] {\n    display: flex !important;\n    flex: 0 1 116px !important;\n    min-width: 0 !important;\n    height: 100px !important;\n    margin: 0 !important;\n    padding: 3px 0 !important;\n    align-items: center !important;\n    justify-content: center !important;\n    flex-direction: column !important;\n    gap: 10px !important;\n    border: 0 !important;\n    background: transparent !important;\n    box-shadow: none !important;\n    transform: none !important;\n}\n\nimg[class*='Voice_avatar'] {\n    display: block !important;\n    position: static !important;\n    flex: 0 0 56px !important;\n    width: 56px !important;\n    height: 56px !important;\n    margin: 0 !important;\n    border: 3px solid var(--cico-cream) !important;\n    border-radius: 14px !important;\n    box-shadow: 0 0 0 2px var(--cico-caramel), 0 4px 0 var(--cico-caramel) !important;\n    object-fit: cover !important;\n    transition: border-color 140ms var(--cico-ease), box-shadow 140ms var(--cico-ease) !important;\n}\n\nimg[class*='Voice_avatarSpeaking'] {\n    border-color: var(--cico-coral) !important;\n    box-shadow: 0 0 0 2px var(--cico-coral), 0 4px 0 var(--cico-caramel) !important;\n}\n\ndiv[class*='Voice_user'] {\n    position: static !important;\n    width: 100% !important;\n    min-width: 0 !important;\n    margin: 0 !important;\n    padding: 0 !important;\n}\n\nspan[class*='Voice_name'] {\n    display: block !important;\n    position: static !important;\n    width: 100% !important;\n    margin: 0 !important;\n    padding: 1px 2px 3px !important;\n    overflow: hidden !important;\n    background: transparent !important;\n    color: var(--cico-chocolate) !important;\n    font: 400 18px/1.2 'CICO Lilita', 'Trebuchet MS', sans-serif !important;\n    text-align: center !important;\n    text-overflow: ellipsis !important;\n    white-space: nowrap !important;\n    transition: color 140ms var(--cico-ease) !important;\n}\n\nli[class*='Voice_voiceState']:has(img[class*='Voice_avatarSpeaking']) span[class*='Voice_name'] {\n    color: var(--cico-coral) !important;\n}\n\nsvg[class*='Voice_logo'],\ndiv[class*='Voice_logo'] {\n    display: none !important;\n}\n\n@media (prefers-reduced-motion: reduce) {\n    * {\n        transition: none !important;\n    }\n}\n\n@media (max-height: 140px) {\n    ul[class*='Voice_voiceStates'] {\n        padding: 2px 4px !important;\n        gap: 16px !important;\n    }\n\n    li[class*='Voice_voiceState'] {\n        flex: 1 1 0 !important;\n        height: 48px !important;\n        flex-direction: row !important;\n        gap: 10px !important;\n    }\n\n    img[class*='Voice_avatar'] {\n        flex-basis: 40px !important;\n        width: 40px !important;\n        height: 40px !important;\n        border-radius: 10px !important;\n    }\n\n    div[class*='Voice_user'] {\n        flex: 1 !important;\n    }\n\n    span[class*='Voice_name'] {\n        text-align: left !important;\n        font-size: 18px !important;\n    }\n}\n"
+                "css": "@font-face {\n    font-family: 'CICO Lilita';\n    src: url('https://fonts.gstatic.com/s/lilitaone/v17/i7dPIFZ9Zz-WBtRtedDbUEY.ttf') format('truetype');\n    font-weight: 400;\n    font-style: normal;\n    font-display: block;\n}\n\n:root {\n    --cico-cream: #fff9dc;\n    --cico-coral: #f56c70;\n    --cico-chocolate: #79553f;\n    --cico-caramel: #946b4d;\n    --cico-ease: cubic-bezier(.16, 1, .3, 1);\n}\n\n* {\n    box-sizing: border-box;\n}\n\nhtml,\nbody {\n    width: 100%;\n    height: 100%;\n    margin: 0;\n    overflow: hidden !important;\n    background: transparent !important;\n}\n\nbody {\n    color: var(--cico-chocolate);\n    font-family: 'CICO Lilita', 'Trebuchet MS', sans-serif;\n    user-select: none;\n}\n\n#root,\ndiv[class*='Voice_voiceContainer'] {\n    width: 100%;\n    height: 100%;\n    background: transparent !important;\n}\n\nul[class*='Voice_voiceStates'] {\n    display: flex !important;\n    width: 100% !important;\n    height: 100% !important;\n    margin: 0 !important;\n    padding: 4px 8px !important;\n    align-items: center !important;\n    justify-content: center !important;\n    gap: 16px !important;\n    list-style: none !important;\n}\n\nli[class*='Voice_voiceState'] {\n    display: flex !important;\n    flex: 0 1 180px !important;\n    min-width: 0 !important;\n    height: 132px !important;\n    margin: 0 !important;\n    padding: 0 !important;\n    align-items: center !important;\n    justify-content: center !important;\n    flex-direction: column !important;\n    gap: 6px !important;\n    border: 0 !important;\n    background: transparent !important;\n    box-shadow: none !important;\n    transform: none !important;\n}\n\nimg[class*='Voice_avatar'] {\n    display: block !important;\n    position: static !important;\n    flex: 0 0 auto !important;\n    width: min(92px, 100%) !important;\n    height: auto !important;\n    aspect-ratio: 1;\n    margin: 0 !important;\n    border: 3px solid var(--cico-cream) !important;\n    border-radius: 14px !important;\n    box-shadow: 0 0 0 2px var(--cico-caramel), 0 4px 0 var(--cico-caramel) !important;\n    object-fit: cover !important;\n    transition: border-color 140ms var(--cico-ease), box-shadow 140ms var(--cico-ease) !important;\n}\n\nimg[class*='Voice_avatarSpeaking'] {\n    border-color: var(--cico-coral) !important;\n    box-shadow: 0 0 0 2px var(--cico-coral), 0 4px 0 var(--cico-caramel) !important;\n}\n\ndiv[class*='Voice_user'] {\n    position: static !important;\n    width: 100% !important;\n    min-width: 0 !important;\n    margin: 0 !important;\n    padding: 0 !important;\n}\n\nspan[class*='Voice_name'] {\n    display: block !important;\n    position: static !important;\n    width: 100% !important;\n    margin: 0 !important;\n    padding: 1px 2px 3px !important;\n    overflow: hidden !important;\n    background: transparent !important;\n    color: var(--cico-chocolate) !important;\n    font: 400 24px/1.1 'CICO Lilita', 'Trebuchet MS', sans-serif !important;\n    text-align: center !important;\n    text-overflow: ellipsis !important;\n    white-space: nowrap !important;\n    transition: color 140ms var(--cico-ease) !important;\n}\n\nli[class*='Voice_voiceState']:has(img[class*='Voice_avatarSpeaking']) span[class*='Voice_name'] {\n    color: var(--cico-coral) !important;\n}\n\nsvg[class*='Voice_logo'],\ndiv[class*='Voice_logo'] {\n    display: none !important;\n}\n\n@media (prefers-reduced-motion: reduce) {\n    * {\n        transition: none !important;\n    }\n}\n"
             },
             "mixers": 255,
             "sync": 0,
@@ -727,11 +727,11 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 1463,
-                            "y": 898
+                            "y": 908
                         },
                         "pos_rel": {
                             "x": 0.9314814814814815,
-                            "y": 0.662962962962963
+                            "y": 0.6814814814814815
                         },
                         "scale": {
                             "x": 1,
@@ -955,11 +955,11 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 1463,
-                            "y": 898
+                            "y": 908
                         },
                         "pos_rel": {
                             "x": 0.9314814814814815,
-                            "y": 0.662962962962963
+                            "y": 0.6814814814814815
                         },
                         "scale": {
                             "x": 1,
@@ -1296,11 +1296,11 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 1463,
-                            "y": 898
+                            "y": 908
                         },
                         "pos_rel": {
                             "x": 0.9314814814814815,
-                            "y": 0.662962962962963
+                            "y": 0.6814814814814815
                         },
                         "scale": {
                             "x": 1,
