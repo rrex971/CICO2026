@@ -8,12 +8,11 @@ const mapPanel = view.mapPanel();
 const logPanel = view.logPanel();
 const gameChat = view.chatPanel('IN-GAME CHAT', 'game-chat');
 const twitchChat = view.chatPanel('TWITCH CHAT', 'twitch-chat');
+const renderChat = view.gameChatFeed(gameChat);
 let context;
 let toastTimer;
 let twitch;
 let previewChat;
-let chatLength = 0;
-let chatLast = '';
 
 function scale() {
     document.documentElement.style.setProperty('--scale', Math.min(innerWidth / 1920, innerHeight / 1080));
@@ -43,7 +42,7 @@ function setupClients() {
     const depth = parseFloat(styles.getPropertyValue('--panel-depth'));
     CICO2026.gameplayClients.forEach((rect, index) => {
         const cutout = svgRect({ x: rect.x, y: rect.y, width: rect.width, height: rect.height, rx: rect.radius, fill: 'black', display: 'none' }, document.querySelector('#cutouts'));
-        for (const [offset, y, color, stroke] of [[border / 2, depth, '#b88e66', border], [border / 2, 0, '#fff9dc', border], [border + outline / 2, 0, '#b88e66', outline]]) {
+        for (const [offset, y, color, stroke] of [[border / 2, depth, 'var(--caramel)', border], [border / 2, 0, 'var(--cream)', border], [border + outline / 2, 0, 'var(--caramel)', outline]]) {
             svgRect({ x: rect.x - offset, y: rect.y - offset + y, width: rect.width + offset * 2, height: rect.height + offset * 2, rx: rect.radius + offset, fill: 'none', stroke: color, 'stroke-width': stroke }, document.querySelector('#client-frames'));
         }
         const placeholder = view.node('div', 'capture-placeholder');
@@ -109,19 +108,6 @@ function render(data) {
     view.updateMap(mapPanel, data.map);
     view.updateLog(logPanel, state.actions, data.pool.maps);
     renderChat(data.live.chat);
-}
-
-function renderChat(messages) {
-    if (!Array.isArray(messages)) return;
-    const key = message => JSON.stringify([message.id ?? message.timestamp ?? '', message.name ?? message.sender ?? '', message.message ?? message.content ?? message.text ?? '']);
-    const last = messages.length ? key(messages.at(-1)) : '';
-    if (last === chatLast && messages.length === chatLength) return;
-    const appended = chatLength > 0 && messages.length > chatLength && key(messages[chatLength - 1]) === chatLast;
-    const previous = appended ? chatLength - 1 : messages.findLastIndex(message => key(message) === chatLast);
-    const fresh = chatLast && previous >= 0 ? messages.slice(previous + 1) : messages.slice(-8);
-    for (const message of fresh) view.appendChat(gameChat, message.name || message.sender || message.user || '—', message.message ?? message.content ?? message.text ?? '');
-    chatLast = last;
-    chatLength = messages.length;
 }
 
 async function start() {

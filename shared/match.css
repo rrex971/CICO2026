@@ -1,5 +1,5 @@
 .side-0 { --player-color: var(--coral); --player-depth: var(--coral-depth); }
-.side-1 { --player-color: var(--caramel); --player-depth: var(--chocolate); }
+.side-1 { --player-color: var(--player-two); --player-depth: var(--chocolate); }
 .side-neutral { --player-color: #c77d91; --player-depth: #9e5e72; }
 .match-header .brand { left: 1455px; top: 12px; transform: scale(.65); transform-origin: top left; }
 .match-header .round-heading { left: 1676px; right: auto; top: 0; width: 218px; height: 142px; }
@@ -50,7 +50,7 @@
 .map-title-window.scrolling { mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent); }
 .map-title { font-size: 34px; line-height: 1.2; width: max-content; min-width: 100%; white-space: nowrap; color: var(--coral); }
 .map-difficulty { font-size: 20px; line-height: 1.2; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
-.map-mapper { display: flex; align-items: baseline; gap: 10px; margin-top: 10px; padding-top: 8px; border-top: 2px solid #b88e6640; }
+.map-mapper { display: flex; align-items: baseline; gap: 10px; margin-top: 10px; padding-top: 8px; border-top: 2px solid var(--caramel-muted); }
 .map-mapper span { font-size: 12px; flex: 0 0 auto; }
 .map-mapper strong { font-size: 19px; font-weight: 400; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .map-stat-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 42px repeat(3, 34px); gap: 8px 10px; padding: 4px 14px 12px; }
@@ -61,7 +61,7 @@
 .map-stat.star strong { font-size: 29px; }
 .pick-log { position: absolute; top: 774px; left: 1443px; width: 455px; height: 64px; }
 .pick-log h2, .match-chat h2, .caster-space h2 { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 400; margin: 0; line-height: 1.2; }
-.heading-line { flex: 1; height: 2px; background: #b88e6640; }
+.heading-line { flex: 1; height: 2px; background: var(--caramel-muted); }
 .log-feed { display: flex; align-items: center; gap: 8px; height: 44px; padding: 4px; border-radius: var(--inset-radius); overflow: hidden; mask-image: linear-gradient(to right, #000 calc(100% - 22px), transparent); }
 .log-chip { display: flex; align-items: center; flex: 0 0 auto; height: 36px; color: var(--player-color); background: var(--cream); border: 1px solid var(--player-color); box-shadow: 0 2px 0 var(--player-depth); border-radius: calc(var(--inset-radius) - 4px); padding: 0 12px; font-size: 21px; line-height: 1; }
 .log-feed::-webkit-scrollbar { display: none; }

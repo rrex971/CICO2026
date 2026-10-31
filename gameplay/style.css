@@ -13,5 +13,5 @@
 .score-comparison { position: absolute; top: 714px; left: 34px; width: 1388px; height: 24px; border: 2px solid var(--caramel); border-radius: 12px; background: var(--cream); }
 .score-track { position: absolute; inset: 0; overflow: hidden; border-radius: 10px; }
 .difference-fill { position: absolute; left: 50%; top: 0; height: 100%; width: 0; max-width: 50%; border-radius: 10px; background: var(--coral); transition: width .24s var(--ease-out), left .24s var(--ease-out), background-color .24s var(--ease-out); }
-.difference-fill.right-lead { background: var(--caramel); }
+.difference-fill.right-lead { background: var(--player-two); }
 #score-gap { position: absolute; left: 50%; top: 29px; transform: translateX(-50%); padding: 1px 9px; border-radius: 8px; color: var(--chocolate); font-size: 18px; line-height: 1.1; white-space: nowrap; }

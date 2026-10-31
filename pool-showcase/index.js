@@ -89,7 +89,7 @@ function colorForSlot(slot) {
 }
 
 function depthForSlot(slot) {
-    return config.modDepthColors[String(slot).slice(0, 2).toUpperCase()] || '#b88e66';
+    return config.modDepthColors[String(slot).slice(0, 2).toUpperCase()] || 'var(--caramel)';
 }
 
 function renderPool() {
@@ -216,7 +216,7 @@ function setMapCopy(value) {
     clearTimeout(copyTimer);
     copyAnimation?.cancel();
     const apply = () => {
-        for (const key of keys) ui[key].textContent = value[key] || '—';
+        for (const key of keys) ui[key].textContent = key === 'difficulty' ? CICOMapData.difficultyLabel(value[key]) : value[key] || '—';
         requestAnimationFrame(updateTitleMotion);
     };
     if (first || reducedMotion.matches) {

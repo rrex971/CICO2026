@@ -4,9 +4,14 @@ const mapsElement = document.querySelector('#maps');
 const playerPanels = [];
 const mapPanel = view.mapPanel();
 const logPanel = view.logPanel();
+const gameChat = view.chatPanel('IN-GAME CHAT', 'game-chat');
+const twitchChat = view.chatPanel('TWITCH CHAT', 'twitch-chat');
+const renderChat = view.gameChatFeed(gameChat);
 let context;
 let signature;
 let previousPickCount = -1;
+let twitch;
+let previewChat;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const easeOut = 'cubic-bezier(.16, 1, .3, 1)';
 const pulseEase = 'cubic-bezier(0, .55, .45, 1)';
@@ -48,7 +53,7 @@ function createMap(map) {
     slot.style.setProperty('--mod-color', CICO2026.modColors[map.slot.slice(0, 2)] || 'var(--caramel)');
     slot.style.setProperty('--mod-depth', CICO2026.modDepthColors[map.slot.slice(0, 2)] || 'var(--chocolate)');
     const copy = view.node('div', 'card-copy');
-    copy.append(view.node('div', 'card-title', map.title || '—'), view.node('div', 'card-artist', map.artist || '—'), view.node('div', 'card-difficulty', map.difficulty || '—'));
+    copy.append(view.node('div', 'card-title', map.title || '—'), view.node('div', 'card-artist', map.artist || '—'), view.node('div', 'card-difficulty', CICOMapData.difficultyLabel(map.difficulty)));
     const stats = view.node('div', 'card-stats');
     stats.append(view.node('span', '', '★'), view.node('strong', '', CICOMapData.number(map.sr) === null ? '—' : Number(map.sr).toFixed(2)));
     copy.append(stats);
@@ -78,11 +83,12 @@ function render(data) {
             const spacing = (cards - groups.length) * 14 + (groups.length - 1) * 18;
             return (mapsElement.clientHeight - spacing) / cards;
         });
-        const cardHeight = Math.min(188, ...heights);
+        const cardHeight = Math.min(170, ...heights);
         mapsElement.style.setProperty('--map-card-height', `${cardHeight}px`);
         mapsElement.replaceChildren(...columns.map(groups => {
             const column = view.node('div', 'mod-column');
             column.classList.toggle('dense', cardHeight < 155);
+            column.classList.toggle('compact', cardHeight < 125);
             for (const group of groups) {
                 const section = view.node('section', 'mod-group');
                 section.dataset.mod = group.mod;
@@ -122,7 +128,9 @@ function render(data) {
             path.setAttribute('stroke-linecap', 'round');
         } else if (badgeLabel) view.badgeIcon(path, badgeType);
         status.querySelector('svg').toggleAttribute('hidden', !action && !badgeLabel);
-        view.setText(status.querySelector('span'), action ? `${action.type === 'ban' ? 'BANNED' : 'PICKED'}${action.side === null ? '' : ` BY P${action.side + 1}`}` : badgeLabel || '—');
+        const playerName = action ? data.players[action.side]?.name || '—' : '';
+        const actionLabel = action ? `${action.type === 'ban' ? 'BANNED' : 'PICKED'}${action.side === null ? '' : ` BY ${playerName}`}` : '';
+        view.setText(status.querySelector('span'), actionLabel || badgeLabel || '—');
         if (changed && !reducedMotion.matches) {
             card.stateAnimation?.cancel();
             const target = action?.type === 'ban' ? card.querySelector('.ban-stamp') : status;
@@ -154,6 +162,7 @@ function render(data) {
     previousPickCount = picks.length;
     view.updateMap(mapPanel, data.map);
     view.updateLog(logPanel, state.actions, data.pool.maps);
+    renderChat(data.live.chat);
 }
 
 async function start() {
@@ -161,11 +170,16 @@ async function start() {
     [0, 1].forEach(side => { const player = view.playerPanel(side, dispatch); playerPanels.push(player); ui.append(player); });
     const casters = view.node('section', 'caster-space panel');
     casters.append(view.node('h2', '', 'CASTERS'));
-    ui.append(mapPanel, logPanel, casters);
+    ui.append(mapPanel, logPanel, casters, gameChat, twitchChat);
     try {
         context = await CICOBroadcast.open(render);
         ui.prepend(view.header('Mappool', context.pool.round));
         document.querySelector('#round').addEventListener('contextmenu', event => { event.preventDefault(); if (event.ctrlKey) dispatch({ type: 'reset' }); });
+        if (context.preview) {
+            view.appendChat(twitchChat, 'catch_fan', 'Ready for the next pick!', {}, true);
+            view.appendChat(twitchChat, 'viewer', 'Kappa', { emotes: '25:0-4' }, true);
+            if (context.params.get('motion') !== '0') previewChat = setInterval(() => view.appendChat(twitchChat, 'viewer', 'Kappa', { emotes: '25:0-4' }, true), 5500);
+        } else twitch = CICOTwitch.connect(CICO2026.match.channel, (name, message, tags) => view.appendChat(twitchChat, name, message, tags, true));
         window.CICOScene = { get context() { return context; }, dispatch };
     } catch (error) {
         ui.prepend(view.header('Mappool', CICO2026.round));
@@ -175,4 +189,5 @@ async function start() {
 }
 
 addEventListener('resize', scale);
+addEventListener('pagehide', () => { clearInterval(previewChat); twitch?.close(); });
 start();

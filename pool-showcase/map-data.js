@@ -13,6 +13,12 @@ window.CICOMapData = (() => {
         return typeof value === 'string' && value.trim() ? value.trim() : fallback;
     }
 
+    function difficultyLabel(value) {
+        const name = text(value, '');
+        if (!name || name === '—' || name === '-') return '—';
+        return name.startsWith('[') && name.endsWith(']') ? name : `[${name}]`;
+    }
+
     function normalized(value) {
         return text(value, '').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
     }
@@ -93,5 +99,5 @@ window.CICOMapData = (() => {
         };
     }
 
-    return { number, resolve, findPool, fromPayload, duration, badgeLabels };
+    return { number, resolve, findPool, fromPayload, duration, badgeLabels, difficultyLabel };
 })();

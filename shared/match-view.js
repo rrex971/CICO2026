@@ -108,7 +108,7 @@ window.CICOMatchView = (() => {
         copy.getAnimations().forEach(animation => animation.cancel());
         setText(copy.querySelector('.map-artist'), value.artist || '—');
         setText(copy.querySelector('.map-title'), value.title || '—');
-        setText(copy.querySelector('.map-difficulty'), value.difficulty || '—');
+        setText(copy.querySelector('.map-difficulty'), CICOMapData.difficultyLabel(value.difficulty));
         setText(copy.querySelector('.map-mapper strong'), value.mapper || '—');
         const mod = String(value.slot).slice(0, 2);
         const slot = element.querySelector('.slot-tag');
@@ -204,10 +204,27 @@ window.CICOMatchView = (() => {
         }
     }
 
+    function gameChatFeed(element) {
+        let chatLength = 0;
+        let chatLast = '';
+        const key = message => JSON.stringify([message.id ?? message.timestamp ?? '', message.name ?? message.sender ?? '', message.message ?? message.content ?? message.text ?? '']);
+        return messages => {
+            if (!Array.isArray(messages)) return;
+            const last = messages.length ? key(messages.at(-1)) : '';
+            if (last === chatLast && messages.length === chatLength) return;
+            const appended = chatLength > 0 && messages.length > chatLength && key(messages[chatLength - 1]) === chatLast;
+            const previous = appended ? chatLength - 1 : messages.findLastIndex(message => key(message) === chatLast);
+            const fresh = chatLast && previous >= 0 ? messages.slice(previous + 1) : messages.slice(-8);
+            for (const message of fresh) appendChat(element, message.name || message.sender || message.user || '—', message.message ?? message.content ?? message.text ?? '');
+            chatLast = last;
+            chatLength = messages.length;
+        };
+    }
+
     reduced.addEventListener('change', () => {
         document.getAnimations().forEach(animation => animation.cancel());
         document.querySelectorAll('.map-title-window').forEach(marquee);
     });
 
-    return { node, setText, number, header, playerPanel, updatePlayer, mapPanel, updateMap, badgeIcon, logPanel, updateLog, chatPanel, appendChat };
+    return { node, setText, number, header, playerPanel, updatePlayer, mapPanel, updateMap, badgeIcon, logPanel, updateLog, chatPanel, appendChat, gameChatFeed };
 })();
