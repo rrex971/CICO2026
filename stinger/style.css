@@ -1,0 +1,13 @@
+.stinger-brand {
+    position: absolute;
+    top: 440px;
+    left: 50%;
+    width: 320px;
+    height: 190px;
+    transform: translate(-50%, -50%) scale(2.2);
+}
+
+.stinger-brand .brand {
+    top: 0;
+    left: 0;
+}

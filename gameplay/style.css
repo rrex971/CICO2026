@@ -1,0 +1,17 @@
+.capture-placeholder { position: absolute; display: grid; place-items: center; overflow: hidden; border-radius: 14px; background: var(--cream) url('../assets/panel-waves.svg') center / 100% 100%; }
+.capture-placeholder.demo { background: #2f2928; }
+.capture-placeholder.demo .candy-mark { background: var(--cream); opacity: .4; }
+.capture-placeholder .candy-mark { width: 80px; height: 52px; }
+.score-card { position: absolute; top: 750px; width: 700px; height: 72px; display: flex; align-items: center; gap: 28px; padding: 4px 12px; }
+.score-card.side-0 { left: 22px; }
+.score-card.side-1 { left: 734px; flex-direction: row-reverse; text-align: right; }
+.score-number { font-size: 48px; line-height: 1; flex: 1; white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--player-color); }
+.score-metric { display: flex; flex-direction: column; gap: 4px; min-width: 90px; }
+.score-metric span { font-size: 13px; color: var(--caramel); }
+.score-metric strong { font-size: 28px; font-weight: 400; line-height: 1.1; white-space: nowrap; }
+.score-metric .misses { color: var(--coral-depth); }
+.score-comparison { position: absolute; top: 714px; left: 34px; width: 1388px; height: 24px; border: 2px solid var(--caramel); border-radius: 12px; background: var(--cream); }
+.score-track { position: absolute; inset: 0; overflow: hidden; border-radius: 10px; }
+.difference-fill { position: absolute; left: 50%; top: 0; height: 100%; width: 0; max-width: 50%; border-radius: 10px; background: var(--coral); transition: width .24s var(--ease-out), left .24s var(--ease-out), background-color .24s var(--ease-out); }
+.difference-fill.right-lead { background: var(--caramel); }
+#score-gap { position: absolute; left: 50%; top: 29px; transform: translateX(-50%); padding: 1px 9px; border-radius: 8px; color: var(--chocolate); font-size: 18px; line-height: 1.1; white-space: nowrap; }

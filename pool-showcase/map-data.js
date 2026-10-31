@@ -19,7 +19,7 @@ window.CICOMapData = (() => {
 
     function resolve(maps, beatmap) {
         const id = number(beatmap.id);
-        const exact = id > 0 && maps.find(map => number(map.id) === id);
+        const exact = id > 0 && (maps.find(map => number(map.id) === id) || maps.find(map => map.ids?.some(value => number(value) === id)));
         if (exact) return exact;
         const title = normalized(beatmap.title);
         const difficulty = normalized(beatmap.version);

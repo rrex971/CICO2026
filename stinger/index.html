@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CICO2026 · Wave Stinger</title>
+    <link rel="stylesheet" href="../shared/theme.css">
+    <link rel="stylesheet" href="../shared/waves.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="overlay">
+        <div class="wave-layer wave-cream">
+            <svg class="wave-art" viewBox="0 0 1920 900" preserveAspectRatio="none">
+                <defs>
+                    <filter id="wave-inner-glow" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceAlpha" stdDeviation="22" result="soft-alpha"/><feComposite in="SourceAlpha" in2="soft-alpha" operator="out" result="inner-edge"/><feFlood flood-color="#fff9dc" flood-opacity=".55"/><feComposite in2="inner-edge" operator="in" result="glow"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="glow"/></feMerge></filter>
+                </defs>
+                <path class="wave-surface wave-back"/>
+                <path class="wave-surface wave-middle" transform="translate(0 24)"/>
+                <path class="wave-surface" transform="translate(0 58)" filter="url(#wave-inner-glow)"/>
+            </svg>
+        </div>
+        <div class="wave-layer wave-coral">
+            <svg class="wave-art" viewBox="0 0 1920 900" preserveAspectRatio="none">
+                <defs><clipPath id="coral-content-clip" clipPathUnits="userSpaceOnUse"><path class="wave-clip" transform="translate(0 660)"/></clipPath></defs>
+                <path class="wave-surface wave-back" transform="translate(0 660)"/>
+                <path class="wave-surface wave-middle" transform="translate(0 636)"/>
+                <path class="wave-surface" transform="translate(0 602)"/>
+            </svg>
+            <div class="wave-content">
+                <div class="stinger-brand"><div class="brand" role="img" aria-label="CICO 2026"><img class="mascot" src="../assets/chibi-mascot.png" alt="" draggable="false"><div class="wordmark"><span>CICO</span><small>2026</small></div></div></div>
+            </div>
+        </div>
+    </main>
+    <script src="../shared/wave-shape.js"></script>
+    <script src="timeline.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

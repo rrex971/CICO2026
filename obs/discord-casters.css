@@ -126,3 +126,33 @@ div[class*='Voice_logo'] {
         transition: none !important;
     }
 }
+
+@media (max-height: 140px) {
+    ul[class*='Voice_voiceStates'] {
+        padding: 2px 4px !important;
+        gap: 16px !important;
+    }
+
+    li[class*='Voice_voiceState'] {
+        flex: 1 1 0 !important;
+        height: 48px !important;
+        flex-direction: row !important;
+        gap: 10px !important;
+    }
+
+    img[class*='Voice_avatar'] {
+        flex-basis: 40px !important;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 10px !important;
+    }
+
+    div[class*='Voice_user'] {
+        flex: 1 !important;
+    }
+
+    span[class*='Voice_name'] {
+        text-align: left !important;
+        font-size: 18px !important;
+    }
+}

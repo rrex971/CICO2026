@@ -197,7 +197,21 @@
                 "keywords": [
                     "RARARA"
                 ],
-                "badge": "original"
+                "badge": "original",
+                "id": 5966053,
+                "beatmapsetId": 2643612,
+                "artist": "sheirara",
+                "difficulty": "Overdose",
+                "mapper": "EpanPan",
+                "background": "https://assets.ppy.sh/beatmaps/2643612/covers/cover.jpg",
+                "sr": 5.9,
+                "cs": 4.1,
+                "ar": 9.5,
+                "od": 9.5,
+                "hp": 5,
+                "bpm": 165,
+                "length": 189000,
+                "mods": 0
             },
             {
                 "slot": "NM2",
@@ -205,11 +219,39 @@
                 "keywords": [
                     "Excelsia"
                 ],
-                "badge": "custom"
+                "badge": "custom",
+                "id": 5966078,
+                "beatmapsetId": 2643620,
+                "artist": "ak+q",
+                "difficulty": "Elysium",
+                "mapper": "EpanPan",
+                "background": "https://assets.ppy.sh/beatmaps/2643620/covers/cover.jpg",
+                "sr": 5.41,
+                "cs": 4.2,
+                "ar": 9.3,
+                "od": 9.3,
+                "hp": 5,
+                "bpm": 188,
+                "length": 144000,
+                "mods": 0
             },
             {
                 "id": 77930,
-                "slot": "NM3"
+                "slot": "NM3",
+                "beatmapsetId": 22037,
+                "artist": "XL Project",
+                "title": "THE DAMNED STALKERS",
+                "difficulty": "Steven's ctb",
+                "mapper": "hy1hy1hy",
+                "background": "https://assets.ppy.sh/beatmaps/22037/covers/cover.jpg",
+                "sr": 4.11,
+                "cs": 4,
+                "ar": 8,
+                "od": 7,
+                "hp": 5,
+                "bpm": 128,
+                "length": 152000,
+                "mods": 0
             },
             {
                 "slot": "NM4",
@@ -217,7 +259,21 @@
                 "keywords": [
                     "landscape"
                 ],
-                "badge": "custom"
+                "badge": "custom",
+                "id": 5967481,
+                "beatmapsetId": 2644065,
+                "artist": "yanaginagi",
+                "difficulty": "overdose",
+                "mapper": "Spectator",
+                "background": "https://assets.ppy.sh/beatmaps/2644065/covers/cover.jpg",
+                "sr": 4.47,
+                "cs": 4,
+                "ar": 9,
+                "od": 9,
+                "hp": 5,
+                "bpm": 161,
+                "length": 218000,
+                "mods": 0
             },
             {
                 "slot": "HD1",
@@ -225,7 +281,21 @@
                 "keywords": [
                     "To the endless sky"
                 ],
-                "badge": "custom"
+                "badge": "custom",
+                "id": 5966096,
+                "beatmapsetId": 2643627,
+                "artist": "Isekaijoucho",
+                "difficulty": "Memories",
+                "mapper": "Sololiquy",
+                "background": "https://assets.ppy.sh/beatmaps/2643627/covers/cover.jpg",
+                "sr": 4.22,
+                "cs": 4,
+                "ar": 9,
+                "od": 9,
+                "hp": 6,
+                "bpm": 128,
+                "length": 215000,
+                "mods": 8
             },
             {
                 "slot": "HD2",
@@ -233,15 +303,60 @@
                 "keywords": [
                     "Cord Cutter"
                 ],
-                "badge": "custom"
+                "badge": "custom",
+                "id": 5967007,
+                "beatmapsetId": 2643902,
+                "artist": "Boom Kitty",
+                "difficulty": "Epan say this is easy",
+                "mapper": "Zvenx",
+                "background": "https://assets.ppy.sh/beatmaps/2643902/covers/cover.jpg",
+                "sr": 4.3,
+                "cs": 4,
+                "ar": 8.4,
+                "od": 8.4,
+                "hp": 5,
+                "bpm": 128,
+                "length": 152000,
+                "mods": 8
             },
             {
                 "id": 5850788,
-                "slot": "HR1"
+                "slot": "HR1",
+                "beatmapsetId": 2611984,
+                "artist": "solfa feat. Ceui",
+                "title": "Natsuiro Yakimochi Koi Moyou",
+                "difficulty": "Precious Feeling",
+                "mapper": "ItzFfas",
+                "background": "https://assets.ppy.sh/beatmaps/2611984/covers/cover.jpg",
+                "sr": 5.7,
+                "cs": 5.2,
+                "ar": 10,
+                "od": 10,
+                "hp": 6.5,
+                "bpm": 193,
+                "length": 253000,
+                "mods": 16
             },
             {
-                "id": 4276891,
-                "slot": "HR2"
+                "id": 5407397,
+                "slot": "HR2",
+                "beatmapsetId": 2469196,
+                "ids": [
+                    4276891
+                ],
+                "artist": "DOT96",
+                "title": "MAKE IT FUNKY NOW",
+                "difficulty": "MAKE IT CATCH NOW",
+                "mapper": "hiroshiki",
+                "background": "https://assets.ppy.sh/beatmaps/2469196/covers/cover.jpg",
+                "sr": 5.18,
+                "cs": 5.72,
+                "ar": 10,
+                "od": 10,
+                "hp": 3.9,
+                "bpm": 146,
+                "length": 119000,
+                "mods": 16
             },
             {
                 "slot": "DT1",
@@ -249,11 +364,39 @@
                 "keywords": [
                     "Colorful -season 03-"
                 ],
-                "badge": "custom"
+                "badge": "custom",
+                "id": 5966484,
+                "beatmapsetId": 2643757,
+                "artist": "ClariS",
+                "difficulty": "Vibrant Colors",
+                "mapper": "Fisicia",
+                "background": "https://assets.ppy.sh/beatmaps/2643757/covers/cover.jpg",
+                "sr": 5.79,
+                "cs": 3.8,
+                "ar": 9.93,
+                "od": 10.02,
+                "hp": 6,
+                "bpm": 267,
+                "length": 176000,
+                "mods": 64
             },
             {
                 "id": 4541816,
-                "slot": "DT2"
+                "slot": "DT2",
+                "beatmapsetId": 2154917,
+                "artist": "Frums",
+                "title": "the end of this world, and the girl who crossed the moon's oceans. (Cut Ver.)",
+                "difficulty": "rain",
+                "mapper": "fayew",
+                "background": "https://assets.ppy.sh/beatmaps/2154917/covers/cover.jpg",
+                "sr": 5.59,
+                "cs": 4.5,
+                "ar": 9.67,
+                "od": 9.75,
+                "hp": 4.5,
+                "bpm": 142.5,
+                "length": 155000,
+                "mods": 64
             },
             {
                 "slot": "DT3",
@@ -261,11 +404,39 @@
                 "keywords": [
                     "Guinevere"
                 ],
-                "badge": "custom"
+                "badge": "custom",
+                "id": 5967036,
+                "beatmapsetId": 2643915,
+                "artist": "-45",
+                "difficulty": "Crystal Violet",
+                "mapper": "Madoka Ayukawa",
+                "background": "https://assets.ppy.sh/beatmaps/2643915/covers/cover.jpg",
+                "sr": 5.68,
+                "cs": 2.5,
+                "ar": 10.07,
+                "od": 10.15,
+                "hp": 5,
+                "bpm": 240,
+                "length": 119000,
+                "mods": 64
             },
             {
                 "id": 4325523,
-                "slot": "FM1"
+                "slot": "FM1",
+                "beatmapsetId": 2067609,
+                "artist": "Tokyo Jihen",
+                "title": "Sounan",
+                "difficulty": "Lost",
+                "mapper": "Dedot",
+                "background": "https://assets.ppy.sh/beatmaps/2067609/covers/cover.jpg",
+                "sr": 5.18,
+                "cs": 4,
+                "ar": 9,
+                "od": 9,
+                "hp": 4.5,
+                "bpm": 156,
+                "length": 197000,
+                "mods": 0
             },
             {
                 "slot": "FM2",
@@ -273,7 +444,21 @@
                 "keywords": [
                     "Luminous Memory"
                 ],
-                "badge": "edit"
+                "badge": "edit",
+                "id": 5966129,
+                "beatmapsetId": 1927452,
+                "artist": "Mitsukiyo",
+                "difficulty": "Memory [CICO edit]",
+                "mapper": "Sololiquy",
+                "background": "https://assets.ppy.sh/beatmaps/1927452/covers/cover.jpg",
+                "sr": 4.58,
+                "cs": 4.2,
+                "ar": 8.5,
+                "od": 8.5,
+                "hp": 4,
+                "bpm": 100,
+                "length": 134000,
+                "mods": 0
             },
             {
                 "slot": "TB",
@@ -281,7 +466,21 @@
                 "keywords": [
                     "Black Berserker"
                 ],
-                "badge": "custom"
+                "badge": "custom",
+                "id": 5966131,
+                "beatmapsetId": 2643642,
+                "artist": "Pratanallis feat. KOKOMI",
+                "difficulty": "Darkness in Grace",
+                "mapper": "[ Azu- ]",
+                "background": "https://assets.ppy.sh/beatmaps/2643642/covers/cover.jpg",
+                "sr": 6.33,
+                "cs": 4,
+                "ar": 9.6,
+                "od": 9.6,
+                "hp": 6,
+                "bpm": 195,
+                "length": 300000,
+                "mods": 0
             }
         ]
     }

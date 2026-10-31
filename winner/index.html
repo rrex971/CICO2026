@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CICO2026 Winner</title>
+    <link rel="stylesheet" href="../shared/theme.css">
+    <link rel="stylesheet" href="../shared/match.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="overlay">
+        <img id="background" src="../assets/background.png" alt="" draggable="false">
+        <div id="branding"></div>
+        <section id="result" aria-live="polite" hidden>
+            <img class="winner-mascot" src="../assets/chibi-mascot.png" alt="" draggable="false" aria-hidden="true">
+            <h1 class="winner-heading">WINNER</h1>
+            <article class="winner-card panel">
+                <div class="winner-portrait"><span class="candy-mark" aria-hidden="true"></span><img id="winner-avatar" alt="" draggable="false" hidden></div>
+                <div class="winner-identity"><img id="winner-flag" alt="" draggable="false" hidden><h2 id="winner-name"></h2></div>
+            </article>
+        </section>
+    </main>
+    <script src="../shared/interactions.js"></script>
+    <script src="../config.js"></script>
+    <script src="../deps/reconnecting-websocket.min.js"></script>
+    <script src="../pool-showcase/map-data.js"></script>
+    <script src="../shared/match-data.js"></script>
+    <script src="../shared/match-state.js"></script>
+    <script src="../shared/match-view.js"></script>
+    <script src="../shared/broadcast.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

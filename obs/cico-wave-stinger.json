@@ -1,0 +1,12 @@
+{
+    "file": "cico-wave-stinger.webm",
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationMs": 2600,
+    "transitionPointType": "milliseconds",
+    "transitionPoint": 1300,
+    "verifiedOpaqueFromMs": 800,
+    "verifiedOpaqueUntilMs": 1760,
+    "audio": false
+}

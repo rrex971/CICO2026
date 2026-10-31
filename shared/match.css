@@ -1,0 +1,82 @@
+.side-0 { --player-color: var(--coral); --player-depth: var(--coral-depth); }
+.side-1 { --player-color: var(--caramel); --player-depth: var(--chocolate); }
+.side-neutral { --player-color: #c77d91; --player-depth: #9e5e72; }
+.match-header .brand { left: 1455px; top: 12px; transform: scale(.65); transform-origin: top left; }
+.match-header .round-heading { left: 1676px; right: auto; top: 0; width: 218px; height: 142px; }
+.match-header #round { font-size: 28px; padding: 8px 15px 10px; }
+.match-header #round.long-round { font-size: 22px; }
+.candy-mark { width: 70px; height: 45px; background: var(--caramel); mask: url('../assets/candy.svg') center / contain no-repeat; }
+.player-panel { position: absolute; top: 16px; width: 700px; height: 126px; display: flex; align-items: center; gap: 16px; padding: 8px 12px; }
+.player-panel.side-0 { left: 22px; }
+.player-panel.side-1 { left: 734px; }
+.player-avatar { position: relative; width: 86px; height: 86px; border-radius: 14px; overflow: hidden; background: var(--surface-muted); flex: 0 0 auto; display: grid; place-items: center; }
+.player-avatar .candy-mark { width: 38px; height: 26px; }
+.player-avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.player-copy { flex: 1; min-width: 0; padding-right: 100px; }
+.player-name-row { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.player-flag { width: 32px; height: 23px; object-fit: cover; border-radius: 3px; flex: 0 0 auto; }
+.player-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 38px; line-height: 1.1; color: var(--player-color); }
+.player-bottom { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 12px; }
+.points { display: flex; gap: 8px; }
+.candy-point { width: 40px; height: 29px; padding: 0; border: 0; background: #dfd0ae; mask: url('../assets/candy.svg') center / contain no-repeat; cursor: pointer; transition: background-color .2s var(--ease-out); }
+.candy-point.earned { background: var(--player-color); }
+.player-ban { position: absolute; right: 12px; top: 12px; width: 84px; height: 78px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border-radius: var(--chip-radius); background: var(--player-color); color: var(--cream); }
+.ban-heading { display: flex; align-items: center; gap: 5px; font-size: 15px; line-height: 1; }
+.ban-heading svg { width: 15px; height: 15px; }
+.ban-pick { font-size: 29px; line-height: 1; font-weight: 400; }
+.player-panel.side-1 { flex-direction: row-reverse; }
+.player-panel.side-1 .player-copy { padding-left: 100px; padding-right: 0; }
+.player-panel.side-1 .player-ban { left: 12px; right: auto; }
+.player-panel.side-1 .player-name-row { flex-direction: row-reverse; }
+.player-panel.side-1 .player-bottom { flex-direction: row-reverse; }
+.player-panel.side-1 .points { flex-direction: row-reverse; }
+.player-panel.side-1 .candy-point { transform: scaleX(-1); }
+.player-panel.side-1 .ban-heading { flex-direction: row-reverse; }
+.player-panel.side-1 .ban-heading svg { transform: scaleX(-1); }
+.player-ban { transition: background-color .26s var(--ease-out); }
+.player-ban .ban-pick { will-change: transform, opacity; }
+.current-map { position: absolute; top: 166px; left: 1443px; width: 455px; height: 590px; overflow: hidden; }
+.map-art { height: 224px; position: relative; overflow: hidden; border-radius: 14px 14px 4px 4px; background: var(--yellow); display: grid; place-items: center; }
+.map-image { position: absolute; width: 100%; height: 100%; inset: 0; object-fit: cover; opacity: 0; transform: scale(1.04); filter: blur(7px); transition: opacity .28s var(--ease-out), transform .4s var(--ease-out), filter .35s var(--ease-out); }
+.map-image.active { opacity: 1; transform: scale(1); filter: blur(0); }
+.slot-tag { position: absolute; top: 10px; left: 10px; padding: 10px 14px; font-size: 42px; color: var(--cream); background: var(--mod-color, var(--caramel)); box-shadow: 0 4px 0 var(--mod-depth, var(--chocolate)); border: 3px solid var(--cream); border-radius: var(--chip-radius); line-height: 1; text-align: center; }
+.map-tag { display: flex; align-items: center; gap: 6px; position: absolute; bottom: 10px; right: 10px; background: var(--chocolate); color: var(--cream); border: 3px solid var(--cream); border-radius: var(--inset-radius); box-shadow: 0 3px 0 #5c3f2e; padding: 6px 10px; font-size: 16px; }
+.map-tag[data-type='edit'] { background: var(--coral); box-shadow: 0 3px 0 var(--coral-depth); }
+.map-tag[data-type='original'] { background: #5b8069; box-shadow: 0 3px 0 #42604d; }
+.map-tag svg { width: 17px; height: 17px; }
+.current-copy { height: 162px; padding: 12px 14px; }
+.map-artist { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 22px/1.2 Felixtowe, serif; height: 27px; }
+.map-title-window { overflow: hidden; padding: 2px 0 3px; }
+.map-title-window.scrolling { mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent); }
+.map-title { font-size: 34px; line-height: 1.2; width: max-content; min-width: 100%; white-space: nowrap; color: var(--coral); }
+.map-difficulty { font-size: 20px; line-height: 1.2; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.map-mapper { display: flex; align-items: baseline; gap: 10px; margin-top: 10px; padding-top: 8px; border-top: 2px solid #b88e6640; }
+.map-mapper span { font-size: 12px; flex: 0 0 auto; }
+.map-mapper strong { font-size: 19px; font-weight: 400; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.map-stat-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 42px repeat(3, 34px); gap: 8px 10px; padding: 4px 14px 12px; }
+.map-stat { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 10px; border-radius: var(--chip-radius); background: var(--surface-muted); min-width: 0; }
+.map-stat span { font-size: 15px; }
+.map-stat strong { font-size: 24px; font-weight: 400; white-space: nowrap; }
+.map-stat.star { grid-column: 1 / -1; color: var(--cream); background: var(--coral); box-shadow: 0 4px 0 var(--coral-depth); }
+.map-stat.star strong { font-size: 29px; }
+.pick-log { position: absolute; top: 774px; left: 1443px; width: 455px; height: 64px; }
+.pick-log h2, .match-chat h2, .caster-space h2 { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 400; margin: 0; line-height: 1.2; }
+.heading-line { flex: 1; height: 2px; background: #b88e6640; }
+.log-feed { display: flex; align-items: center; gap: 8px; height: 44px; padding: 4px; border-radius: var(--inset-radius); overflow: hidden; mask-image: linear-gradient(to right, #000 calc(100% - 22px), transparent); }
+.log-chip { display: flex; align-items: center; flex: 0 0 auto; height: 36px; color: var(--player-color); background: var(--cream); border: 1px solid var(--player-color); box-shadow: 0 2px 0 var(--player-depth); border-radius: calc(var(--inset-radius) - 4px); padding: 0 12px; font-size: 21px; line-height: 1; }
+.log-feed::-webkit-scrollbar { display: none; }
+.log-empty { display: block; padding: 8px 6px; color: var(--caramel); font-size: 24px; }
+.caster-space { position: absolute; top: 862px; left: 1443px; width: 455px; height: 196px; padding: 8px 10px; }
+.operator-toast { position: absolute; z-index: 20; bottom: 28px; left: 50%; transform: translateX(-50%); background: var(--chocolate); color: var(--cream); font-size: 23px; padding: 14px 24px; border-radius: var(--panel-radius); box-shadow: 0 5px 0 var(--caramel); pointer-events: none; }
+.match-chat { position: absolute; top: 862px; width: 700px; height: 196px; padding: 8px 10px; }
+.match-chat h2 { color: var(--chocolate); }
+.game-chat { left: 22px; }
+.twitch-chat { left: 734px; }
+.chat-viewport { position: absolute; inset: 38px 10px 9px; overflow: hidden; min-height: 0; mask-image: linear-gradient(transparent, #000 9px); }
+.chat-rows { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; gap: 6px; }
+.chat-line { font-size: 22px; line-height: 1.2; overflow-wrap: anywhere; }
+.chat-line strong { font-weight: 400; color: var(--coral); margin-right: 8px; }
+.chat-emote { height: 28px; width: auto; max-width: 90px; object-fit: contain; vertical-align: middle; }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+}

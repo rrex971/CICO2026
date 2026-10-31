@@ -5,6 +5,11 @@ window.CICO2026 = {
     tournamentSource: 'https://wybin.xyz/api/v1/tournament/cico2026',
     seedReveal: { qualifiedSeeds: 32, eliminatedPageSize: 16 },
     startingSoon: { minutes: 5, channel: 'osucatchid', video: '../assets/starting-soon.mp4' },
+    match: { bestOf: 9, bans: 1, channel: 'osucatchid', profileSource: '../qualifier-seeds.json', matchSource: '../matches.json' },
+    gameplayClients: [
+        { x: 32, y: 166, width: 680, height: 510, radius: 14 },
+        { x: 744, y: 166, width: 680, height: 510, radius: 14 }
+    ],
     maps: [],
     modColors: {
         NM: '#629bc1',

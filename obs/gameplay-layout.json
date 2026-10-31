@@ -1,0 +1,59 @@
+{
+    "canvas": {
+        "width": 1920,
+        "height": 1080
+    },
+    "browserSources": {
+        "gameplay": "http://127.0.0.1:24050/CICO2026/gameplay/",
+        "mappool": "http://127.0.0.1:24050/CICO2026/mappool/"
+    },
+    "captures": [
+        {
+            "player": 1,
+            "x": 32,
+            "y": 166,
+            "width": 680,
+            "height": 510,
+            "radius": 14,
+            "lock": true
+        },
+        {
+            "player": 2,
+            "x": 744,
+            "y": 166,
+            "width": 680,
+            "height": 510,
+            "radius": 14,
+            "lock": true
+        }
+    ],
+    "casterSource": {
+        "x": 1463,
+        "y": 898,
+        "width": 415,
+        "height": 140,
+        "customCss": "discord-casters.css"
+    },
+    "sourceOrderBottomToTop": [
+        "Player 1 capture",
+        "Player 2 capture",
+        "CICO2026 gameplay browser",
+        "Discord Streamkit casters"
+    ],
+    "controls": {
+        "mappool": {
+            "leftClick": "Player 1 pick",
+            "rightClick": "Player 2 pick",
+            "shift": "Ban instead of pick; one ban each; TB cannot be banned",
+            "ctrl": "Clear this map"
+        },
+        "points": {
+            "clickCandy": "Set points manually",
+            "rightClickCandy": "Remove this and later points",
+            "ctrlClickCandy": "Return to live tosu points"
+        },
+        "reset": "Ctrl + right click the round label to clear picks, bans and manual points for this match",
+        "match": "Use the same ?match=<Wybin match ID or label> or ?lobby=<unique lobby name> on both scene URLs",
+        "preview": "?preview=1 uses isolated demo state; add &motion=0 for a static preview"
+    }
+}

@@ -1,0 +1,1599 @@
+{
+    "name": "CICO2026 Portable",
+    "sources": [
+        {
+            "prev_ver": 553648129,
+            "name": "osu! Audio",
+            "uuid": "e5385857-496f-464f-8f1f-bc70195bd485",
+            "id": "wasapi_process_output_capture",
+            "versioned_id": "wasapi_process_output_capture",
+            "settings": {
+                "window": " Tournament Client 0:WindowsForms10.Window.2b.app.0.1ca0192_r18_ad1:osu!.exe",
+                "priority": 1
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "CICO2026 Discord Casters",
+            "uuid": "4a312330-377f-42c9-83b3-e950198102ff",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "url": "about:blank",
+                "width": 415,
+                "height": 140,
+                "fps_custom": true,
+                "fps": 60,
+                "reroute_audio": false,
+                "shutdown": false,
+                "restart_when_active": false,
+                "css": "@font-face {\n    font-family: 'CICO Lilita';\n    src: url('https://fonts.gstatic.com/s/lilitaone/v17/i7dPIFZ9Zz-WBtRtedDbUEY.ttf') format('truetype');\n    font-weight: 400;\n    font-style: normal;\n    font-display: block;\n}\n\n:root {\n    --cico-cream: #fff9dc;\n    --cico-coral: #f56c70;\n    --cico-chocolate: #79553f;\n    --cico-caramel: #b88e66;\n    --cico-ease: cubic-bezier(.16, 1, .3, 1);\n}\n\n* {\n    box-sizing: border-box;\n}\n\nhtml,\nbody {\n    width: 100%;\n    height: 100%;\n    margin: 0;\n    overflow: hidden !important;\n    background: transparent !important;\n}\n\nbody {\n    color: var(--cico-chocolate);\n    font-family: 'CICO Lilita', 'Trebuchet MS', sans-serif;\n    user-select: none;\n}\n\n#root,\ndiv[class*='Voice_voiceContainer'] {\n    width: 100%;\n    height: 100%;\n    background: transparent !important;\n}\n\nul[class*='Voice_voiceStates'] {\n    display: flex !important;\n    width: 100% !important;\n    height: 100% !important;\n    margin: 0 !important;\n    padding: 10px 8px !important;\n    align-items: center !important;\n    justify-content: center !important;\n    gap: 12px !important;\n    list-style: none !important;\n}\n\nli[class*='Voice_voiceState'] {\n    display: flex !important;\n    flex: 0 1 116px !important;\n    min-width: 0 !important;\n    height: 100px !important;\n    margin: 0 !important;\n    padding: 3px 0 !important;\n    align-items: center !important;\n    justify-content: center !important;\n    flex-direction: column !important;\n    gap: 10px !important;\n    border: 0 !important;\n    background: transparent !important;\n    box-shadow: none !important;\n    transform: none !important;\n}\n\nimg[class*='Voice_avatar'] {\n    display: block !important;\n    position: static !important;\n    flex: 0 0 56px !important;\n    width: 56px !important;\n    height: 56px !important;\n    margin: 0 !important;\n    border: 3px solid var(--cico-cream) !important;\n    border-radius: 14px !important;\n    box-shadow: 0 0 0 2px var(--cico-caramel), 0 4px 0 var(--cico-caramel) !important;\n    object-fit: cover !important;\n    transition: border-color 140ms var(--cico-ease), box-shadow 140ms var(--cico-ease) !important;\n}\n\nimg[class*='Voice_avatarSpeaking'] {\n    border-color: var(--cico-coral) !important;\n    box-shadow: 0 0 0 2px var(--cico-coral), 0 4px 0 var(--cico-caramel) !important;\n}\n\ndiv[class*='Voice_user'] {\n    position: static !important;\n    width: 100% !important;\n    min-width: 0 !important;\n    margin: 0 !important;\n    padding: 0 !important;\n}\n\nspan[class*='Voice_name'] {\n    display: block !important;\n    position: static !important;\n    width: 100% !important;\n    margin: 0 !important;\n    padding: 1px 2px 3px !important;\n    overflow: hidden !important;\n    background: transparent !important;\n    color: var(--cico-chocolate) !important;\n    font: 400 18px/1.2 'CICO Lilita', 'Trebuchet MS', sans-serif !important;\n    text-align: center !important;\n    text-overflow: ellipsis !important;\n    white-space: nowrap !important;\n    transition: color 140ms var(--cico-ease) !important;\n}\n\nli[class*='Voice_voiceState']:has(img[class*='Voice_avatarSpeaking']) span[class*='Voice_name'] {\n    color: var(--cico-coral) !important;\n}\n\nsvg[class*='Voice_logo'],\ndiv[class*='Voice_logo'] {\n    display: none !important;\n}\n\n@media (prefers-reduced-motion: reduce) {\n    * {\n        transition: none !important;\n    }\n}\n\n@media (max-height: 140px) {\n    ul[class*='Voice_voiceStates'] {\n        padding: 2px 4px !important;\n        gap: 16px !important;\n    }\n\n    li[class*='Voice_voiceState'] {\n        flex: 1 1 0 !important;\n        height: 48px !important;\n        flex-direction: row !important;\n        gap: 10px !important;\n    }\n\n    img[class*='Voice_avatar'] {\n        flex-basis: 40px !important;\n        width: 40px !important;\n        height: 40px !important;\n        border-radius: 10px !important;\n    }\n\n    div[class*='Voice_user'] {\n        flex: 1 !important;\n    }\n\n    span[class*='Voice_name'] {\n        text-align: left !important;\n        font-size: 18px !important;\n    }\n}\n"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "CICO2026 Tournament Client 0",
+            "uuid": "91fa43d6-9212-42bd-87a4-732d4b7c3ab7",
+            "id": "game_capture",
+            "versioned_id": "game_capture",
+            "settings": {
+                "window": " Tournament Client 0:WindowsForms10.Window.2b.app.0.1ca0192_r18_ad1:osu!.exe",
+                "capture_mode": "window",
+                "priority": 1,
+                "capture_cursor": false,
+                "anti_cheat_hook": false
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "CICO2026 Tournament Client 1",
+            "uuid": "be7da192-74fa-4d36-8aad-cb2658c81205",
+            "id": "game_capture",
+            "versioned_id": "game_capture",
+            "settings": {
+                "window": " Tournament Client 1:WindowsForms10.Window.2b.app.0.1ca0192_r18_ad1:osu!.exe",
+                "capture_mode": "window",
+                "priority": 1,
+                "capture_cursor": false,
+                "anti_cheat_hook": false
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "CICO2026 Showcase Capture",
+            "uuid": "ad94495c-ff22-43f9-8a80-679e48e6ca16",
+            "id": "window_capture",
+            "versioned_id": "window_capture",
+            "settings": {
+                "window": "osu!:WindowsForms10.Window.2b.app.0.1114f81_r18_ad1:osu!.exe",
+                "cursor": false,
+                "client_area": true
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "CICO2026 Starting Soon Overlay",
+            "uuid": "c4ed370d-2cce-465c-8049-01598f52a442",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "url": "http://127.0.0.1:24050/CICO2026/starting-soon/",
+                "width": 1920,
+                "height": 1080,
+                "fps_custom": true,
+                "fps": 60,
+                "reroute_audio": false,
+                "shutdown": true,
+                "restart_when_active": false,
+                "css": "body { background-color: transparent; margin: 0; overflow: hidden; }"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "Starting Soon",
+            "uuid": "8f243fe6-f4b3-46da-8d6b-b9e203ae77bd",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "custom_size": false,
+                "id_counter": 2,
+                "items": [
+                    {
+                        "name": "osu! Audio",
+                        "source_uuid": "e5385857-496f-464f-8f1f-bc70195bd485",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Starting Soon Overlay",
+                        "source_uuid": "c4ed370d-2cce-465c-8049-01598f52a442",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "CICO2026 Seed Reveal Overlay",
+            "uuid": "dde21057-c5dc-4f92-863c-9d5b15c51e8e",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "url": "http://127.0.0.1:24050/CICO2026/seed-reveal/",
+                "width": 1920,
+                "height": 1080,
+                "fps_custom": true,
+                "fps": 60,
+                "reroute_audio": false,
+                "shutdown": false,
+                "restart_when_active": false,
+                "css": "body { background-color: transparent; margin: 0; overflow: hidden; }"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "Seed Reveal",
+            "uuid": "2ba0249d-6186-46e4-8164-2df051a9216d",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "custom_size": false,
+                "id_counter": 2,
+                "items": [
+                    {
+                        "name": "osu! Audio",
+                        "source_uuid": "e5385857-496f-464f-8f1f-bc70195bd485",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Seed Reveal Overlay",
+                        "source_uuid": "dde21057-c5dc-4f92-863c-9d5b15c51e8e",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "CICO2026 Pool Showcase Overlay",
+            "uuid": "5ab1519e-ff70-494c-83c2-75cfd4bfabd3",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "url": "http://127.0.0.1:24050/CICO2026/pool-showcase/?round=round-of-32",
+                "width": 1920,
+                "height": 1080,
+                "fps_custom": true,
+                "fps": 60,
+                "reroute_audio": false,
+                "shutdown": false,
+                "restart_when_active": false,
+                "css": "body { background-color: transparent; margin: 0; overflow: hidden; }"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "Pool Showcase",
+            "uuid": "81f5c79c-543b-4263-8167-2dcfdea6c94c",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "custom_size": false,
+                "id_counter": 4,
+                "items": [
+                    {
+                        "name": "osu! Audio",
+                        "source_uuid": "e5385857-496f-464f-8f1f-bc70195bd485",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Showcase Capture",
+                        "source_uuid": "ad94495c-ff22-43f9-8a80-679e48e6ca16",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 32,
+                            "y": 176
+                        },
+                        "pos_rel": {
+                            "x": -1.7185185185185186,
+                            "y": -0.674074074074074
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1392,
+                            "y": 783
+                        },
+                        "bounds_rel": {
+                            "x": 2.577777777777778,
+                            "y": 1.45
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Pool Showcase Overlay",
+                        "source_uuid": "5ab1519e-ff70-494c-83c2-75cfd4bfabd3",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Discord Casters",
+                        "source_uuid": "4a312330-377f-42c9-83b3-e950198102ff",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 4,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1463,
+                            "y": 898
+                        },
+                        "pos_rel": {
+                            "x": 0.9314814814814815,
+                            "y": 0.662962962962963
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 415,
+                            "y": 140
+                        },
+                        "bounds_rel": {
+                            "x": 0.7685185185185185,
+                            "y": 0.25925925925925924
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "CICO2026 Mappool Overlay",
+            "uuid": "95065851-f176-449b-836b-ff521a6aaec3",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "url": "http://127.0.0.1:24050/CICO2026/mappool/?round=round-of-32",
+                "width": 1920,
+                "height": 1080,
+                "fps_custom": true,
+                "fps": 60,
+                "reroute_audio": false,
+                "shutdown": false,
+                "restart_when_active": false,
+                "css": "body { background-color: transparent; margin: 0; overflow: hidden; }"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "Mappool",
+            "uuid": "85ce583d-75d2-47a7-8b09-2902a8a0e8f0",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "custom_size": false,
+                "id_counter": 3,
+                "items": [
+                    {
+                        "name": "osu! Audio",
+                        "source_uuid": "e5385857-496f-464f-8f1f-bc70195bd485",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Mappool Overlay",
+                        "source_uuid": "95065851-f176-449b-836b-ff521a6aaec3",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Discord Casters",
+                        "source_uuid": "4a312330-377f-42c9-83b3-e950198102ff",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1463,
+                            "y": 898
+                        },
+                        "pos_rel": {
+                            "x": 0.9314814814814815,
+                            "y": 0.662962962962963
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 415,
+                            "y": 140
+                        },
+                        "bounds_rel": {
+                            "x": 0.7685185185185185,
+                            "y": 0.25925925925925924
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {
+                "transition": "CICO Wave Stinger",
+                "transition_duration": 2600
+            }
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "CICO2026 Gameplay Overlay",
+            "uuid": "ff8c2411-a3ff-45ca-8dc1-c8384ba1ecea",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "url": "http://127.0.0.1:24050/CICO2026/gameplay/?round=round-of-32",
+                "width": 1920,
+                "height": 1080,
+                "fps_custom": true,
+                "fps": 60,
+                "reroute_audio": false,
+                "shutdown": false,
+                "restart_when_active": false,
+                "css": "body { background-color: transparent; margin: 0; overflow: hidden; }"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "Gameplay",
+            "uuid": "81de4e0b-3073-445c-8f30-ef552f00d227",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "custom_size": false,
+                "id_counter": 5,
+                "items": [
+                    {
+                        "name": "osu! Audio",
+                        "source_uuid": "e5385857-496f-464f-8f1f-bc70195bd485",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Tournament Client 0",
+                        "source_uuid": "91fa43d6-9212-42bd-87a4-732d4b7c3ab7",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 32,
+                            "y": 166
+                        },
+                        "pos_rel": {
+                            "x": -1.7185185185185186,
+                            "y": -0.6925925925925925
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 680,
+                            "y": 510
+                        },
+                        "bounds_rel": {
+                            "x": 1.2592592592592593,
+                            "y": 0.9444444444444444
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Tournament Client 1",
+                        "source_uuid": "be7da192-74fa-4d36-8aad-cb2658c81205",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 744,
+                            "y": 166
+                        },
+                        "pos_rel": {
+                            "x": -0.4,
+                            "y": -0.6925925925925925
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 680,
+                            "y": 510
+                        },
+                        "bounds_rel": {
+                            "x": 1.2592592592592593,
+                            "y": 0.9444444444444444
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Gameplay Overlay",
+                        "source_uuid": "ff8c2411-a3ff-45ca-8dc1-c8384ba1ecea",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 4,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Discord Casters",
+                        "source_uuid": "4a312330-377f-42c9-83b3-e950198102ff",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 5,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1463,
+                            "y": 898
+                        },
+                        "pos_rel": {
+                            "x": 0.9314814814814815,
+                            "y": 0.662962962962963
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 415,
+                            "y": 140
+                        },
+                        "bounds_rel": {
+                            "x": 0.7685185185185185,
+                            "y": 0.25925925925925924
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {
+                "transition": "CICO Wave Stinger",
+                "transition_duration": 2600
+            }
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "CICO2026 Winner Overlay",
+            "uuid": "9f5ea5f0-dbdf-4087-8b2e-23a3da226d33",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "url": "http://127.0.0.1:24050/CICO2026/winner/?round=round-of-32",
+                "width": 1920,
+                "height": 1080,
+                "fps_custom": true,
+                "fps": 60,
+                "reroute_audio": false,
+                "shutdown": false,
+                "restart_when_active": false,
+                "css": "body { background-color: transparent; margin: 0; overflow: hidden; }"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 553648129,
+            "name": "Winner",
+            "uuid": "f5b3ef3c-b395-4651-8d6e-4f57c5adbd67",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "custom_size": false,
+                "id_counter": 2,
+                "items": [
+                    {
+                        "name": "osu! Audio",
+                        "source_uuid": "e5385857-496f-464f-8f1f-bc70195bd485",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "CICO2026 Winner Overlay",
+                        "source_uuid": "9f5ea5f0-dbdf-4087-8b2e-23a3da226d33",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0,
+                        "scale_ref": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777777777777,
+                            "y": -1
+                        },
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "scale_rel": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "bounds": {
+                            "x": 1920,
+                            "y": 1080
+                        },
+                        "bounds_rel": {
+                            "x": 3.5555555555555554,
+                            "y": 2
+                        },
+                        "scale_filter": "bicubic",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        }
+    ],
+    "groups": [],
+    "canvases": [],
+    "transitions": [
+        {
+            "name": "CICO Stinger",
+            "id": "obs_stinger_transition",
+            "settings": {
+                "tp_type": 1,
+                "transition_point": 150,
+                "path": "cico-stinger.webm"
+            }
+        },
+        {
+            "name": "CICO Wave Stinger",
+            "id": "obs_stinger_transition",
+            "settings": {
+                "tp_type": 0,
+                "transition_point": 1300,
+                "path": "cico-wave-stinger.webm"
+            }
+        }
+    ],
+    "current_transition": "CICO Stinger",
+    "transition_duration": 300,
+    "quick_transitions": [
+        {
+            "name": "Fade",
+            "duration": 300,
+            "hotkeys": [],
+            "id": 1,
+            "fade_to_black": false
+        }
+    ],
+    "saved_projectors": [],
+    "preview_locked": true,
+    "scaling_enabled": false,
+    "scaling_level": 0,
+    "scaling_off_x": 0,
+    "scaling_off_y": 0,
+    "modules": {},
+    "version": 2,
+    "scene_order": [
+        {
+            "name": "Starting Soon"
+        },
+        {
+            "name": "Seed Reveal"
+        },
+        {
+            "name": "Pool Showcase"
+        },
+        {
+            "name": "Mappool"
+        },
+        {
+            "name": "Gameplay"
+        },
+        {
+            "name": "Winner"
+        }
+    ],
+    "current_scene": "Starting Soon",
+    "current_program_scene": "Starting Soon",
+    "resolution": {
+        "x": 1920,
+        "y": 1080
+    },
+    "migration_resolution": {
+        "x": 1920,
+        "y": 1080
+    }
+}

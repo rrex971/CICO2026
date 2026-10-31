@@ -41,7 +41,23 @@
 
 * {
     box-sizing: border-box;
+    -webkit-user-select: none;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background: transparent;
+    color: inherit;
+}
+
+:focus,
+:focus-visible {
+    outline: none;
+}
+
+button {
+    appearance: none;
 }
 
 html, body {

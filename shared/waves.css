@@ -1,0 +1,46 @@
+:root {
+    --transition-cream: #f3de99;
+}
+
+.wave-layer {
+    position: absolute;
+    width: 1920px;
+    height: 900px;
+    left: 0;
+    will-change: transform;
+}
+
+.wave-art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.wave-content {
+    position: absolute;
+    inset: 0;
+}
+
+.wave-cream .wave-content { clip-path: url(#cream-content-clip); }
+.wave-coral .wave-content { clip-path: url(#coral-content-clip); }
+
+.wave-cream {
+    top: 465px;
+    z-index: 0;
+    fill: var(--transition-cream);
+    transform: translateY(800px);
+}
+
+.wave-coral {
+    top: -190px;
+    z-index: 1;
+    fill: var(--coral);
+    transform: translateY(-800px);
+}
+
+.wave-cream .wave-back { fill: #dfc47d; }
+.wave-cream .wave-middle { fill: #fae9b4; }
+.wave-coral .wave-back { fill: #dc6269; }
+.wave-coral .wave-middle { fill: #f58c8b; }
