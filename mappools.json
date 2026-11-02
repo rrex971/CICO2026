@@ -553,9 +553,9 @@
             },
             {
                 "slot": "HD2",
-                "title": "Shikata Akiko",
+                "title": "METHOD_METAFALICA/.",
                 "keywords": [
-                    "Shikata Akiko"
+                    "METHOD_METAFALICA/."
                 ],
                 "badge": "custom",
                 "mods": 8
@@ -597,13 +597,21 @@
                 "mods": 16
             },
             {
+                "id": 5002103,
                 "slot": "DT1",
-                "title": "Three Magic (DiGiTAL WING TRANCE Remix)",
-                "keywords": [
-                    "Three Magic (DiGiTAL WING TRANCE Remix)"
-                ],
-                "badge": "edit",
-                "mods": 64
+                "beatmapsetId": 2330599,
+                "artist": "kessoku band",
+                "title": "Re:Re:",
+                "difficulty": "atomic's Rain",
+                "mapper": "Yumeno Himiko",
+                "background": "https://assets.ppy.sh/beatmaps/2330599/covers/cover.jpg",
+                "mods": 64,
+                "cs": 4.2,
+                "ar": 8.7,
+                "od": 8.7,
+                "hp": 4.5,
+                "bpm": 155,
+                "length": 277000
             },
             {
                 "slot": "DT2",
@@ -615,19 +623,13 @@
                 "mods": 64
             },
             {
-                "id": 4811954,
                 "slot": "DT3",
-                "beatmapsetId": 2260838,
-                "artist": "Halozy",
-                "title": "Three Magic (DiGiTAL WiNG TRANCE Remix)",
-                "difficulty": "rinkiha & Bober's Enchanted Love",
-                "mapper": "BoberOfDarkness",
-                "background": "https://assets.ppy.sh/beatmaps/2260838/covers/cover.jpg",
-                "mods": 64,
-                "cs": 4.2,
-                "hp": 4,
-                "bpm": 210,
-                "length": 170000
+                "title": "Three Magic (DiGiTAL WING TRANCE Remix)",
+                "keywords": [
+                    "Three Magic (DiGiTAL WING TRANCE Remix)"
+                ],
+                "badge": "edit",
+                "mods": 64
             },
             {
                 "slot": "FM1",
