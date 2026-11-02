@@ -1,7 +1,7 @@
 const config = window.CICO2026;
 const params = new URLSearchParams(location.search);
 const byId = id => document.getElementById(id);
-const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
 const waveStops = [];
 const waveExitStops = [];
 for (let step = 0; step <= 40; step++) {
@@ -119,13 +119,6 @@ function renderModCards(player) {
 function updateSummaries(player) {
     CICOPlaceholders.toggle(byId('average-score'), false);
     CICOPlaceholders.toggle(byId('percent-max'), false);
-    if (reducedMotion.matches) {
-        scoreCounter?.reset();
-        percentCounter?.reset();
-        byId('average-score').textContent = formatter.format(player.averageScore);
-        byId('percent-max').textContent = player.percentMaxSum.toFixed(3);
-        return;
-    }
     if (!scoreCounter) {
         scoreCounter = new CountUp(byId('average-score'), player.averageScore, player.averageScore, 0, .45, { useGrouping: true, separator: ',' });
         percentCounter = new CountUp(byId('percent-max'), player.percentMaxSum, player.percentMaxSum, 3, .45, { useGrouping: false });
@@ -198,7 +191,7 @@ function startWaveMotion() {
     let previousTime = performance.now();
     let phase = 0;
     const draw = now => {
-        if (reducedMotion.matches || byId('reveal').hidden) { waveFrame = 0; return; }
+        if (byId('reveal').hidden) { waveFrame = 0; return; }
         const elapsed = Math.max(.001, Math.min(.05, (now - previousTime) / 1000));
         previousTime = now;
         let speed = 0;
@@ -219,7 +212,6 @@ function startWaveMotion() {
 async function changeScreen(index) {
     if (index === -1 && !busy) { renderScreen(-1); return; }
     if (busy || !screens[index] || index === cursor) return;
-    if (reducedMotion.matches) { renderScreen(index); return; }
     busy = true;
     const request = ++sequence;
     const screen = screens[index];
@@ -323,13 +315,4 @@ addEventListener('keydown', event => {
 });
 addEventListener('resize', scaleScene);
 addEventListener('pagehide', () => { sequence++; clearInterval(autoTimer); stopWaveMotion(); animations.forEach(animation => animation.cancel()); });
-reducedMotion.addEventListener('change', () => {
-    sequence++;
-    stopWaveMotion();
-    animations.forEach(animation => animation.cancel());
-    animations = [];
-    byId('reveal').hidden = true;
-    busy = false;
-    renderScreen(cursor);
-});
 start();

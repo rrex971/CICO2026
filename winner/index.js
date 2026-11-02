@@ -3,7 +3,7 @@ const resultElement = document.querySelector('#result');
 const nameElement = document.querySelector('#winner-name');
 const avatarElement = document.querySelector('#winner-avatar');
 const flagElement = document.querySelector('#winner-flag');
-const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
 let context;
 let signature = '';
 
@@ -83,13 +83,11 @@ function render(data) {
     updateAvatar(winner.player);
     updateFlag(country);
     fitName();
-    if (!reducedMotion.matches) {
-        for (const [index, element] of [document.querySelector('.winner-mascot'), document.querySelector('.winner-heading'), document.querySelector('.winner-card')].entries()) {
-            element.animate([
-                { opacity: 0, transform: 'translateY(24px)', filter: 'blur(7px)' },
-                { opacity: 1, transform: 'translateY(0)', filter: 'blur(0)' }
-            ], { duration: 520, delay: index * 65, easing: 'cubic-bezier(.16, 1, .3, 1)', fill: 'backwards' });
-        }
+    for (const [index, element] of [document.querySelector('.winner-mascot'), document.querySelector('.winner-heading'), document.querySelector('.winner-card')].entries()) {
+        element.animate([
+            { opacity: 0, transform: 'translateY(24px)', filter: 'blur(7px)' },
+            { opacity: 1, transform: 'translateY(0)', filter: 'blur(0)' }
+        ], { duration: 520, delay: index * 65, easing: 'cubic-bezier(.16, 1, .3, 1)', fill: 'backwards' });
     }
 }
 

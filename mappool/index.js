@@ -12,7 +12,7 @@ let signature;
 let previousPickCount = -1;
 let twitch;
 let previewChat;
-const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
 const easeOut = 'cubic-bezier(.16, 1, .3, 1)';
 const pulseEase = 'cubic-bezier(0, .55, .45, 1)';
 
@@ -131,7 +131,7 @@ function render(data) {
         const playerName = action ? data.players[action.side]?.name || '' : '';
         const actionLabel = action ? `${action.type === 'ban' ? 'BANNED' : 'PICKED'}${playerName ? ` BY ${playerName}` : ''}` : '';
         view.setText(status.querySelector('span'), actionLabel || badgeLabel || '—');
-        if (changed && !reducedMotion.matches) {
+        if (changed) {
             card.stateAnimation?.cancel();
             const target = action?.type === 'ban' ? card.querySelector('.ban-stamp') : status;
             card.stateAnimation = target.animate(action?.type === 'ban' ? [
@@ -144,7 +144,7 @@ function render(data) {
         }
         if (latest?.slot !== card.dataset.slot || !action) card.pulseAnimation?.cancel();
         if (action?.type !== 'pick') card.flashAnimation?.cancel();
-        if (pulse && latest?.slot === card.dataset.slot && !reducedMotion.matches) {
+        if (pulse && latest?.slot === card.dataset.slot) {
             card.pulseAnimation?.cancel();
             card.pulseAnimation = card.querySelector('.pick-halo').animate([
                 { opacity: .8, transform: 'scale(1)' },

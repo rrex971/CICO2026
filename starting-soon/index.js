@@ -4,7 +4,7 @@ const overlay = document.getElementById('overlay');
 const background = document.getElementById('background-video');
 const countdown = document.getElementById('countdown');
 const feed = document.getElementById('twitch-chat');
-const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
 const preview = params.get('preview') === '1';
 const requestedMinutes = Number(params.get('minutes') ?? settings.minutes);
 const duration = (Number.isFinite(requestedMinutes) ? Math.max(0, requestedMinutes) : settings.minutes) * 60000;
@@ -35,7 +35,7 @@ function appendMessage(name, message, tags = {}) {
     feed.append(row);
     while (feed.children.length > 30) feed.firstElementChild.remove();
     row.addEventListener('animationend', () => row.classList.remove('entering'), {once: true});
-    if (!anchor?.isConnected || reducedMotion.matches) return;
+    if (!anchor?.isConnected) return;
     const scale = overlay.getBoundingClientRect().width / overlay.offsetWidth;
     const shift = (previousTop - anchor.getBoundingClientRect().top) / scale;
     feed.animate([{transform: `translateY(${shift}px)`}, {transform: 'translateY(0)'}], {

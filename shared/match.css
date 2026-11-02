@@ -87,6 +87,3 @@
 .map-stat strong { --placeholder-width: 1.8em; }
 .map-stat[data-stat="length"] strong { --placeholder-width: 2.6em; }
 .map-stat.star strong { --placeholder-width: 2.4em; --placeholder-color: #fff9dc66; }
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-}

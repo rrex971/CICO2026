@@ -1,5 +1,5 @@
 window.CICOMatchView = (() => {
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+
     const ease = 'cubic-bezier(.16, 1, .3, 1)';
     const node = (tag, className, text) => {
         const element = document.createElement(tag);
@@ -66,7 +66,7 @@ window.CICOMatchView = (() => {
         setText(element.querySelector('.player-name'), player?.name || '—');
         element.querySelectorAll('.candy-point').forEach((button, index) => {
             const earned = points.value !== null && index < points.value;
-            if (button.wasEarned !== undefined && button.wasEarned !== earned && !reduced.matches) {
+            if (button.wasEarned !== undefined && button.wasEarned !== earned) {
                 button.pointAnimation?.cancel();
                 const mirror = element.classList.contains('side-1') ? -1 : 1;
                 button.pointAnimation = button.animate([
@@ -80,7 +80,7 @@ window.CICOMatchView = (() => {
         });
         const banPick = element.querySelector('.ban-pick');
         const banText = ban?.slot || '—';
-        if (element.banText !== undefined && element.banText !== banText && !reduced.matches) {
+        if (element.banText !== undefined && element.banText !== banText) {
             banPick.getAnimations().forEach(animation => animation.cancel());
             const direction = element.classList.contains('side-1') ? -1 : 1;
             banPick.animate([{ transform: `translateX(${direction * 8}px)`, filter: 'blur(3px)', opacity: .2 }, { transform: 'translateX(0)', filter: 'blur(0)', opacity: 1 }], { duration: 320, easing: ease });
@@ -159,7 +159,7 @@ window.CICOMatchView = (() => {
             image.src = value.cover;
         }
         if (!value.cover) element.coverUrl = '';
-        if (!reduced.matches) copy.animate([{ opacity: .2, filter: 'blur(3px)', transform: 'translateY(5px)' }, { opacity: 1, filter: 'blur(0)', transform: 'translateY(0)' }], { duration: 260, easing: ease });
+        copy.animate([{ opacity: .2, filter: 'blur(3px)', transform: 'translateY(5px)' }, { opacity: 1, filter: 'blur(0)', transform: 'translateY(0)' }], { duration: 260, easing: ease });
         requestAnimationFrame(() => marquee(element.querySelector('.map-title-window')));
     }
 
@@ -168,7 +168,7 @@ window.CICOMatchView = (() => {
         title.getAnimations().forEach(animation => animation.cancel());
         viewport.classList.remove('scrolling');
         const distance = title.scrollWidth - viewport.clientWidth;
-        if (reduced.matches || distance < 2) return;
+        if (distance < 2) return;
         viewport.classList.add('scrolling');
         const duration = 3000 + distance / 35 * 2000;
         title.animate([{ transform: 'translateX(0)', offset: 0 }, { transform: 'translateX(0)', offset: .12 }, { transform: `translateX(-${distance + 28}px)`, offset: .5 }, { transform: `translateX(-${distance + 28}px)`, offset: .62 }, { transform: 'translateX(0)', offset: 1 }], { duration, iterations: Infinity });
@@ -192,7 +192,7 @@ window.CICOMatchView = (() => {
         });
         element.querySelector('.log-feed').replaceChildren(...rows);
         if (!rows.length) element.querySelector('.log-feed').append(node('span', 'log-empty', '—'));
-        if (rows.length && !reduced.matches) rows[0].animate([{ opacity: 0, transform: 'translateY(-5px)', filter: 'blur(2px)' }, { opacity: 1, transform: 'translateY(0)', filter: 'blur(0)' }], { duration: 220, easing: ease });
+        if (rows.length) rows[0].animate([{ opacity: 0, transform: 'translateY(-5px)', filter: 'blur(2px)' }, { opacity: 1, transform: 'translateY(0)', filter: 'blur(0)' }], { duration: 220, easing: ease });
     }
 
     function chatPanel(label, className) {
@@ -213,11 +213,9 @@ window.CICOMatchView = (() => {
         row.append(node('strong', '', name || '—'), document.createTextNode(' '), twitch ? CICOTwitch.fragment(String(message), tags) : document.createTextNode(String(message)));
         rows.append(row);
         while (rows.children.length > 30) rows.firstElementChild.remove();
-        if (!reduced.matches) {
-            const height = rows.getBoundingClientRect().height;
-            const scale = document.querySelector('#overlay').getBoundingClientRect().width / 1920;
-            rows.animate([{ transform: `translateY(${Math.max(0, height - previous) / scale}px)` }, { transform: 'translateY(0)' }], { duration: 180, easing: ease });
-        }
+        const height = rows.getBoundingClientRect().height;
+        const scale = document.querySelector('#overlay').getBoundingClientRect().width / 1920;
+        rows.animate([{ transform: `translateY(${Math.max(0, height - previous) / scale}px)` }, { transform: 'translateY(0)' }], { duration: 180, easing: ease });
     }
 
     function gameChatFeed(element) {
@@ -237,10 +235,6 @@ window.CICOMatchView = (() => {
         };
     }
 
-    reduced.addEventListener('change', () => {
-        document.getAnimations().forEach(animation => animation.cancel());
-        document.querySelectorAll('.map-title-window').forEach(marquee);
-    });
 
     return { node, setText, number, header, playerPanel, updatePlayer, mapPanel, updateMap, badgeIcon, logPanel, updateLog, chatPanel, appendChat, gameChatFeed };
 })();

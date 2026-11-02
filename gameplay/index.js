@@ -3,7 +3,7 @@ const ui = document.querySelector('#match-ui');
 const slots = [];
 const playerPanels = [];
 const scoreCards = [];
-const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+
 const mapPanel = view.mapPanel();
 const logPanel = view.logPanel();
 const gameChat = view.chatPanel('IN-GAME CHAT', 'game-chat');
@@ -70,12 +70,6 @@ function counter(node, value, decimals, suffix = '') {
         return;
     }
     CICOPlaceholders.toggle(node, false);
-    if (reduced.matches) {
-        if (node.counter) cancelAnimationFrame(node.counter.rAF);
-        node.counter = null;
-        view.setText(node, value.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + suffix);
-        return;
-    }
     if (!node.counter) node.counter = new CountUp(node, value, value, decimals, .22, { useEasing: true, useGrouping: true, separator: ',', suffix });
     else if (node.counter.endVal !== value) node.counter.update(value);
 }

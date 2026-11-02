@@ -1,7 +1,7 @@
 const config = window.CICO2026;
 const params = new URLSearchParams(location.search);
 const preview = params.get('preview') === '1';
-const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
 const byId = id => document.getElementById(id);
 const ui = Object.fromEntries(['round', 'pick', 'artist', 'title', 'difficulty', 'mapper', 'replayer', 'length'].map(id => [id, byId(id)]));
 const coverLayers = [...document.querySelectorAll('.cover-layer')];
@@ -67,7 +67,6 @@ function updateTitleMotion() {
     titleAnimation = null;
     const viewport = byId('title-window');
     viewport.classList.remove('scrolling');
-    if (reducedMotion.matches) return;
     const distance = ui.title.scrollWidth - viewport.clientWidth + 4;
     if (distance <= 4) return;
     viewport.classList.add('scrolling');
@@ -124,7 +123,7 @@ function syncPool() {
     track.style.transform = `translateX(-${offset}px)`;
     if (offset !== poolOffset) {
         poolAnimation?.cancel();
-        if (hasRendered && !reducedMotion.matches) {
+        if (hasRendered) {
             poolAnimation = track.animate([
                 { filter: 'blur(2px)', opacity: .7 },
                 { filter: 'blur(0px)', opacity: 1 }
@@ -136,7 +135,7 @@ function syncPool() {
 
 function animateValue(node) {
     valueAnimations.get(node)?.cancel();
-    if (!hasRendered || reducedMotion.matches) return;
+    if (!hasRendered) return;
     valueAnimations.set(node, node.animate([
         { opacity: .25, filter: 'blur(3px)', transform: 'translateY(2px)' },
         { opacity: 1, filter: 'blur(0px)', transform: 'translateY(0)' }
@@ -153,12 +152,6 @@ function updateCounter(name, value) {
         return;
     }
     CICOPlaceholders.toggle(node, false);
-    if (reducedMotion.matches) {
-        if (counters[name]) cancelAnimationFrame(counters[name].rAF);
-        delete counters[name];
-        node.textContent = name === 'sr' ? next.toFixed(2) : Number(next.toFixed(2)).toString();
-        return;
-    }
     if (!counters[name]) {
         counters[name] = new CountUp(node, next, next, 2, .3, {
             useEasing: true,
@@ -217,7 +210,7 @@ function setMapCopy(value) {
         for (const key of keys) CICOPlaceholders.set(ui[key], key === 'difficulty' ? CICOMapData.difficultyLabel(value[key]) : value[key]);
         requestAnimationFrame(updateTitleMotion);
     };
-    if (first || reducedMotion.matches) {
+    if (first) {
         apply();
         return;
     }
@@ -244,7 +237,7 @@ async function setMapBadge(value) {
     const request = ++badgeRequest;
     const element = byId('map-badge');
     badgeAnimation?.cancel();
-    if (!element.hidden && !reducedMotion.matches) {
+    if (!element.hidden) {
         badgeAnimation = element.animate([
             { transform: 'translateY(0)', filter: 'blur(0px)', opacity: 1 },
             { transform: 'translateY(-3px)', filter: 'blur(3px)', opacity: 0 }
@@ -256,7 +249,7 @@ async function setMapBadge(value) {
     element.hidden = !nextType;
     element.dataset.type = nextType;
     element.querySelector('span').textContent = CICOMapData.badgeLabels[nextType] || '';
-    if (!nextType || reducedMotion.matches) return;
+    if (!nextType) return;
     badgeAnimation = element.animate([
         { transform: 'translateY(3px)', filter: 'blur(3px)', opacity: 0 },
         { transform: 'translateY(0)', filter: 'blur(0px)', opacity: 1 }
@@ -322,7 +315,7 @@ async function start() {
             const response = await fetch(config.poolSource, { cache: 'no-store' });
             if (!response.ok) throw new Error('Mappool unavailable');
             const pools = await response.json();
-            const pool = CICOMapData.findPool(pools, params.get('round') || config.defaultRound);
+            const pool = CICOMapData.findPool(pools, params.get('round') || config.showcaseRound || config.defaultRound);
             maps = Array.isArray(pool.maps) ? pool.maps : [];
             if (typeof pool.round === 'string' && pool.round.trim()) config.round = pool.round;
         } catch { maps = []; }
@@ -346,5 +339,4 @@ async function start() {
 
 addEventListener('resize', scaleScene);
 addEventListener('pagehide', () => socket?.close());
-reducedMotion.addEventListener('change', updateTitleMotion);
 start();

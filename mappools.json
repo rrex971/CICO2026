@@ -483,5 +483,179 @@
                 "mods": 0
             }
         ]
+    },
+    "round-of-16": {
+        "round": "Round of 16",
+        "stageId": 1079,
+        "maps": [
+            {
+                "slot": "NM1",
+                "title": "Dedication",
+                "keywords": [
+                    "Dedication"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "id": 5017095,
+                "slot": "NM2",
+                "beatmapsetId": 2321611,
+                "artist": "DJ Raisei",
+                "title": "ReDIVE NEURON",
+                "difficulty": "Unlucky_w's Overdose",
+                "mapper": "Unlucky_w",
+                "background": "https://assets.ppy.sh/beatmaps/2321611/covers/cover.jpg",
+                "mods": 0,
+                "sr": 6.00484,
+                "cs": 4,
+                "ar": 9.6,
+                "od": 9.6,
+                "hp": 5,
+                "bpm": 193,
+                "length": 119000
+            },
+            {
+                "slot": "NM3",
+                "title": "Moonflowers",
+                "keywords": [
+                    "Moonflowers"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "NM4",
+                "title": "Homework Crisis",
+                "keywords": [
+                    "Homework Crisis"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "id": 4950436,
+                "slot": "HD1",
+                "beatmapsetId": 2243054,
+                "artist": "YOASOBI",
+                "title": "UNDEAD",
+                "difficulty": "Crowley's Overdose",
+                "mapper": "Verso Dessendre",
+                "background": "https://assets.ppy.sh/beatmaps/2243054/covers/cover.jpg",
+                "mods": 8,
+                "sr": 5.42136,
+                "cs": 4,
+                "ar": 9.2,
+                "od": 9.2,
+                "hp": 5,
+                "bpm": 144,
+                "length": 181000
+            },
+            {
+                "slot": "HD2",
+                "title": "Shikata Akiko",
+                "keywords": [
+                    "Shikata Akiko"
+                ],
+                "badge": "custom",
+                "mods": 8
+            },
+            {
+                "slot": "HD3",
+                "title": "POISON -KO3 Remix-",
+                "keywords": [
+                    "POISON -KO3 Remix-"
+                ],
+                "badge": "custom",
+                "mods": 8
+            },
+            {
+                "slot": "HR1",
+                "title": "Light for Knight",
+                "keywords": [
+                    "Light for Knight"
+                ],
+                "badge": "custom",
+                "mods": 16
+            },
+            {
+                "slot": "HR2",
+                "title": "Sakura Rain",
+                "keywords": [
+                    "Sakura Rain"
+                ],
+                "badge": "custom",
+                "mods": 16
+            },
+            {
+                "slot": "HR3",
+                "title": "Ataraxia",
+                "keywords": [
+                    "Ataraxia"
+                ],
+                "badge": "custom",
+                "mods": 16
+            },
+            {
+                "slot": "DT1",
+                "title": "Three Magic (DiGiTAL WING TRANCE Remix)",
+                "keywords": [
+                    "Three Magic (DiGiTAL WING TRANCE Remix)"
+                ],
+                "badge": "edit",
+                "mods": 64
+            },
+            {
+                "slot": "DT2",
+                "title": "Love Pills",
+                "keywords": [
+                    "Love Pills"
+                ],
+                "badge": "custom",
+                "mods": 64
+            },
+            {
+                "id": 4811954,
+                "slot": "DT3",
+                "beatmapsetId": 2260838,
+                "artist": "Halozy",
+                "title": "Three Magic (DiGiTAL WiNG TRANCE Remix)",
+                "difficulty": "rinkiha & Bober's Enchanted Love",
+                "mapper": "BoberOfDarkness",
+                "background": "https://assets.ppy.sh/beatmaps/2260838/covers/cover.jpg",
+                "mods": 64,
+                "cs": 4.2,
+                "hp": 4,
+                "bpm": 210,
+                "length": 170000
+            },
+            {
+                "slot": "FM1",
+                "title": "Na Na Na (Na Na Na Na Na Na Na Na Na)",
+                "keywords": [
+                    "Na Na Na (Na Na Na Na Na Na Na Na Na)"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "FM2",
+                "title": "NightTheater",
+                "keywords": [
+                    "NightTheater"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "TB",
+                "title": "The Solace of Oblivion",
+                "keywords": [
+                    "The Solace of Oblivion"
+                ],
+                "badge": "custom",
+                "mods": 0
+            }
+        ]
     }
 }

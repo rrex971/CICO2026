@@ -121,9 +121,3 @@ svg[class*='Voice_logo'],
 div[class*='Voice_logo'] {
     display: none !important;
 }
-
-@media (prefers-reduced-motion: reduce) {
-    * {
-        transition: none !important;
-    }
-}

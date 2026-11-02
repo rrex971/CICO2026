@@ -39,7 +39,7 @@ window.CICOMapData = (() => {
     function findPool(pools, round) {
         if (Array.isArray(pools.maps)) return pools;
         const alias = String(round || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-        const key = { ro32: 'round-of-32', roundof32: 'round-of-32', qualifiers: 'qualifiers' }[alias];
+        const key = { ro16: 'round-of-16', roundof16: 'round-of-16', ro32: 'round-of-32', roundof32: 'round-of-32', qualifiers: 'qualifiers' }[alias];
         return pools[key] || { round: '—', maps: [] };
     }
 

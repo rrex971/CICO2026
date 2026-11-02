@@ -399,15 +399,3 @@
     color: var(--cream);
     opacity: .4;
 }
-
-@media (prefers-reduced-motion: reduce) {
-    *, *::before {
-        animation: none !important;
-        transition: none !important;
-    }
-    #title {
-        max-width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
