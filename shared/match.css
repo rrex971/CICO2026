@@ -59,6 +59,7 @@
 .map-stat span { font-size: 15px; }
 .map-stat strong { font-size: 24px; font-weight: 400; white-space: nowrap; }
 .map-stat.star { grid-column: 1 / -1; color: var(--cream); background: var(--coral); box-shadow: 0 4px 0 var(--coral-depth); }
+.map-stat.star > span { font-size: 24px; }
 .map-stat.star strong { font-size: 29px; }
 .pick-log { position: absolute; top: 774px; left: 1443px; width: 455px; height: 64px; }
 .pick-log h2, .match-chat h2, .caster-space h2 { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 400; margin: 0; line-height: 1.2; }

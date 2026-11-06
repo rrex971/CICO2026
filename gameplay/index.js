@@ -53,12 +53,10 @@ function setupClients() {
         placeholder.append(view.node('span', 'candy-mark'));
         document.querySelector('#clients').append(placeholder);
         slots.push({ cutout, placeholder });
-        const player = view.playerPanel(index, dispatch);
         const score = view.node('section', `score-card side-${index}`);
         score.innerHTML = '<strong class="score-number">—</strong><div class="score-metric"><span>MISSES</span><strong class="misses">—</strong></div>';
-        playerPanels.push(player);
         scoreCards.push(score);
-        ui.append(player, score);
+        ui.append(score);
     });
 }
 
@@ -76,6 +74,13 @@ function counter(node, value, decimals, suffix = '') {
 
 function render(data) {
     context = data;
+    if (!playerPanels.length) {
+        for (const side of [0, 1]) {
+            const panel = view.playerPanel(side, dispatch, data.rules.bestOf);
+            playerPanels.push(panel);
+            ui.append(panel);
+        }
+    }
     const state = data.store.state;
     playerPanels.forEach((panel, index) => {
         const manual = state.points[index] !== null;

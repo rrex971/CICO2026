@@ -352,5 +352,359 @@
                 }
             ]
         }
+    ],
+    "round-of-16": [
+        {
+            "id": "12862",
+            "label": "17",
+            "players": [
+                {
+                    "id": 7928880,
+                    "name": "Cipse",
+                    "country": "NZ",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 13845399,
+                    "name": "Sprint",
+                    "country": "ES",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12863",
+            "label": "18",
+            "players": [
+                {
+                    "id": 6647589,
+                    "name": "smelly DVD box",
+                    "country": "RU",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 30653081,
+                    "name": "Azakriel",
+                    "country": "BG",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12864",
+            "label": "19",
+            "players": [
+                {
+                    "id": 12759554,
+                    "name": "MusicDropZ",
+                    "country": "ES",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 2957534,
+                    "name": "madcin",
+                    "country": "PL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12865",
+            "label": "20",
+            "players": [
+                {
+                    "id": 14318796,
+                    "name": "shimu",
+                    "country": "TR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 4682813,
+                    "name": "[Romanos]",
+                    "country": "GR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12866",
+            "label": "21",
+            "players": [
+                {
+                    "id": 7024526,
+                    "name": "ES Jonne",
+                    "country": "FI",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 25723773,
+                    "name": "Lunati1kid",
+                    "country": "PE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12867",
+            "label": "22",
+            "players": [
+                {
+                    "id": 19515018,
+                    "name": "Niisan",
+                    "country": "MX",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 32028459,
+                    "name": "trooperr",
+                    "country": "US",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12868",
+            "label": "23",
+            "players": [
+                {
+                    "id": 29503627,
+                    "name": "my angel auto",
+                    "country": "HK",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 1948043,
+                    "name": "dazzulay",
+                    "country": "CN",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12869",
+            "label": "24",
+            "players": [
+                {
+                    "id": 18468376,
+                    "name": "Cornet",
+                    "country": "CN",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 6283136,
+                    "name": "ElSkeffe",
+                    "country": "BE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12854",
+            "label": "25",
+            "players": [
+                {
+                    "id": 17309439,
+                    "name": "SirGonzaxz",
+                    "country": "AR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 10516547,
+                    "name": "Firu",
+                    "country": "MX",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12855",
+            "label": "26",
+            "players": [
+                {
+                    "id": 2389481,
+                    "name": "Aryssiel",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 16355636,
+                    "name": "-Rustyy",
+                    "country": "PH",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12856",
+            "label": "27",
+            "players": [
+                {
+                    "id": 2956936,
+                    "name": "- N a g i -",
+                    "country": "CN",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 3355617,
+                    "name": "Keita",
+                    "country": "ID",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12857",
+            "label": "28",
+            "players": [
+                {
+                    "id": 12588215,
+                    "name": "Juansy-",
+                    "country": "CO",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 6434318,
+                    "name": "Smukur",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12858",
+            "label": "29",
+            "players": [
+                {
+                    "id": 7547506,
+                    "name": "qwhj79",
+                    "country": "KR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 11202866,
+                    "name": "Nerris",
+                    "country": "RU",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12859",
+            "label": "30",
+            "players": [
+                {
+                    "id": 1565036,
+                    "name": "Stark",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 1177233,
+                    "name": "eauikk",
+                    "country": "TW",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12860",
+            "label": "31",
+            "players": [
+                {
+                    "id": 5297904,
+                    "name": "Boltico",
+                    "country": "PE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 5166056,
+                    "name": "doddo",
+                    "country": "HR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12861",
+            "label": "32",
+            "players": [
+                {
+                    "id": 10835397,
+                    "name": "HelpMePleasee",
+                    "country": "CO",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 2548278,
+                    "name": "- S H -",
+                    "country": "TW",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        }
     ]
 }

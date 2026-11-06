@@ -63,10 +63,10 @@ function render(data) {
     const demoWinner = data.preview && data.params.get('winner') !== 'none' && !data.store.state.resetCount;
     if (demoWinner) {
         const side = data.params.get('winner') === '2' ? 1 : 0;
-        points[side] = Math.ceil(CICO2026.match.bestOf / 2);
+        points[side] = Math.ceil(data.rules.bestOf / 2);
         points[1 - side] = Math.max(0, points[side] - 2);
     }
-    const winner = data.store.state.winner || (demoWinner ? CICOMatchData.winner(data.players, points, CICO2026.match.bestOf) : null);
+    const winner = data.store.state.winner || (demoWinner ? CICOMatchData.winner(data.players, points, data.rules.bestOf) : null);
     const profile = winner ? data.profiles.find(player => Number(player.userId) === Number(winner.player.id)) : null;
     const country = winner?.player.country || profile?.country || '';
     const next = winner ? JSON.stringify([winner.side, winner.player.id, winner.player.name, country]) : '';

@@ -1,6 +1,6 @@
 #maps { position: absolute; top: 166px; left: 22px; width: 1412px; height: 720px; display: grid; gap: 18px; }
 .match-chat { top: 910px; height: 148px; }
-.mod-column { display: flex; flex-direction: column; gap: 18px; min-width: 0; min-height: 0; }
+.mod-column { display: flex; flex-direction: column; gap: 14px; min-width: 0; min-height: 0; }
 .mod-group { flex: 0 0 auto; min-width: 0; min-height: 0; }
 .mod-maps { display: grid; gap: 14px; min-width: 0; min-height: 0; }
 

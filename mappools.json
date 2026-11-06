@@ -495,7 +495,20 @@
                     "Dedication"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 5979022,
+                "beatmapsetId": 2647441,
+                "artist": "void",
+                "difficulty": "Hollow Vow",
+                "mapper": "Beepu",
+                "background": "https://assets.ppy.sh/beatmaps/2647441/covers/cover.jpg",
+                "sr": 6.59,
+                "cs": 4,
+                "ar": 9.6,
+                "od": 9.6,
+                "hp": 5,
+                "bpm": 170,
+                "length": 255000
             },
             {
                 "id": 5017095,
@@ -504,16 +517,17 @@
                 "artist": "DJ Raisei",
                 "title": "ReDIVE NEURON",
                 "difficulty": "Unlucky_w's Overdose",
-                "mapper": "Unlucky_w",
+                "mapper": "Jemzuu",
                 "background": "https://assets.ppy.sh/beatmaps/2321611/covers/cover.jpg",
                 "mods": 0,
-                "sr": 6.00484,
+                "sr": 6,
                 "cs": 4,
                 "ar": 9.6,
                 "od": 9.6,
                 "hp": 5,
                 "bpm": 193,
-                "length": 119000
+                "length": 119000,
+                "badge": ""
             },
             {
                 "slot": "NM3",
@@ -522,7 +536,20 @@
                     "Moonflowers"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 5979024,
+                "beatmapsetId": 2647443,
+                "artist": "meganeko",
+                "difficulty": "fall into the night",
+                "mapper": "DizzyOracel",
+                "background": "https://assets.ppy.sh/beatmaps/2647443/covers/cover.jpg",
+                "sr": 4.98,
+                "cs": 4.5,
+                "ar": 8.2,
+                "od": 8.2,
+                "hp": 5.5,
+                "bpm": 137,
+                "length": 235000
             },
             {
                 "slot": "NM4",
@@ -531,7 +558,20 @@
                     "Homework Crisis"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 5979752,
+                "beatmapsetId": 2647648,
+                "artist": "bibuko",
+                "difficulty": "Let's Dash!!",
+                "mapper": "Spectator",
+                "background": "https://assets.ppy.sh/beatmaps/2647648/covers/cover.jpg",
+                "sr": 5.47,
+                "cs": 4,
+                "ar": 9.3,
+                "od": 9.3,
+                "hp": 5,
+                "bpm": 180,
+                "length": 185000
             },
             {
                 "id": 4950436,
@@ -540,16 +580,17 @@
                 "artist": "YOASOBI",
                 "title": "UNDEAD",
                 "difficulty": "Crowley's Overdose",
-                "mapper": "Verso Dessendre",
+                "mapper": "Spectator",
                 "background": "https://assets.ppy.sh/beatmaps/2243054/covers/cover.jpg",
                 "mods": 8,
-                "sr": 5.42136,
+                "sr": 5.42,
                 "cs": 4,
                 "ar": 9.2,
                 "od": 9.2,
                 "hp": 5,
                 "bpm": 144,
-                "length": 181000
+                "length": 181000,
+                "badge": ""
             },
             {
                 "slot": "HD2",
@@ -558,7 +599,20 @@
                     "METHOD_METAFALICA/."
                 ],
                 "badge": "custom",
-                "mods": 8
+                "mods": 8,
+                "id": 5978979,
+                "beatmapsetId": 2647422,
+                "artist": "Shikata Akiko",
+                "difficulty": "Mir",
+                "mapper": "Madoka Ayukawa",
+                "background": "https://assets.ppy.sh/beatmaps/2647422/covers/cover.jpg",
+                "sr": 4.36,
+                "cs": 4.2,
+                "ar": 8.2,
+                "od": 8.2,
+                "hp": 5,
+                "bpm": 120,
+                "length": 266000
             },
             {
                 "slot": "HD3",
@@ -567,7 +621,20 @@
                     "POISON -KO3 Remix-"
                 ],
                 "badge": "custom",
-                "mods": 8
+                "mods": 8,
+                "id": 5978926,
+                "beatmapsetId": 2647408,
+                "artist": "YUC'e",
+                "difficulty": "POISON -5- (CICO edit)",
+                "mapper": "My Angel RangE",
+                "background": "https://assets.ppy.sh/beatmaps/2647408/covers/cover.jpg",
+                "sr": 5.84,
+                "cs": 4.2,
+                "ar": 9.5,
+                "od": 9.5,
+                "hp": 6,
+                "bpm": 170,
+                "length": 169000
             },
             {
                 "slot": "HR1",
@@ -576,7 +643,20 @@
                     "Light for Knight"
                 ],
                 "badge": "custom",
-                "mods": 16
+                "mods": 16,
+                "id": 5978981,
+                "beatmapsetId": 2647424,
+                "artist": "Mimori Suzuko",
+                "difficulty": "White Knight (HR Edit)",
+                "mapper": "-Miya",
+                "background": "https://assets.ppy.sh/beatmaps/2647424/covers/cover.jpg",
+                "sr": 6.13,
+                "cs": 5.2,
+                "ar": 10,
+                "od": 10,
+                "hp": 6.5,
+                "bpm": 190,
+                "length": 198000
             },
             {
                 "slot": "HR2",
@@ -585,16 +665,42 @@
                     "Sakura Rain"
                 ],
                 "badge": "custom",
-                "mods": 16
+                "mods": 16,
+                "id": 5978992,
+                "beatmapsetId": 2647428,
+                "artist": "Nanatsukaze",
+                "difficulty": "Overdose",
+                "mapper": "Sololiquy",
+                "background": "https://assets.ppy.sh/beatmaps/2647428/covers/cover.jpg",
+                "sr": 5.72,
+                "cs": 5.85,
+                "ar": 10,
+                "od": 10,
+                "hp": 6.5,
+                "bpm": 120,
+                "length": 144000
             },
             {
                 "slot": "HR3",
-                "title": "Ataraxia",
+                "title": "Ataraxia (2020 Rework)",
                 "keywords": [
                     "Ataraxia"
                 ],
                 "badge": "custom",
-                "mods": 16
+                "mods": 16,
+                "id": 5978988,
+                "beatmapsetId": 2647427,
+                "artist": "seatrus",
+                "difficulty": "Eudaimonia",
+                "mapper": "EpanPan",
+                "background": "https://assets.ppy.sh/beatmaps/2647427/covers/cover.jpg",
+                "sr": 5.78,
+                "cs": 5.2,
+                "ar": 10,
+                "od": 10,
+                "hp": 6.5,
+                "bpm": 176,
+                "length": 116000
             },
             {
                 "id": 5002103,
@@ -607,11 +713,13 @@
                 "background": "https://assets.ppy.sh/beatmaps/2330599/covers/cover.jpg",
                 "mods": 64,
                 "cs": 4.2,
-                "ar": 8.7,
-                "od": 8.7,
+                "ar": 10.13,
+                "od": 10.22,
                 "hp": 4.5,
-                "bpm": 155,
-                "length": 277000
+                "bpm": 232.5,
+                "length": 191000,
+                "badge": "",
+                "sr": 5.85
             },
             {
                 "slot": "DT2",
@@ -620,16 +728,42 @@
                     "Love Pills"
                 ],
                 "badge": "custom",
-                "mods": 64
+                "mods": 64,
+                "id": 5979014,
+                "beatmapsetId": 2647438,
+                "artist": "EmoCosine",
+                "difficulty": "Addiction",
+                "mapper": "Zvenx",
+                "background": "https://assets.ppy.sh/beatmaps/2647438/covers/cover.jpg",
+                "sr": 6.34,
+                "cs": 4.2,
+                "ar": 9.87,
+                "od": 9.95,
+                "hp": 4,
+                "bpm": 240,
+                "length": 139000
             },
             {
                 "slot": "DT3",
-                "title": "Three Magic (DiGiTAL WING TRANCE Remix)",
+                "title": "Three Magic (DiGiTAL WiNG TRANCE Remix)",
                 "keywords": [
                     "Three Magic (DiGiTAL WING TRANCE Remix)"
                 ],
                 "badge": "edit",
-                "mods": 64
+                "mods": 64,
+                "id": 5981269,
+                "beatmapsetId": 2647862,
+                "artist": "Halozy",
+                "difficulty": "rinkiha & Bober's Enchanted Love (CICO Edit)",
+                "mapper": "Constantine",
+                "background": "https://assets.ppy.sh/beatmaps/2647862/covers/cover.jpg",
+                "sr": 5.65,
+                "cs": 3.5,
+                "ar": 10.2,
+                "od": 10.28,
+                "hp": 4,
+                "bpm": 210,
+                "length": 170000
             },
             {
                 "slot": "FM1",
@@ -638,7 +772,20 @@
                     "Na Na Na (Na Na Na Na Na Na Na Na Na)"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 5979020,
+                "beatmapsetId": 2647440,
+                "artist": "My Chemical Romance",
+                "difficulty": "Overdose",
+                "mapper": "Zvenx",
+                "background": "https://assets.ppy.sh/beatmaps/2647440/covers/cover.jpg",
+                "sr": 5.52,
+                "cs": 4,
+                "ar": 9,
+                "od": 9,
+                "hp": 5,
+                "bpm": 166,
+                "length": 191000
             },
             {
                 "slot": "FM2",
@@ -647,7 +794,20 @@
                     "NightTheater"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 5979023,
+                "beatmapsetId": 2647442,
+                "artist": "*wakadori",
+                "difficulty": "WinterRain",
+                "mapper": "Yoshi_green",
+                "background": "https://assets.ppy.sh/beatmaps/2647442/covers/cover.jpg",
+                "sr": 4.59,
+                "cs": 4.5,
+                "ar": 8.2,
+                "od": 8.2,
+                "hp": 4.2,
+                "bpm": 151,
+                "length": 119000
             },
             {
                 "slot": "TB",
@@ -656,8 +816,25 @@
                     "The Solace of Oblivion"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 5979309,
+                "beatmapsetId": 2647537,
+                "artist": "Helblinde",
+                "difficulty": "Daletto & Spec's Salvation in Bloodshed",
+                "mapper": "Daletto",
+                "background": "https://assets.ppy.sh/beatmaps/2647537/covers/cover.jpg",
+                "sr": 6.28,
+                "cs": 4.3,
+                "ar": 9.7,
+                "od": 9.7,
+                "hp": 3,
+                "bpm": 195,
+                "length": 328000
             }
-        ]
+        ],
+        "rules": {
+            "bestOf": 11,
+            "bans": 1
+        }
     }
 }

@@ -71,6 +71,13 @@ function createMap(map) {
 
 function render(data) {
     context = data;
+    if (!playerPanels.length) {
+        for (const side of [0, 1]) {
+            const panel = view.playerPanel(side, dispatch, data.rules.bestOf);
+            playerPanels.push(panel);
+            ui.append(panel);
+        }
+    }
     const state = data.store.state;
     const next = JSON.stringify(data.pool.maps);
     if (signature !== next) {
@@ -80,7 +87,7 @@ function render(data) {
         mapsElement.style.gridTemplateColumns = `repeat(${columns.length}, minmax(0, 1fr))`;
         const heights = columns.map(groups => {
             const cards = groups.reduce((sum, group) => sum + group.maps.length, 0);
-            const spacing = (cards - groups.length) * 14 + (groups.length - 1) * 18;
+            const spacing = (cards - 1) * 14;
             return (mapsElement.clientHeight - spacing) / cards;
         });
         const cardHeight = Math.min(170, ...heights);
@@ -167,7 +174,6 @@ function render(data) {
 
 async function start() {
     scale();
-    [0, 1].forEach(side => { const player = view.playerPanel(side, dispatch); playerPanels.push(player); ui.append(player); });
     const casters = view.node('section', 'caster-space panel');
     casters.append(view.node('h2', '', 'CASTERS'));
     ui.append(mapPanel, logPanel, casters, gameChat, twitchChat);

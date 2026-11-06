@@ -70,22 +70,18 @@
 
     function columns(maps) {
         const order = ['NM', 'HD', 'HR', 'DT', 'FM', 'TB'];
-        const groups = order.map(mod => ({ mod, maps: maps.filter(map => map.slot.slice(0, 2) === mod) })).filter(group => group.maps.length);
-        const count = Math.min(groups.length, 4);
-        let best = [];
-        let bestCost = Infinity;
-        function partition(start, remaining, parts) {
-            if (remaining === 1) {
-                const candidate = [...parts, groups.slice(start)];
-                const weights = candidate.map(column => column.reduce((sum, group) => sum + group.maps.length + .6, 0));
-                const cost = Math.max(...weights) * 100 + weights.reduce((sum, weight) => sum + weight * weight, 0);
-                if (cost < bestCost) { bestCost = cost; best = candidate; }
-                return;
-            }
-            for (let end = start + 1; end <= groups.length - remaining + 1; end++) partition(end, remaining - 1, [...parts, groups.slice(start, end)]);
+        const ordered = order.flatMap(mod => maps.filter(map => map.slot.startsWith(mod)));
+        const count = Math.min(ordered.length, 4);
+        const columns = [];
+        let start = 0;
+        for (let index = 0; index < count; index++) {
+            const size = Math.ceil((ordered.length - start) / (count - index));
+            const cards = ordered.slice(start, start + size);
+            const groups = order.map(mod => ({ mod, maps: cards.filter(map => map.slot.startsWith(mod)) }));
+            columns.push(groups.filter(group => group.maps.length));
+            start += size;
         }
-        if (count) partition(0, count, []);
-        return best;
+        return columns;
     }
 
     const api = { number, player, normalize, poolFromStage, matchFromWybin, winner, columns };

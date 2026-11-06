@@ -11,8 +11,9 @@ window.CICOBroadcast = (() => {
         const pools = await json(CICO2026.poolSource);
         const pool = CICOMapData.findPool(pools, params.get('round') || CICO2026.defaultRound);
         if (!pool.maps.length) throw new Error('Mappool unavailable');
-        const round = Object.keys(pools).find(key => pools[key] === pool) || 'round-of-32';
-        const context = { params, preview, pool, round, players: [null, null], points: [null, null], live: { players: [null, null], playing: false, chat: [] }, packet: null, map: null, profiles: [], store: null };
+        const round = Object.keys(pools).find(key => pools[key] === pool) || CICO2026.defaultRound;
+        const rules = { ...CICO2026.match, ...pool.rules };
+        const context = { params, preview, pool, round, rules, players: [null, null], points: [null, null], live: { players: [null, null], playing: false, chat: [] }, packet: null, map: null, profiles: [], store: null };
         let matches = {};
         let socket;
         let revision = 0;
@@ -36,7 +37,7 @@ window.CICOBroadcast = (() => {
         const results = await Promise.allSettled([json(CICO2026.match.profileSource), json(CICO2026.match.matchSource)]);
         if (results[0].status === 'fulfilled') context.profiles = results[0].value.players || [];
         if (results[1].status === 'fulfilled') matches = results[1].value;
-        context.store = CICOMatchState.create({ round, match: params.get('lobby') || configuredMatch, preview, rules: CICO2026.match, maps: pool.maps, onChange: publish });
+        context.store = CICOMatchState.create({ round, match: params.get('lobby') || configuredMatch, preview, rules, maps: pool.maps, onChange: publish });
         updatePlayers();
 
         function apply(packet) {

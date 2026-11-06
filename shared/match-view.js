@@ -31,11 +31,11 @@ window.CICOMatchView = (() => {
         return element;
     }
 
-    function playerPanel(side, dispatch) {
+    function playerPanel(side, dispatch, bestOf) {
         const element = node('section', `player-panel panel side-${side}`);
         element.innerHTML = '<div class="player-avatar"><span class="candy-mark"></span><img alt=""></div><div class="player-copy"><div class="player-name-row"><img class="player-flag" alt=""><span class="player-name">—</span></div><div class="player-bottom"><div class="points"></div></div></div><div class="player-ban"><div class="ban-heading"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="m6 6 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span>BAN</span></div><strong class="ban-pick">—</strong></div>';
         const points = element.querySelector('.points');
-        for (let index = 0; index < Math.ceil(CICO2026.match.bestOf / 2); index++) {
+        for (let index = 0; index < Math.ceil(bestOf / 2); index++) {
             const button = node('button', 'candy-point');
             button.type = 'button';
             button.setAttribute('aria-label', `Player ${side + 1}: ${index + 1} points`);
@@ -92,7 +92,7 @@ window.CICOMatchView = (() => {
     function mapPanel() {
         const element = node('aside', 'current-map panel');
         element.innerHTML = '<div class="map-art"><span class="candy-mark"></span><img class="map-image" alt=""><img class="map-image" alt=""><span class="slot-tag pool-pick"></span><span class="map-tag" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path/></svg><span></span></span></div><div class="current-copy"><div class="map-artist">—</div><div class="map-title-window"><div class="map-title">—</div></div><div class="map-difficulty">—</div><div class="map-mapper"><span>MAPPED BY</span><strong>—</strong></div></div><div class="map-stat-grid"></div>';
-        for (const [key, label] of [['sr', '★ STAR RATING'], ['cs', 'CS'], ['ar', 'AR'], ['od', 'OD'], ['hp', 'HP'], ['bpm', 'BPM'], ['length', 'LENGTH']]) {
+        for (const [key, label] of [['sr', '★ SR'], ['cs', 'CS'], ['ar', 'AR'], ['od', 'OD'], ['hp', 'HP'], ['bpm', 'BPM'], ['length', 'LENGTH']]) {
             const stat = node('div', `map-stat${key === 'sr' ? ' star' : ''}`);
             stat.dataset.stat = key;
             stat.append(node('span', '', label), node('strong', '', '—'));

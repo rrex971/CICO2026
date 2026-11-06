@@ -1,6 +1,6 @@
 window.CICO2026 = {
-    round: 'Round of 32',
-    defaultRound: 'round-of-32',
+    round: 'Round of 16',
+    defaultRound: 'round-of-16',
     showcaseRound: 'round-of-16',
     poolSource: '../mappools.json',
     tournamentSource: 'https://wybin.xyz/api/v1/tournament/cico2026',
