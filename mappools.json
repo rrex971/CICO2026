@@ -836,5 +836,194 @@
             "bestOf": 11,
             "bans": 1
         }
+    },
+    "quarterfinals": {
+        "round": "Quarterfinals",
+        "stageId": 1080,
+        "rules": {
+            "bestOf": 11,
+            "bans": 1
+        },
+        "maps": [
+            {
+                "slot": "NM1",
+                "title": "Shining Stella",
+                "keywords": [
+                    "Shining Stella"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "id": 3654761,
+                "slot": "NM2",
+                "beatmapsetId": 1784525,
+                "artist": "DJ Noriken vs. MASAKI",
+                "title": "QiXiN MAdN3ss 2153",
+                "difficulty": "ULTRA",
+                "mapper": "Jemzuu",
+                "background": "https://assets.ppy.sh/beatmaps/1784525/covers/cover.jpg",
+                "bpm": 200,
+                "length": 147000,
+                "sr": 6.71651,
+                "cs": 4.2,
+                "ar": 9.7,
+                "od": 9.7,
+                "hp": 6,
+                "mods": 0
+            },
+            {
+                "slot": "NM3",
+                "title": "Coinage",
+                "keywords": [
+                    "Coinage"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "NM4",
+                "title": "affection",
+                "keywords": [
+                    "affection"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "id": 4158940,
+                "slot": "HD1",
+                "beatmapsetId": 2000364,
+                "artist": "Rigel Theatre",
+                "title": "ECLIPSE",
+                "difficulty": "I prefer VSCode",
+                "mapper": "F D Flourite",
+                "background": "https://assets.ppy.sh/beatmaps/2000364/covers/cover.jpg",
+                "bpm": 146,
+                "length": 237000,
+                "sr": 5.62141,
+                "cs": 4.2,
+                "ar": 9,
+                "od": 9,
+                "hp": 5,
+                "mods": 8
+            },
+            {
+                "id": 3007125,
+                "slot": "HD2",
+                "beatmapsetId": 1463986,
+                "artist": "KAKU P-MODEL",
+                "title": "Sore ike! Halycon",
+                "difficulty": "Go for it!",
+                "mapper": "Deif",
+                "background": "https://assets.ppy.sh/beatmaps/1463986/covers/cover.jpg",
+                "bpm": 180,
+                "length": 152000,
+                "sr": 4.644,
+                "cs": 4.5,
+                "ar": 8,
+                "od": 8,
+                "hp": 6,
+                "mods": 8
+            },
+            {
+                "slot": "HD3",
+                "title": "Caelion",
+                "keywords": [
+                    "Caelion"
+                ],
+                "badge": "original",
+                "mods": 8
+            },
+            {
+                "id": 5031230,
+                "slot": "HR1",
+                "beatmapsetId": 2320439,
+                "artist": "Fuki",
+                "title": "Zinger Ringer Gang Love",
+                "difficulty": "Zvenx's Deluge",
+                "mapper": "Zvenx",
+                "background": "https://assets.ppy.sh/beatmaps/2320439/covers/cover.jpg",
+                "bpm": 150,
+                "length": 220000,
+                "mods": 16
+            },
+            {
+                "id": 2607991,
+                "slot": "HR2",
+                "beatmapsetId": 1254879,
+                "artist": "Fractal Dreamers",
+                "title": "Ex Nihilo",
+                "difficulty": "Genesis",
+                "mapper": "wonjae",
+                "background": "https://assets.ppy.sh/beatmaps/1254879/covers/cover.jpg",
+                "bpm": 145,
+                "length": 120000,
+                "mods": 16
+            },
+            {
+                "slot": "HR3",
+                "title": "Prism of Chroma",
+                "keywords": [
+                    "Prism of Chroma"
+                ],
+                "badge": "custom",
+                "mods": 16
+            },
+            {
+                "slot": "DT1",
+                "title": "shadowgraph",
+                "keywords": [
+                    "shadowgraph"
+                ],
+                "badge": "custom",
+                "mods": 64
+            },
+            {
+                "slot": "DT2",
+                "title": "Rave Busters",
+                "keywords": [
+                    "Rave Busters"
+                ],
+                "badge": "custom",
+                "mods": 64
+            },
+            {
+                "slot": "DT3",
+                "title": "LOVELESS WORLD",
+                "keywords": [
+                    "LOVELESS WORLD"
+                ],
+                "badge": "edit",
+                "mods": 64
+            },
+            {
+                "slot": "FM1",
+                "title": "Oshikatsu Angel Miss Vivian",
+                "keywords": [
+                    "Oshikatsu Angel Miss Vivian"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "FM2",
+                "title": "Militant",
+                "keywords": [
+                    "Militant"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "TB",
+                "title": "Achamoth",
+                "keywords": [
+                    "Achamoth"
+                ],
+                "badge": "original",
+                "mods": 0
+            }
+        ]
     }
 }
