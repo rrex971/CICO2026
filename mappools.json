@@ -852,7 +852,20 @@
                     "Shining Stella"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 5993909,
+                "beatmapsetId": 2651463,
+                "artist": "m108",
+                "difficulty": "Deluge",
+                "mapper": "Spectator",
+                "background": "https://assets.ppy.sh/beatmaps/2651463/covers/cover.jpg",
+                "sr": 7.07,
+                "cs": 4.1,
+                "ar": 9.7,
+                "od": 9.7,
+                "hp": 4.1,
+                "bpm": 172,
+                "length": 237000
             },
             {
                 "id": 3654761,
@@ -865,12 +878,13 @@
                 "background": "https://assets.ppy.sh/beatmaps/1784525/covers/cover.jpg",
                 "bpm": 200,
                 "length": 147000,
-                "sr": 6.71651,
+                "sr": 6.72,
                 "cs": 4.2,
                 "ar": 9.7,
                 "od": 9.7,
                 "hp": 6,
-                "mods": 0
+                "mods": 0,
+                "badge": ""
             },
             {
                 "slot": "NM3",
@@ -879,7 +893,20 @@
                     "Coinage"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 5993597,
+                "beatmapsetId": 2651330,
+                "artist": "The Flashbulb",
+                "difficulty": "Numismatics",
+                "mapper": "Alepe",
+                "background": "https://assets.ppy.sh/beatmaps/2651330/covers/cover.jpg",
+                "sr": 5.51,
+                "cs": 4.8,
+                "ar": 8.8,
+                "od": 8.8,
+                "hp": 5,
+                "bpm": 175,
+                "length": 142000
             },
             {
                 "slot": "NM4",
@@ -888,7 +915,20 @@
                     "affection"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 5993529,
+                "beatmapsetId": 2651308,
+                "artist": "solfa feat. KOTOKO",
+                "difficulty": "Harmonious",
+                "mapper": "Madoka Ayukawa",
+                "background": "https://assets.ppy.sh/beatmaps/2651308/covers/cover.jpg",
+                "sr": 5.99,
+                "cs": 4.3,
+                "ar": 9.4,
+                "od": 9.4,
+                "hp": 5,
+                "bpm": 195,
+                "length": 241000
             },
             {
                 "id": 4158940,
@@ -901,12 +941,13 @@
                 "background": "https://assets.ppy.sh/beatmaps/2000364/covers/cover.jpg",
                 "bpm": 146,
                 "length": 237000,
-                "sr": 5.62141,
+                "sr": 5.62,
                 "cs": 4.2,
                 "ar": 9,
                 "od": 9,
                 "hp": 5,
-                "mods": 8
+                "mods": 8,
+                "badge": ""
             },
             {
                 "id": 3007125,
@@ -919,12 +960,13 @@
                 "background": "https://assets.ppy.sh/beatmaps/1463986/covers/cover.jpg",
                 "bpm": 180,
                 "length": 152000,
-                "sr": 4.644,
+                "sr": 4.64,
                 "cs": 4.5,
                 "ar": 8,
                 "od": 8,
                 "hp": 6,
-                "mods": 8
+                "mods": 8,
+                "badge": ""
             },
             {
                 "slot": "HD3",
@@ -933,7 +975,20 @@
                     "Caelion"
                 ],
                 "badge": "original",
-                "mods": 8
+                "mods": 8,
+                "id": 5993527,
+                "beatmapsetId": 2651306,
+                "artist": "Primbe",
+                "difficulty": "Race & Alepe's Heavenly Battle",
+                "mapper": "Race-",
+                "background": "https://assets.ppy.sh/beatmaps/2651306/covers/cover.jpg",
+                "sr": 5.91,
+                "cs": 4.2,
+                "ar": 9.5,
+                "od": 9.5,
+                "hp": 5,
+                "bpm": 210,
+                "length": 157000
             },
             {
                 "id": 5031230,
@@ -942,11 +997,17 @@
                 "artist": "Fuki",
                 "title": "Zinger Ringer Gang Love",
                 "difficulty": "Zvenx's Deluge",
-                "mapper": "Zvenx",
+                "mapper": "-Luminate",
                 "background": "https://assets.ppy.sh/beatmaps/2320439/covers/cover.jpg",
                 "bpm": 150,
                 "length": 220000,
-                "mods": 16
+                "mods": 16,
+                "badge": "",
+                "sr": 6.89,
+                "cs": 5.46,
+                "ar": 10,
+                "od": 10,
+                "hp": 7.8
             },
             {
                 "id": 2607991,
@@ -959,7 +1020,13 @@
                 "background": "https://assets.ppy.sh/beatmaps/1254879/covers/cover.jpg",
                 "bpm": 145,
                 "length": 120000,
-                "mods": 16
+                "mods": 16,
+                "badge": "",
+                "sr": 6.17,
+                "cs": 6.24,
+                "ar": 10,
+                "od": 10,
+                "hp": 7.8
             },
             {
                 "slot": "HR3",
@@ -968,7 +1035,20 @@
                     "Prism of Chroma"
                 ],
                 "badge": "custom",
-                "mods": 16
+                "mods": 16,
+                "id": 5993532,
+                "beatmapsetId": 2651310,
+                "artist": "trung-nova",
+                "difficulty": "Metamorphopsia",
+                "mapper": "Natsuko",
+                "background": "https://assets.ppy.sh/beatmaps/2651310/covers/cover.jpg",
+                "sr": 7.65,
+                "cs": 4.94,
+                "ar": 10,
+                "od": 10,
+                "hp": 6.5,
+                "bpm": 207,
+                "length": 181000
             },
             {
                 "slot": "DT1",
@@ -977,16 +1057,42 @@
                     "shadowgraph"
                 ],
                 "badge": "custom",
-                "mods": 64
+                "mods": 64,
+                "id": 5995389,
+                "beatmapsetId": 2651847,
+                "artist": "MYTH & ROID",
+                "difficulty": "can you see the meaning inside yourself?",
+                "mapper": "DizzyOracel",
+                "background": "https://assets.ppy.sh/beatmaps/2651847/covers/cover.jpg",
+                "sr": 6.18,
+                "cs": 4,
+                "ar": 10.2,
+                "od": 10.28,
+                "hp": 4,
+                "bpm": 187.5,
+                "length": 159000
             },
             {
                 "slot": "DT2",
-                "title": "Rave Busters",
+                "title": "RAVE BUSTERS",
                 "keywords": [
                     "Rave Busters"
                 ],
                 "badge": "custom",
-                "mods": 64
+                "mods": 64,
+                "id": 5993862,
+                "beatmapsetId": 2651438,
+                "artist": "DJ Genki",
+                "difficulty": "Nagi ask for Nilou bg in dt",
+                "mapper": "Zvenx",
+                "background": "https://assets.ppy.sh/beatmaps/2651438/covers/cover.jpg",
+                "sr": 6.47,
+                "cs": 4.2,
+                "ar": 9.8,
+                "od": 9.88,
+                "hp": 5,
+                "bpm": 255,
+                "length": 140000
             },
             {
                 "slot": "DT3",
@@ -995,16 +1101,42 @@
                     "LOVELESS WORLD"
                 ],
                 "badge": "edit",
-                "mods": 64
+                "mods": 64,
+                "id": 5995127,
+                "beatmapsetId": 2651752,
+                "artist": "u's",
+                "difficulty": "Rain (CICO Edit)",
+                "mapper": "Intel21",
+                "background": "https://assets.ppy.sh/beatmaps/2651752/covers/cover.jpg",
+                "sr": 6.18,
+                "cs": 3.8,
+                "ar": 10.33,
+                "od": 10.42,
+                "hp": 5,
+                "bpm": 235.5,
+                "length": 202000
             },
             {
                 "slot": "FM1",
-                "title": "Oshikatsu Angel Miss Vivian",
+                "title": "Oshikatsu Angel Miss Vivian (feat. Mustard and beatMARIO)",
                 "keywords": [
                     "Oshikatsu Angel Miss Vivian"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 5993517,
+                "beatmapsetId": 2651301,
+                "artist": "FARUCO",
+                "difficulty": "VIVIAN",
+                "mapper": "Sololiquy",
+                "background": "https://assets.ppy.sh/beatmaps/2651301/covers/cover.jpg",
+                "sr": 6.28,
+                "cs": 4.2,
+                "ar": 9.5,
+                "od": 9.5,
+                "hp": 10,
+                "bpm": 180,
+                "length": 227000
             },
             {
                 "slot": "FM2",
@@ -1013,7 +1145,20 @@
                     "Militant"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 5993576,
+                "beatmapsetId": 2651321,
+                "artist": "Dictate",
+                "difficulty": "_/-\\_/>0<\\_/-\\_",
+                "mapper": "DizzyOracel",
+                "background": "https://assets.ppy.sh/beatmaps/2651321/covers/cover.jpg",
+                "sr": 5.28,
+                "cs": 4.4,
+                "ar": 8.4,
+                "od": 8.4,
+                "hp": 5.2,
+                "bpm": 172,
+                "length": 171000
             },
             {
                 "slot": "TB",
@@ -1022,7 +1167,20 @@
                     "Achamoth"
                 ],
                 "badge": "original",
-                "mods": 0
+                "mods": 0,
+                "id": 5993943,
+                "beatmapsetId": 2651476,
+                "artist": "trailmix37",
+                "difficulty": "Divine Light",
+                "mapper": "Zvenx",
+                "background": "https://assets.ppy.sh/beatmaps/2651476/covers/cover.jpg",
+                "sr": 7.14,
+                "cs": 4.3,
+                "ar": 9.7,
+                "od": 9.7,
+                "hp": 4,
+                "bpm": 190,
+                "length": 305000
             }
         ]
     }

@@ -706,5 +706,579 @@
                 }
             ]
         }
+    ],
+    "quarterfinals": [
+        {
+            "id": "12994",
+            "label": "33",
+            "players": [
+                {
+                    "id": 10516547,
+                    "name": "Firu",
+                    "country": "MX",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 6283136,
+                    "name": "ElSkeffe",
+                    "country": "BE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12993",
+            "label": "34",
+            "players": [
+                {
+                    "id": 16355636,
+                    "name": "-Rustyy",
+                    "country": "PH",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 1948043,
+                    "name": "dazzulay",
+                    "country": "CN",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12992",
+            "label": "35",
+            "players": [
+                {
+                    "id": 3355617,
+                    "name": "Keita",
+                    "country": "ID",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 19515018,
+                    "name": "Niisan",
+                    "country": "MX",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12991",
+            "label": "36",
+            "players": [
+                {
+                    "id": 12588215,
+                    "name": "Juansy-",
+                    "country": "CO",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 25723773,
+                    "name": "Lunati1kid",
+                    "country": "PE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12990",
+            "label": "37",
+            "players": [
+                {
+                    "id": 11202866,
+                    "name": "Nerris",
+                    "country": "RU",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 4682813,
+                    "name": "[Romanos]",
+                    "country": "GR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12989",
+            "label": "38",
+            "players": [
+                {
+                    "id": 1565036,
+                    "name": "Stark",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 2957534,
+                    "name": "madcin",
+                    "country": "PL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12988",
+            "label": "39",
+            "players": [
+                {
+                    "id": 5166056,
+                    "name": "doddo",
+                    "country": "HR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 6647589,
+                    "name": "smelly DVD box",
+                    "country": "RU",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12987",
+            "label": "40",
+            "players": [
+                {
+                    "id": 2548278,
+                    "name": "- S H -",
+                    "country": "TW",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 13845399,
+                    "name": "Sprint",
+                    "country": "ES",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13009",
+            "label": "41C",
+            "players": [
+                {
+                    "id": 1948043,
+                    "name": "dazzulay",
+                    "country": "CN",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 10516547,
+                    "name": "Firu",
+                    "country": "MX",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13010",
+            "label": "41D",
+            "players": [
+                {
+                    "id": 1948043,
+                    "name": "dazzulay",
+                    "country": "CN",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 6283136,
+                    "name": "ElSkeffe",
+                    "country": "BE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13003",
+            "label": "42A",
+            "players": [
+                {
+                    "id": 12588215,
+                    "name": "Juansy-",
+                    "country": "CO",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 3355617,
+                    "name": "Keita",
+                    "country": "ID",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13004",
+            "label": "42B",
+            "players": [
+                {
+                    "id": 12588215,
+                    "name": "Juansy-",
+                    "country": "CO",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 19515018,
+                    "name": "Niisan",
+                    "country": "MX",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13005",
+            "label": "42C",
+            "players": [
+                {
+                    "id": 25723773,
+                    "name": "Lunati1kid",
+                    "country": "PE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 3355617,
+                    "name": "Keita",
+                    "country": "ID",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13006",
+            "label": "42D",
+            "players": [
+                {
+                    "id": 25723773,
+                    "name": "Lunati1kid",
+                    "country": "PE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 19515018,
+                    "name": "Niisan",
+                    "country": "MX",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12999",
+            "label": "43A",
+            "players": [
+                {
+                    "id": 1565036,
+                    "name": "Stark",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 11202866,
+                    "name": "Nerris",
+                    "country": "RU",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13000",
+            "label": "43B",
+            "players": [
+                {
+                    "id": 1565036,
+                    "name": "Stark",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 4682813,
+                    "name": "[Romanos]",
+                    "country": "GR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13001",
+            "label": "43C",
+            "players": [
+                {
+                    "id": 2957534,
+                    "name": "madcin",
+                    "country": "PL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 11202866,
+                    "name": "Nerris",
+                    "country": "RU",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13002",
+            "label": "43D",
+            "players": [
+                {
+                    "id": 2957534,
+                    "name": "madcin",
+                    "country": "PL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 4682813,
+                    "name": "[Romanos]",
+                    "country": "GR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12995",
+            "label": "44A",
+            "players": [
+                {
+                    "id": 2548278,
+                    "name": "- S H -",
+                    "country": "TW",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 5166056,
+                    "name": "doddo",
+                    "country": "HR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12996",
+            "label": "44B",
+            "players": [
+                {
+                    "id": 2548278,
+                    "name": "- S H -",
+                    "country": "TW",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 6647589,
+                    "name": "smelly DVD box",
+                    "country": "RU",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12997",
+            "label": "44C",
+            "players": [
+                {
+                    "id": 13845399,
+                    "name": "Sprint",
+                    "country": "ES",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 5166056,
+                    "name": "doddo",
+                    "country": "HR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12998",
+            "label": "44D",
+            "players": [
+                {
+                    "id": 13845399,
+                    "name": "Sprint",
+                    "country": "ES",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 6647589,
+                    "name": "smelly DVD box",
+                    "country": "RU",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12983",
+            "label": "45",
+            "players": [
+                {
+                    "id": 17309439,
+                    "name": "SirGonzaxz",
+                    "country": "AR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 2389481,
+                    "name": "Aryssiel",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12984",
+            "label": "46",
+            "players": [
+                {
+                    "id": 2956936,
+                    "name": "- N a g i -",
+                    "country": "CN",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 6434318,
+                    "name": "Smukur",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12985",
+            "label": "47",
+            "players": [
+                {
+                    "id": 7547506,
+                    "name": "qwhj79",
+                    "country": "KR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 1177233,
+                    "name": "eauikk",
+                    "country": "TW",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "12986",
+            "label": "48",
+            "players": [
+                {
+                    "id": 5297904,
+                    "name": "Boltico",
+                    "country": "PE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 10835397,
+                    "name": "HelpMePleasee",
+                    "country": "CO",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        }
     ]
 }

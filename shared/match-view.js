@@ -12,6 +12,7 @@ window.CICOMatchView = (() => {
 
     function header(title, round, reset) {
         const element = node('header', 'header match-header');
+        element.classList.toggle('compact-round', round.length > 12);
         element.setAttribute('aria-label', title);
         element.innerHTML = '<div class="brand" role="img" aria-label="CICO 2026"><img class="mascot" src="../assets/chibi-mascot.png" alt="" draggable="false"><div class="wordmark"><span>CICO</span><small>2026</small></div></div><div class="round-heading"><div id="round"></div></div>';
         setText(element.querySelector('#round'), round);

@@ -4,7 +4,7 @@
 .match-header .brand { left: 1455px; top: 12px; transform: scale(.65); transform-origin: top left; }
 .match-header .round-heading { left: 1676px; right: auto; top: 0; width: 218px; height: 142px; }
 .match-header #round { font-size: 28px; padding: 8px 15px 10px; }
-.match-header #round.long-round { font-size: 22px; }
+.match-header.compact-round #round { font-size: 22px; }
 .brand[role="button"] { cursor: pointer; }
 .candy-mark { width: 70px; height: 45px; background: var(--caramel); mask: url('../assets/candy.svg') center / contain no-repeat; }
 .player-panel { position: absolute; top: 16px; width: 700px; height: 126px; display: flex; align-items: center; gap: 16px; padding: 8px 12px; }
