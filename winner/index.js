@@ -26,21 +26,6 @@ function fitName() {
     }
 }
 
-function updateAvatar(player) {
-    const id = Number(player.id) > 0 ? String(player.id) : '';
-    avatarElement.alt = player.name;
-    if (avatarElement.dataset.user === id) return;
-    avatarElement.dataset.user = id;
-    avatarElement.hidden = true;
-    if (!id) {
-        avatarElement.removeAttribute('src');
-        return;
-    }
-    avatarElement.onload = () => { if (avatarElement.dataset.user === id) avatarElement.hidden = false; };
-    avatarElement.onerror = () => { avatarElement.hidden = true; };
-    avatarElement.src = `https://a.ppy.sh/${id}`;
-}
-
 function updateFlag(country) {
     const code = /^[A-Z]{2}$/.test(country || '') ? country : '';
     flagElement.hidden = !code;
@@ -69,6 +54,10 @@ function render(data) {
     const winner = data.store.state.winner || (demoWinner ? CICOMatchData.winner(data.players, points, data.rules.bestOf) : null);
     const profile = winner ? data.profiles.find(player => Number(player.userId) === Number(winner.player.id)) : null;
     const country = winner?.player.country || profile?.country || '';
+    if (winner) {
+        avatarElement.alt = winner.player.name;
+        view.updateAvatar(avatarElement, winner.player, data.avatars.get(winner.player.id));
+    }
     const next = winner ? JSON.stringify([winner.side, winner.player.id, winner.player.name, country]) : '';
     if (signature === next) return;
     signature = next;
@@ -80,7 +69,6 @@ function render(data) {
     }
     resultElement.className = `side-${winner.side}`;
     nameElement.textContent = winner.player.name;
-    updateAvatar(winner.player);
     updateFlag(country);
     fitName();
     for (const [index, element] of [document.querySelector('.winner-mascot'), document.querySelector('.winner-heading'), document.querySelector('.winner-card')].entries()) {

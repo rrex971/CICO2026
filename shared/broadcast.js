@@ -13,7 +13,7 @@ window.CICOBroadcast = (() => {
         if (!pool.maps.length) throw new Error('Mappool unavailable');
         const round = Object.keys(pools).find(key => pools[key] === pool) || CICO2026.defaultRound;
         const rules = { ...CICO2026.match, ...pool.rules };
-        const context = { params, preview, pool, round, rules, players: [null, null], points: [null, null], live: { players: [null, null], playing: false, chat: [] }, packet: null, map: null, profiles: [], store: null };
+        const context = { params, preview, pool, round, rules, players: [null, null], points: [null, null], live: { players: [null, null], playing: false, chat: [] }, packet: null, map: null, profiles: [], avatars: new Map(), store: null };
         let matches = {};
         let socket;
         let revision = 0;
@@ -52,13 +52,18 @@ window.CICOBroadcast = (() => {
             try {
                 const tournament = await json(CICO2026.tournamentSource);
                 if (stopped) return;
+                for (const registration of tournament.players || []) {
+                    const user = registration.user?.userOsu;
+                    if (user?.id && user.avatar_url) context.avatars.set(Number(user.id), user.avatar_url);
+                }
                 const stage = tournament.stages?.find(stage => stage.id === pool.stageId);
-                if (!stage) return;
-                const updated = CICOMatchData.poolFromStage(stage, context.pool);
-                context.pool.maps.splice(0, context.pool.maps.length, ...updated.maps);
-                matches[round] = (stage.matches || []).filter(match => !match.softDeleted).map(CICOMatchData.matchFromWybin);
-                if (context.packet) context.map = CICOMapData.fromPayload(context.packet, context.pool.maps);
-                updatePlayers();
+                if (stage) {
+                    const updated = CICOMatchData.poolFromStage(stage, context.pool);
+                    context.pool.maps.splice(0, context.pool.maps.length, ...updated.maps);
+                    matches[round] = (stage.matches || []).filter(match => !match.softDeleted).map(CICOMatchData.matchFromWybin);
+                    if (context.packet) context.map = CICOMapData.fromPayload(context.packet, context.pool.maps);
+                    updatePlayers();
+                }
                 publish();
             } catch (error) { console.warn('Using bundled Wybin metadata:', error.message); }
         }

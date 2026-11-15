@@ -108,7 +108,10 @@ function render(data) {
             return column;
         }));
     }
-    playerPanels.forEach((panel, index) => view.updatePlayer(panel, data.players[index], { value: state.points[index] ?? data.points[index], manual: state.points[index] !== null }, state.actions.find(action => action.type === 'ban' && action.side === index)));
+    playerPanels.forEach((panel, index) => {
+        const player = data.players[index];
+        view.updatePlayer(panel, player, { value: state.points[index] ?? data.points[index], manual: state.points[index] !== null }, state.actions.find(action => action.type === 'ban' && action.side === index), data.avatars.get(player?.id));
+    });
     const picks = state.actions.filter(action => action.type === 'pick');
     const latest = picks.at(-1);
     const pulse = picks.length > previousPickCount;

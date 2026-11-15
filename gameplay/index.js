@@ -84,7 +84,8 @@ function render(data) {
     const state = data.store.state;
     playerPanels.forEach((panel, index) => {
         const manual = state.points[index] !== null;
-        view.updatePlayer(panel, data.players[index], { value: state.points[index] ?? data.points[index], manual }, state.actions.find(action => action.type === 'ban' && action.side === index));
+        const player = data.players[index];
+        view.updatePlayer(panel, player, { value: state.points[index] ?? data.points[index], manual }, state.actions.find(action => action.type === 'ban' && action.side === index), data.avatars.get(player?.id));
         const live = data.live.players[index];
         const occupied = Boolean(live);
         slots[index].cutout.setAttribute('display', occupied ? '' : 'none');

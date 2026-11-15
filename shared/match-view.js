@@ -44,18 +44,32 @@ window.CICOMatchView = (() => {
             button.addEventListener('contextmenu', event => { event.preventDefault(); dispatch({ type: 'points', side, value: event.ctrlKey ? null : index }); });
             points.append(button);
         }
-        element.querySelector('.player-avatar img').addEventListener('error', event => { event.target.hidden = true; });
         return element;
     }
 
-    function updatePlayer(element, player, points, ban) {
-        const image = element.querySelector('.player-avatar img');
-        const id = player?.id > 0 ? String(player.id) : '';
-        if (image.dataset.user !== id) {
-            image.dataset.user = id;
-            image.hidden = !id;
-            if (id) image.src = `https://a.ppy.sh/${id}`;
+    function updateAvatar(image, player, versionedUrl) {
+        const id = Number.isSafeInteger(player?.id) && player.id > 0 ? player.id : null;
+        const base = id ? `https://a.ppy.sh/${id}` : '';
+        const version = typeof versionedUrl === 'string' && versionedUrl.startsWith(base + '?') ? versionedUrl.slice(base.length + 1) : '';
+        const url = base && /^\d+(?:\.(?:png|jpe?g|gif|webp))?$/i.test(version) ? versionedUrl : base;
+        if (image.dataset.avatarUrl === url) return;
+        if (image.dataset.avatarUser !== String(id)) image.hidden = true;
+        image.dataset.avatarUser = String(id);
+        image.dataset.avatarUrl = url;
+        if (!url) {
+            image.removeAttribute('src');
+            return;
         }
+        image.onload = () => { image.hidden = false; };
+        image.onerror = () => {
+            if (image.getAttribute('src') !== base) image.src = base;
+            else image.hidden = true;
+        };
+        image.src = url;
+    }
+
+    function updatePlayer(element, player, points, ban, avatarUrl) {
+        updateAvatar(element.querySelector('.player-avatar img'), player, avatarUrl);
         const flag = element.querySelector('.player-flag');
         const country = /^[A-Z]{2}$/.test(player?.country || '') ? player.country : '';
         if (flag.dataset.country !== country) {
@@ -237,5 +251,5 @@ window.CICOMatchView = (() => {
     }
 
 
-    return { node, setText, number, header, playerPanel, updatePlayer, mapPanel, updateMap, badgeIcon, logPanel, updateLog, chatPanel, appendChat, gameChatFeed };
+    return { node, setText, number, header, playerPanel, updateAvatar, updatePlayer, mapPanel, updateMap, badgeIcon, logPanel, updateLog, chatPanel, appendChat, gameChatFeed };
 })();
