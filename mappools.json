@@ -1183,5 +1183,187 @@
                 "length": 305000
             }
         ]
+    },
+    "semifinals": {
+        "round": "Semifinals",
+        "stageId": 1081,
+        "rules": {
+            "bestOf": 13,
+            "bans": 2
+        },
+        "maps": [
+            {
+                "slot": "NM1",
+                "title": "Vivarium",
+                "keywords": [
+                    "Vivarium"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "NM2",
+                "title": "ENERGY INFLATION",
+                "keywords": [
+                    "ENERGY INFLATION"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "NM3",
+                "title": "F-mine",
+                "keywords": [
+                    "F-mine"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "NM4",
+                "title": "Fanfare",
+                "keywords": [
+                    "Fanfare"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "NM5",
+                "title": "T_ritama Breaker",
+                "keywords": [
+                    "T_ritama Breaker"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "HD1",
+                "title": "Black Winged Variation",
+                "keywords": [
+                    "Black Winged Variation"
+                ],
+                "badge": "custom",
+                "mods": 8
+            },
+            {
+                "slot": "HD2",
+                "title": "world.execute(me);",
+                "keywords": [
+                    "world.execute(me);"
+                ],
+                "badge": "custom",
+                "mods": 8
+            },
+            {
+                "slot": "HD3",
+                "title": "Arghena",
+                "keywords": [
+                    "Arghena"
+                ],
+                "badge": "custom",
+                "mods": 8
+            },
+            {
+                "slot": "HR1",
+                "title": "AshVeit",
+                "keywords": [
+                    "AshVeit"
+                ],
+                "badge": "custom",
+                "mods": 16
+            },
+            {
+                "slot": "HR2",
+                "title": "EtE",
+                "keywords": [
+                    "EtE"
+                ],
+                "badge": "custom",
+                "mods": 16
+            },
+            {
+                "slot": "HR3",
+                "title": "SO HPPY!!",
+                "keywords": [
+                    "SO HPPY!!"
+                ],
+                "badge": "original",
+                "mods": 16
+            },
+            {
+                "slot": "DT1",
+                "title": "Animal Land",
+                "keywords": [
+                    "Animal Land"
+                ],
+                "badge": "custom",
+                "mods": 64
+            },
+            {
+                "id": 5188096,
+                "slot": "DT2",
+                "mods": 64,
+                "beatmapsetId": 2395290,
+                "artist": "F-777",
+                "title": "Deadlocked",
+                "difficulty": "It would seem we have reached an impasse.",
+                "mapper": "Yoshi_green",
+                "background": "https://assets.ppy.sh/beatmaps/2395290/covers/cover.jpg",
+                "cs": 4.3,
+                "hp": 5.3,
+                "bpm": 202.5
+            },
+            {
+                "id": 4869770,
+                "slot": "DT3",
+                "mods": 64,
+                "beatmapsetId": 2238952,
+                "artist": "Nanahoshi Kangengakudan",
+                "title": "Rubik's Cube",
+                "difficulty": "Aku's Rain",
+                "mapper": "-Aku",
+                "background": "https://assets.ppy.sh/beatmaps/2238952/covers/cover.jpg",
+                "cs": 3.8,
+                "hp": 4,
+                "bpm": 261
+            },
+            {
+                "slot": "DT4",
+                "title": "Rockerfeller Street",
+                "keywords": [
+                    "Rockerfeller Street"
+                ],
+                "badge": "custom",
+                "mods": 64
+            },
+            {
+                "slot": "FM1",
+                "title": "Pyroclastic Flow",
+                "keywords": [
+                    "Pyroclastic Flow"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "FM2",
+                "title": "White Rose",
+                "keywords": [
+                    "White Rose"
+                ],
+                "badge": "custom",
+                "mods": 0
+            },
+            {
+                "slot": "TB",
+                "title": "The Purge",
+                "keywords": [
+                    "The Purge"
+                ],
+                "badge": "original",
+                "mods": 0
+            }
+        ]
     }
 }

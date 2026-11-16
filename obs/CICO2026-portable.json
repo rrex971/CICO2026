@@ -503,7 +503,7 @@
             "id": "browser_source",
             "versioned_id": "browser_source",
             "settings": {
-                "url": "http://127.0.0.1:24050/CICO2026/pool-showcase/?round=quarterfinals",
+                "url": "http://127.0.0.1:24050/CICO2026/pool-showcase/?round=semifinals",
                 "width": 1920,
                 "height": 1080,
                 "fps_custom": true,

@@ -1,7 +1,7 @@
 window.CICO2026 = {
     round: 'Quarterfinals',
     defaultRound: 'quarterfinals',
-    showcaseRound: 'quarterfinals',
+    showcaseRound: 'semifinals',
     poolSource: '../mappools.json',
     tournamentSource: 'https://wybin.xyz/api/v1/tournament/cico2026',
     seedReveal: { qualifiedSeeds: 32, eliminatedPageSize: 16 },
