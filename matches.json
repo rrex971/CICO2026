@@ -1280,5 +1280,315 @@
                 }
             ]
         }
+    ],
+    "semifinals": [
+        {
+            "id": "13056",
+            "label": "49",
+            "players": [
+                {
+                    "id": 2389481,
+                    "name": "Aryssiel",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 1565036,
+                    "name": "Stark",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13055",
+            "label": "50",
+            "players": [
+                {
+                    "id": 6434318,
+                    "name": "Smukur",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 5166056,
+                    "name": "doddo",
+                    "country": "HR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13058",
+            "label": "51",
+            "players": [
+                {
+                    "id": 1177233,
+                    "name": "eauikk",
+                    "country": "TW",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 6283136,
+                    "name": "ElSkeffe",
+                    "country": "BE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13057",
+            "label": "52",
+            "players": [
+                {
+                    "id": 10835397,
+                    "name": "HelpMePleasee",
+                    "country": "CO",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 3355617,
+                    "name": "Keita",
+                    "country": "ID",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13059",
+            "label": "53A",
+            "players": [
+                {
+                    "id": 6434318,
+                    "name": "Smukur",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 2389481,
+                    "name": "Aryssiel",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13060",
+            "label": "53B",
+            "players": [
+                {
+                    "id": 6434318,
+                    "name": "Smukur",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 1565036,
+                    "name": "Stark",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13061",
+            "label": "53C",
+            "players": [
+                {
+                    "id": 5166056,
+                    "name": "doddo",
+                    "country": "HR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 2389481,
+                    "name": "Aryssiel",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13062",
+            "label": "53D",
+            "players": [
+                {
+                    "id": 5166056,
+                    "name": "doddo",
+                    "country": "HR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 1565036,
+                    "name": "Stark",
+                    "country": "CL",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13063",
+            "label": "54A",
+            "players": [
+                {
+                    "id": 10835397,
+                    "name": "HelpMePleasee",
+                    "country": "CO",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 1177233,
+                    "name": "eauikk",
+                    "country": "TW",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13064",
+            "label": "54B",
+            "players": [
+                {
+                    "id": 10835397,
+                    "name": "HelpMePleasee",
+                    "country": "CO",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 6283136,
+                    "name": "ElSkeffe",
+                    "country": "BE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13065",
+            "label": "54C",
+            "players": [
+                {
+                    "id": 3355617,
+                    "name": "Keita",
+                    "country": "ID",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 1177233,
+                    "name": "eauikk",
+                    "country": "TW",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13066",
+            "label": "54D",
+            "players": [
+                {
+                    "id": 3355617,
+                    "name": "Keita",
+                    "country": "ID",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 6283136,
+                    "name": "ElSkeffe",
+                    "country": "BE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13053",
+            "label": "55",
+            "players": [
+                {
+                    "id": 17309439,
+                    "name": "SirGonzaxz",
+                    "country": "AR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 2956936,
+                    "name": "- N a g i -",
+                    "country": "CN",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        },
+        {
+            "id": "13054",
+            "label": "56",
+            "players": [
+                {
+                    "id": 7547506,
+                    "name": "qwhj79",
+                    "country": "KR",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                },
+                {
+                    "id": 5297904,
+                    "name": "Boltico",
+                    "country": "PE",
+                    "score": null,
+                    "accuracy": null,
+                    "misses": null
+                }
+            ]
+        }
     ]
 }

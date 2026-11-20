@@ -1199,7 +1199,20 @@
                     "Vivarium"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 6006623,
+                "beatmapsetId": 2654980,
+                "artist": "Ado",
+                "difficulty": "Trust Myself",
+                "mapper": "[ Azu- ]",
+                "background": "https://assets.ppy.sh/beatmaps/2654980/covers/cover.jpg",
+                "sr": 7.44,
+                "cs": 4.2,
+                "ar": 9.7,
+                "od": 9.7,
+                "hp": 6,
+                "bpm": 195,
+                "length": 242000
             },
             {
                 "slot": "NM2",
@@ -1208,7 +1221,20 @@
                     "ENERGY INFLATION"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 6006756,
+                "beatmapsetId": 2655048,
+                "artist": "A?",
+                "difficulty": "OVERCHARGE",
+                "mapper": "yeeeter",
+                "background": "https://assets.ppy.sh/beatmaps/2655048/covers/cover.jpg",
+                "sr": 7.4,
+                "cs": 4.1,
+                "ar": 9.8,
+                "od": 9.8,
+                "hp": 5,
+                "bpm": 215,
+                "length": 125000
             },
             {
                 "slot": "NM3",
@@ -1217,7 +1243,20 @@
                     "F-mine"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 6007258,
+                "beatmapsetId": 2655224,
+                "artist": "onoken",
+                "difficulty": "Tragedy of the Star-Crossed",
+                "mapper": "Nidoking",
+                "background": "https://assets.ppy.sh/beatmaps/2655224/covers/cover.jpg",
+                "sr": 5.75,
+                "cs": 5,
+                "ar": 8.8,
+                "od": 8.8,
+                "hp": 5.8,
+                "bpm": 172,
+                "length": 200000
             },
             {
                 "slot": "NM4",
@@ -1226,7 +1265,20 @@
                     "Fanfare"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 6006653,
+                "beatmapsetId": 2654999,
+                "artist": "sumika",
+                "difficulty": "Farewell",
+                "mapper": "Madoka Ayukawa",
+                "background": "https://assets.ppy.sh/beatmaps/2654999/covers/cover.jpg",
+                "sr": 6.36,
+                "cs": 4.3,
+                "ar": 9.5,
+                "od": 9.5,
+                "hp": 5,
+                "bpm": 218,
+                "length": 176000
             },
             {
                 "slot": "NM5",
@@ -1235,7 +1287,20 @@
                     "T_ritama Breaker"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 6006634,
+                "beatmapsetId": 2654987,
+                "artist": "NIWASHI",
+                "difficulty": "Speed Breaker",
+                "mapper": "EpanPan",
+                "background": "https://assets.ppy.sh/beatmaps/2654987/covers/cover.jpg",
+                "sr": 7.49,
+                "cs": 4.2,
+                "ar": 9.8,
+                "od": 9.8,
+                "hp": 5,
+                "bpm": 255,
+                "length": 127000
             },
             {
                 "slot": "HD1",
@@ -1244,7 +1309,20 @@
                     "Black Winged Variation"
                 ],
                 "badge": "custom",
-                "mods": 8
+                "mods": 8,
+                "id": 6006640,
+                "beatmapsetId": 2654989,
+                "artist": "Risa Yuzuki",
+                "difficulty": "Raven's Waltz",
+                "mapper": "EpanPan",
+                "background": "https://assets.ppy.sh/beatmaps/2654989/covers/cover.jpg",
+                "sr": 6.37,
+                "cs": 4.2,
+                "ar": 9.1,
+                "od": 9.1,
+                "hp": 5,
+                "bpm": 145,
+                "length": 202000
             },
             {
                 "slot": "HD2",
@@ -1253,7 +1331,20 @@
                     "world.execute(me);"
                 ],
                 "badge": "custom",
-                "mods": 8
+                "mods": 8,
+                "id": 6006641,
+                "beatmapsetId": 2654990,
+                "artist": "Mili",
+                "difficulty": "cico.mappool(SF-HD-2);",
+                "mapper": "-Miya",
+                "background": "https://assets.ppy.sh/beatmaps/2654990/covers/cover.jpg",
+                "sr": 5.2,
+                "cs": 4.4,
+                "ar": 8,
+                "od": 8,
+                "hp": 5,
+                "bpm": 130,
+                "length": 206000
             },
             {
                 "slot": "HD3",
@@ -1262,7 +1353,20 @@
                     "Arghena"
                 ],
                 "badge": "custom",
-                "mods": 8
+                "mods": 8,
+                "id": 6007352,
+                "beatmapsetId": 2655266,
+                "artist": "Feryquitous vs. Laur",
+                "difficulty": "Aeterna",
+                "mapper": "Jemzuu",
+                "background": "https://assets.ppy.sh/beatmaps/2655266/covers/cover.jpg",
+                "sr": 7.07,
+                "cs": 4,
+                "ar": 9.7,
+                "od": 9.7,
+                "hp": 5,
+                "bpm": 185,
+                "length": 149000
             },
             {
                 "slot": "HR1",
@@ -1271,7 +1375,20 @@
                     "AshVeit"
                 ],
                 "badge": "custom",
-                "mods": 16
+                "mods": 16,
+                "id": 6006660,
+                "beatmapsetId": 2655003,
+                "artist": "ELFENSJoN",
+                "difficulty": "Smouldering Determination",
+                "mapper": "-Luminate",
+                "background": "https://assets.ppy.sh/beatmaps/2655003/covers/cover.jpg",
+                "sr": 7.54,
+                "cs": 4.94,
+                "ar": 10,
+                "od": 10,
+                "hp": 6.5,
+                "bpm": 145,
+                "length": 182000
             },
             {
                 "slot": "HR2",
@@ -1280,16 +1397,42 @@
                     "EtE"
                 ],
                 "badge": "custom",
-                "mods": 16
+                "mods": 16,
+                "id": 6006648,
+                "beatmapsetId": 2654995,
+                "artist": "Risa Yuzuki (Prod. Feryquitous)",
+                "difficulty": "from eternity to the beyond (CICO Ver.)",
+                "mapper": "-Miya",
+                "background": "https://assets.ppy.sh/beatmaps/2654995/covers/cover.jpg",
+                "sr": 6.73,
+                "cs": 6.37,
+                "ar": 10,
+                "od": 10,
+                "hp": 6.5,
+                "bpm": 190,
+                "length": 188000
             },
             {
                 "slot": "HR3",
-                "title": "SO HPPY!!",
+                "title": "SO H*PPY!!",
                 "keywords": [
                     "SO HPPY!!"
                 ],
                 "badge": "original",
-                "mods": 16
+                "mods": 16,
+                "id": 6006795,
+                "beatmapsetId": 2655067,
+                "artist": "1zm8",
+                "difficulty": "ULTIMATE ACCELERATION!!",
+                "mapper": "Vaqu",
+                "background": "https://assets.ppy.sh/beatmaps/2655067/covers/cover.jpg",
+                "sr": 7.53,
+                "cs": 5.59,
+                "ar": 10,
+                "od": 10,
+                "hp": 6.5,
+                "bpm": 180,
+                "length": 132000
             },
             {
                 "slot": "DT1",
@@ -1298,7 +1441,20 @@
                     "Animal Land"
                 ],
                 "badge": "custom",
-                "mods": 64
+                "mods": 64,
+                "id": 6006659,
+                "beatmapsetId": 2655002,
+                "artist": "Camellia feat. Nanahira",
+                "difficulty": "Nya Chan",
+                "mapper": "My Angel RangE",
+                "background": "https://assets.ppy.sh/beatmaps/2655002/covers/cover.jpg",
+                "sr": 6.76,
+                "cs": 4,
+                "ar": 10.33,
+                "od": 10.42,
+                "hp": 4.6,
+                "bpm": 225,
+                "length": 149000
             },
             {
                 "id": 5188096,
@@ -1312,7 +1468,12 @@
                 "background": "https://assets.ppy.sh/beatmaps/2395290/covers/cover.jpg",
                 "cs": 4.3,
                 "hp": 5.3,
-                "bpm": 202.5
+                "bpm": 202.5,
+                "badge": "",
+                "sr": 6.75,
+                "ar": 9.93,
+                "od": 10.02,
+                "length": 132000
             },
             {
                 "id": 4869770,
@@ -1322,20 +1483,38 @@
                 "artist": "Nanahoshi Kangengakudan",
                 "title": "Rubik's Cube",
                 "difficulty": "Aku's Rain",
-                "mapper": "-Aku",
+                "mapper": "Spectator",
                 "background": "https://assets.ppy.sh/beatmaps/2238952/covers/cover.jpg",
                 "cs": 3.8,
                 "hp": 4,
-                "bpm": 261
+                "bpm": 261,
+                "badge": "",
+                "sr": 6.69,
+                "ar": 10.47,
+                "od": 10.55,
+                "length": 128000
             },
             {
                 "slot": "DT4",
-                "title": "Rockerfeller Street",
+                "title": "Rockefeller Street",
                 "keywords": [
                     "Rockerfeller Street"
                 ],
                 "badge": "custom",
-                "mods": 64
+                "mods": 64,
+                "id": 6006768,
+                "beatmapsetId": 2655054,
+                "artist": "Getter Jaani",
+                "difficulty": "Let's keep movin' on!",
+                "mapper": "hiroshiki",
+                "background": "https://assets.ppy.sh/beatmaps/2655054/covers/cover.jpg",
+                "sr": 6.38,
+                "cs": 4.5,
+                "ar": 9.67,
+                "od": 9.75,
+                "hp": 3,
+                "bpm": 195,
+                "length": 126000
             },
             {
                 "slot": "FM1",
@@ -1344,7 +1523,20 @@
                     "Pyroclastic Flow"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 6006666,
+                "beatmapsetId": 2655008,
+                "artist": "Pirendora",
+                "difficulty": "Hellfire",
+                "mapper": "Bunnrei",
+                "background": "https://assets.ppy.sh/beatmaps/2655008/covers/cover.jpg",
+                "sr": 6.72,
+                "cs": 4.2,
+                "ar": 9.4,
+                "od": 9.4,
+                "hp": 4,
+                "bpm": 162,
+                "length": 240000
             },
             {
                 "slot": "FM2",
@@ -1353,7 +1545,20 @@
                     "White Rose"
                 ],
                 "badge": "custom",
-                "mods": 0
+                "mods": 0,
+                "id": 6007434,
+                "beatmapsetId": 2655295,
+                "artist": "M2U",
+                "difficulty": "Overdose",
+                "mapper": "Spectator",
+                "background": "https://assets.ppy.sh/beatmaps/2655295/covers/cover.jpg",
+                "sr": 5.34,
+                "cs": 4.7,
+                "ar": 8.2,
+                "od": 8.2,
+                "hp": 5,
+                "bpm": 128,
+                "length": 107000
             },
             {
                 "slot": "TB",
@@ -1362,7 +1567,20 @@
                     "The Purge"
                 ],
                 "badge": "original",
-                "mods": 0
+                "mods": 0,
+                "id": 6006678,
+                "beatmapsetId": 2655018,
+                "artist": "XADA",
+                "difficulty": "Tri-Protocol: Purge",
+                "mapper": "EpanPan",
+                "background": "https://assets.ppy.sh/beatmaps/2655018/covers/cover.jpg",
+                "sr": 7.51,
+                "cs": 4.3,
+                "ar": 9.8,
+                "od": 9.8,
+                "hp": 5,
+                "bpm": 200,
+                "length": 321000
             }
         ]
     }

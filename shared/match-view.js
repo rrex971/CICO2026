@@ -68,7 +68,7 @@ window.CICOMatchView = (() => {
         image.src = url;
     }
 
-    function updatePlayer(element, player, points, ban, avatarUrl) {
+    function updatePlayer(element, player, points, bans, avatarUrl) {
         updateAvatar(element.querySelector('.player-avatar img'), player, avatarUrl);
         const flag = element.querySelector('.player-flag');
         const country = /^[A-Z]{2}$/.test(player?.country || '') ? player.country : '';
@@ -94,7 +94,8 @@ window.CICOMatchView = (() => {
             button.setAttribute('aria-pressed', String(points.value !== null && index < points.value));
         });
         const banPick = element.querySelector('.ban-pick');
-        const banText = ban?.slot || '—';
+        const banText = bans.map(ban => ban.slot).join('\n') || '—';
+        element.querySelector('.player-ban').classList.toggle('multiple-bans', bans.length > 1);
         if (element.banText !== undefined && element.banText !== banText) {
             banPick.getAnimations().forEach(animation => animation.cancel());
             const direction = element.classList.contains('side-1') ? -1 : 1;

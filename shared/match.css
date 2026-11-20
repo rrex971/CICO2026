@@ -25,6 +25,7 @@
 .ban-heading { display: flex; align-items: center; gap: 5px; font-size: 15px; line-height: 1; }
 .ban-heading svg { width: 15px; height: 15px; }
 .ban-pick { font-size: 29px; line-height: 1; font-weight: 400; }
+.multiple-bans .ban-pick { font-size: 22px; line-height: 1.05; white-space: pre-line; }
 .player-panel.side-1 { flex-direction: row-reverse; }
 .player-panel.side-1 .player-copy { padding-left: 100px; padding-right: 0; }
 .player-panel.side-1 .player-ban { left: 12px; right: auto; }

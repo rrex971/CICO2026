@@ -1,6 +1,6 @@
 window.CICO2026 = {
-    round: 'Quarterfinals',
-    defaultRound: 'quarterfinals',
+    round: 'Semifinals',
+    defaultRound: 'semifinals',
     showcaseRound: 'semifinals',
     poolSource: '../mappools.json',
     tournamentSource: 'https://wybin.xyz/api/v1/tournament/cico2026',

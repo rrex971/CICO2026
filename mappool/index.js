@@ -110,7 +110,7 @@ function render(data) {
     }
     playerPanels.forEach((panel, index) => {
         const player = data.players[index];
-        view.updatePlayer(panel, player, { value: state.points[index] ?? data.points[index], manual: state.points[index] !== null }, state.actions.find(action => action.type === 'ban' && action.side === index), data.avatars.get(player?.id));
+        view.updatePlayer(panel, player, { value: state.points[index] ?? data.points[index], manual: state.points[index] !== null }, state.actions.filter(action => action.type === 'ban' && action.side === index), data.avatars.get(player?.id));
     });
     const picks = state.actions.filter(action => action.type === 'pick');
     const latest = picks.at(-1);
@@ -130,6 +130,7 @@ function render(data) {
         const path = status.querySelector('path');
         const badgeType = data.pool.maps.find(map => map.slot === card.dataset.slot)?.badge;
         const badgeLabel = CICOMapData.badgeLabels[badgeType];
+        status.hidden = !action && !badgeLabel;
         if (action) {
             path.setAttribute('d', action.type === 'ban' ? 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20ZM5 5l14 14' : 'm4 12 5 5L20 6');
             path.setAttribute('fill', 'none');
